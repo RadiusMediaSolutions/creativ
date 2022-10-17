@@ -58,7 +58,7 @@ const TextWrapper = styled.div`
 	h1 span {
 		text-transform: uppercase;
 		font-family: 'poppins';
-	   	background-image: url(https://images.unsplash.com/photo-1509473332032-f1ce823d92c4?ixlib=rb-0.3.5&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ&s=3e2410208e8f8a78e4aa3550fddfbb44);
+	   	background-image: url(${background});
 		background-position: left center;
 	   	-webkit-background-clip: text;
 	   	-webkit-text-fill-color: transparent;

@@ -29,7 +29,7 @@ const MoreText = styled.div`
 
 const SectionTwo = styled.section`
 	position: relative;
-	background-color: #21b2a6;
+	background-color: whitesmoke;
 	text-align: center;
 	padding: 10rem 0;
 	div {
@@ -40,7 +40,7 @@ const SectionTwo = styled.section`
 	h2 {
 		font-size: 3rem;
 		padding: 1.5rem 0;
-		color: #ffffff;
+		color: #9b9b01;
 		border-bottom: 2px solid #1d9c91;
 		text-transform: uppercase;
 		letter-spacing: 0.6rem;

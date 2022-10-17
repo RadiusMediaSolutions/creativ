@@ -28,7 +28,8 @@ const SiteHeader = styled.header`
 		background: whitesmoke;
 		display: flex;
 		text-transform: uppercase;
-		border-left: 6px solid #666;
+		border: 2px solid #9b9b01;
+		border-left: 6px solid #9b9b01;
 	}
 	.menu__items > * {
 		margin-right: 1rem;
