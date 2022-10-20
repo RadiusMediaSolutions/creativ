@@ -17,6 +17,7 @@ import {
 	GenericH2,
 	SectionFour
 } from "../styles/IndexStyles"
+import Companies from "../components/companies"
 
 const IndexPage = () => (
 	<Layout>
@@ -47,7 +48,7 @@ const IndexPage = () => (
 				</span>
 			</div>
 		</SectionTwo>
-		<SectionThree>
+		{/* <SectionThree>
 			<FlexBoxIndex>
 				<div className="image">
 					<img src="https://source.unsplash.com/LXI5kqCdEcE/600x480" alt="Picture 1" />
@@ -81,7 +82,8 @@ const IndexPage = () => (
 					</GenericPara>
 				</div>
 			</FlexBoxIndex>
-		</SectionThree>
+		</SectionThree> */}
+		<Companies></Companies>
 		<SectionFour>
 			<div className="header__section4">
 				<div className="title__section4">Our Technologies</div>

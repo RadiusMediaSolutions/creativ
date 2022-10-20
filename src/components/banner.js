@@ -14,21 +14,21 @@ const Hero = styled.div`
 		// position: absolute;
 	}
 	&:after {
-		z-index: 60;
+		z-index: 110;
     	content: "";
 		display: block;
 		height: 90vh;
 		width: 100%;
-    	position: fixed;
+    	position: relative;
 		background-image: url(${background});
 		background-size: cover;
 		background-repeat: no-repeat;
 		background-position: center;
-		filter: grayscale(100%);
+		// filter: grayscale(100%);
         clip-path: polygon(15% 0%, 100% 0%, 100% 100%, 60% 100%);
 	}
 	& > * {
-		z-index: 50;
+		z-index: 150;
 	}
 `
 
@@ -82,7 +82,7 @@ const BannerFooter = styled.div`
 	position:relative;
 	background:linear-gradient(91deg, rgb(195 195 0 / 75%), #ddca7e);
 	height:10vh;
-	z-index: 10;
+	z-index: 100;
 	.icon-set-group {
 		padding-left:150px;
 		padding-top:10px;
