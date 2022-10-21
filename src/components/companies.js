@@ -1,60 +1,63 @@
 import * as React from "react"
-import { Link } from "gatsby"
-import styled, { keyframes } from 'styled-components'
+
+import styled, { keyframes } from "styled-components"
+
+import Canvas from "../components/canvas"
 import { FlexBoxIndex } from "../styles/IndexStyles"
-import Canvas  from "../components/canvas"
+import { Link } from "gatsby"
+
 const cssProps = {
 	white: `#fff`,
-    red: `#ea4335`,
-    green: `#34a853`,
-    yellow: `#fbbc05`,
-    black: `#000`,
-    speed: `10s`
+	red: `#ea4335`,
+	green: `#34a853`,
+	yellow: `#fbbc05`,
+	black: `#000`,
+	speed: `10s`,
 }
 const cursor = keyframes`
 	0% {
-		background-color: ${cssProps['red']};
+		background-color: ${cssProps["red"]};
 		transform: translate(24rem, 0rem);
 		z-index: 100;
 	}
 	15% {
-		background-color: ${cssProps['red']};
+		background-color: ${cssProps["red"]};
 		transform: translate(-0rem, 0rem);
 		z-index: 100;
 		width: 24rem;
 	}
 	30% {
-		background-color: ${cssProps['red']};
+		background-color: ${cssProps["red"]};
 		transform: translate(-2rem, 0rem);
 		width: 1rem;
 	}
 	40% {
-		background-color: ${cssProps['yellow']};
+		background-color: ${cssProps["yellow"]};
 		transform: translate(-2rem, 5rem);
 		width: 1rem;
 	}
 	50% {
-		background-color: ${cssProps['yellow']};
+		background-color: ${cssProps["yellow"]};
 		transform: translate(0rem, 5rem);
 		width: 20rem;
 	}
 	60% {
-		background-color: ${cssProps['green']};
+		background-color: ${cssProps["green"]};
 		transform: translate(0rem, 9.5rem);
 		width: 20rem;
 	}
 	80% {
 		transform: translate(-10rem, 9.5rem);
-		background-color: ${cssProps['green']};
+		background-color: ${cssProps["green"]};
 	}
 	89% {
 		transform: translate(-20rem, 9.5rem);
-		background-color: ${cssProps['green']};
+		background-color: ${cssProps["green"]};
 		z-index: 2;
 	}
 	99% {
 		z-index: -100;
-		background-color: ${cssProps['red']};
+		background-color: ${cssProps["red"]};
 	}
 `
 const Container = styled.div`
@@ -76,7 +79,8 @@ const Container = styled.div`
 		align-items: flex-start;
 		flex-direction: column;
 		line-height: 1.2;
-		font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+		font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+			sans-serif;
 	}
 	span {
 		display: flex;
@@ -85,7 +89,7 @@ const Container = styled.div`
 		color: ${cssProps.red};
 		// background-color: #fff;
 		animation-name: css;
-		animation-duration: calc(${cssProps.speed}  / 4);
+		animation-duration: calc(${cssProps.speed} / 4);
 		animation-delay: 0s;
 	}
 	#b {

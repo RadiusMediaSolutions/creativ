@@ -70,3 +70,42 @@ a {
 	height: 120px;
 	object-fit: cover;
 }
+
+/*
+.siteLogo {
+	color: white;
+	font-size: 4rem;
+	margin-top: -2rem;
+	margin-left: 4rem;
+	position: fixed;
+}
+*/
+.siteLogo img {
+	filter: drop-shadow(0 2px 2px #333);
+}
+
+.fixed-top {
+	padding: 1.5rem 4rem;
+	width: var(--container-width);
+	position: fixed;
+	display: flex;
+	justify-content: space-between;
+	margin: 0 auto;
+	align-items: center;
+	z-index: 1030;
+}
+
+/*
+
+.fixed-top {
+	position: fixed;
+	top: 0;
+	right: 0;
+	left: 0;
+	z-index: 1030;
+	display: flex;
+	justify-content: space-around;
+	margin: 0 auto;
+	align-items: center;
+}
+*/

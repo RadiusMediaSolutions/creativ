@@ -1,5 +1,4 @@
-import styled from 'styled-components'
-
+import styled from "styled-components"
 
 const MoreText = styled.div`
 	position: absolute;
@@ -33,7 +32,7 @@ const SectionTwo = styled.section`
 	text-align: center;
 	padding: 10rem 0;
 	div {
-		width: 66%;
+		// width: 66%;
 		margin: 0 auto;
 	}
 
@@ -45,13 +44,22 @@ const SectionTwo = styled.section`
 		text-transform: uppercase;
 		letter-spacing: 0.6rem;
 		margin: 0;
+		&:after {
+			content: "";
+			display: block;
+			height: 0.5rem;
+			width: 8rem;
+			position: absolute;
+			background: var(--heading-color);
+			margin-top: 15px;
+		}
 	}
 
 	p {
-		text-transform: uppercase;
+		// text-transform: uppercase;
 		color: #c8ece9;
 		text-align: center;
-		margin: auto;
+		margin: 0 auto;
 		padding-top: 0.5rem;
 		letter-spacing: 0.225em;
 		font-size: 1.5rem;
@@ -93,36 +101,39 @@ const FlexBoxIndex = styled.div`
 	}
 	h2 {
 		font-size: 3rem;
-		color: #ffffff;
+		color: var(--heading-color);
 		text-transform: uppercase;
 		letter-spacing: 0.225rem;
 		margin: 0;
 	}
 	p {
-		text-transform: uppercase;
+		// text-transform: uppercase;
 		color: #c8ece9;
 		text-align: center;
 		letter-spacing: 0.075em;
 		font-size: 1.5rem;
+		margin: 0 auto;
 	}
 `
 
 const GenericPara = styled.p`
-	margin: auto;
-	letter-spacing: ${props => props.lessSpacing? "0.075em" : "0.225em"} !important;
-	font-size: 		${props => props.lessSize 	? "1.5rem" 	: "2.5rem"} !important;
-	line-height: 	${props => props.lessSize 	? "2rem" 	: "3rem"} !important;
-	color: 			${props => props.grey 		? "#c8ece9" : "#ffffff"} !important;
+	margin: 0 auto;
+	letter-spacing: ${props =>
+		props.lessSpacing ? "0.075em" : "0.225em"} !important;
+	font-size: ${props => (props.lessSize ? "1.5rem" : "2.5rem")} !important;
+	line-height: ${props => (props.lessSize ? "2rem" : "3rem")} !important;
+	color: ${props => (props.grey ? "#c8ece9" : "#666666")} !important;
 `
 
 const GenericH2 = styled.h2`
-	font-size: 		${props => props.lessSize ? "2rem" : "3rem"} !important;
-	padding: 		${props => props.none ? "1em" : "1.35em 0"} !important;
-	border-top:		${props => props.none ? "0" : "2px solid #1d9c91"} !important;
-	border-bottom: 	${props => props.none ? "0" : "2px solid #1d9c91"} !important;
+	font-size: ${props => (props.lessSize ? "2rem" : "3rem")} !important;
+	padding: ${props => (props.none ? "1em" : "1.35em 0")} !important;
+	border-top: ${props => (props.none ? "0" : "2px solid #1d9c91")} !important;
+	border-bottom: ${props =>
+		props.none ? "0" : "2px solid #1d9c91"} !important;
 `
 
-const SectionFour  = styled.section`
+const SectionFour = styled.section`
 	background-color: #505393;
 	color: #ffffff;
 	text-align: center;
@@ -166,7 +177,7 @@ const Footer = styled.footer`
 	.icons > * {
 		cursor: pointer;
 		margin-right: 1rem;
-		color: rgba(255, 255, 255, .5);
+		color: rgba(255, 255, 255, 0.5);
 	}
 	.copyright {
 		color: rgba(255, 255, 255, 0.5);
@@ -198,5 +209,5 @@ export {
 	GenericH2,
 	SectionFour,
 	Footer,
-	Works
+	Works,
 }
