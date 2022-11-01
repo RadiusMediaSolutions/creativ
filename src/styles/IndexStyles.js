@@ -108,7 +108,7 @@ const FlexBoxIndex = styled.div`
 	}
 	p {
 		// text-transform: uppercase;
-		color: #c8ece9;
+		color: black;
 		text-align: center;
 		letter-spacing: 0.075em;
 		font-size: 1.5rem;
@@ -122,7 +122,7 @@ const GenericPara = styled.p`
 		props.lessSpacing ? "0.075em" : "0.225em"} !important;
 	font-size: ${props => (props.lessSize ? "1.5rem" : "2.5rem")} !important;
 	line-height: ${props => (props.lessSize ? "2rem" : "3rem")} !important;
-	color: ${props => (props.grey ? "#c8ece9" : "#666666")} !important;
+	color: ${props => (props.grey ? "#000000" : "#666666")} !important;
 `
 
 const GenericH2 = styled.h2`
@@ -134,7 +134,7 @@ const GenericH2 = styled.h2`
 `
 
 const SectionFour = styled.section`
-	background-color: #505393;
+	// background-color: #505393;
 	color: #ffffff;
 	text-align: center;
 	.header__section4 {
@@ -144,10 +144,21 @@ const SectionFour = styled.section`
 	.title__section4 {
 		font-size: 3rem;
 		padding: 1.35em 0;
-		color: #ffffff;
-		border-bottom: 2px solid #464981;
+		color: var(--heading-color);
+		// border-bottom: 2px solid #464981;
 		text-transform: uppercase;
 		margin: 0;
+		&:after {
+			content: "";
+			display: block;
+			height: 0.5rem;
+			width: 8rem;
+			position: absolute;
+			background: var(--heading-color);
+			margin-top: 15px;
+			left: 38%;
+			transform: translateX(12%);
+		}
 	}
 	.grid__section4 {
 		display: grid;

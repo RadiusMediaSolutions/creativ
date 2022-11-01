@@ -137,7 +137,13 @@ const IndexPage = () => (
 				</GenericPara>
 			</div>
 			<div className="grid__section4">
-				<div className="item1" style={{ backgroundColor: "#4D408E" }}>
+				<div
+					className="item1"
+					style={{
+						backgroundColor: "#fff",
+						boxShadow: "0 0 7px #ddd",
+					}}
+				>
 					<div className="flex__section4">
 						<FontAwesomeIcon
 							icon={faReact}

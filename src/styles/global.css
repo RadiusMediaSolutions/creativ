@@ -89,7 +89,7 @@ a {
 	width: var(--container-width);
 	position: fixed;
 	display: flex;
-	justify-content: space-between;
+	justify-content: space-around;
 	margin: 0 auto;
 	align-items: center;
 	z-index: 1030;
