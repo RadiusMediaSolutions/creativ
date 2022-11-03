@@ -1,5 +1,6 @@
 import * as React from "react"
 import * as styles from "../components/index.module.css"
+import background from "../images/road.jpeg"
 
 import {
 	FlexBoxIndex,
@@ -55,7 +56,7 @@ const MoreButton = styled.a`
 const IndexPage = () => (
 	<Layout>
 		<div style={{ position: "relative" }}>
-			<Banner></Banner>
+			<Banner bgImage={background} h2Content="SKY" spanContent="Develop"></Banner>
 		</div>
 		<SectionTwo>
 			<FlexBoxIndex>

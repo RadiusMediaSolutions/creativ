@@ -25,10 +25,10 @@ const Hero = styled.div`
 		z-index: 110;
 		content: "";
 		display: block;
-		height: 90vh;
+		height: ${props => props.inner ? `80vh` : `90vh`};
 		width: 100%;
 		position: relative;
-		background-image: url(${background});
+		background-image: url(${props => props.bgImage});
 		background-size: cover;
 		background-repeat: no-repeat;
 		background-position: center;
@@ -65,7 +65,7 @@ const TextWrapper = styled.div`
 	h1 span {
 		text-transform: uppercase;
 		font-family: "poppins";
-		background-image: url(${background});
+		background-image: url(${props => props.bgImage});
 		background-position: left center;
 		-webkit-background-clip: text;
 		-webkit-text-fill-color: transparent;
@@ -86,6 +86,7 @@ const TextWrapper = styled.div`
 `
 
 const BannerFooter = styled.div`
+	display: ${props => props.inner ? 'none' : 'block'};
 	position: relative;
 	background: linear-gradient(91deg, rgb(195 195 0 / 75%), #ddca7e);
 	height: 10vh;
@@ -121,23 +122,29 @@ const MoreLink = styled.a`
 	top: 50px;
 	left: 70px;
 `
-const Banner = () => {
+const Banner = ({
+	bgImage,
+	inner,
+	h2Content,
+	spanContent
+}) => {
 	return (
 		<>
 			<div>
-				<Hero />
-				<TextWrapper>
+				<Hero bgImage={bgImage} inner={!!inner} />
+
+				<TextWrapper bgImage={bgImage}>
 					<div>
-						<h2>SKY</h2>
+						<h2>{h2Content}</h2>
 						<h1>
-							<span>DEVELOP</span>
+							<span>{spanContent}</span>
 						</h1>
 						<p>Develop your inner beast</p>
 					</div>
 					<MoreLink>Learn More</MoreLink>
 				</TextWrapper>
 			</div>
-			<BannerFooter>
+			<BannerFooter inner={inner}>
 				<div class="icon-set-group">
 					<FontAwesomeIcon icon={faTwitter} color="#666;" size="1x" />
 					<FontAwesomeIcon

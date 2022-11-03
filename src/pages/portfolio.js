@@ -1,9 +1,9 @@
 import { GenericH2, Works } from "../styles/IndexStyles"
 
-import InnerBanner from "../components/banner"
+import Banner from "../components/banner"
 import Layout from "../components/layout"
 import Project from "../components/project"
-import Projectbackground from "../images/portfolio.jpg"
+import background from "../images/portfolio.jpg"
 import React from "react"
 
 const projects = [
@@ -20,18 +20,21 @@ const projects = [
 	{ title: "Project K", link: "https://www.google.com" },
 ]
 
-export default () => (
-	<Layout>
-		<div style={{ position: "relative" }}>
-			<InnerBanner project={{ Projectbackground }}></InnerBanner>
-		</div>
-		<Works>
-			<section class="gallery__flex">
-				{projects &&
-					projects.map(proj => (
-						<Project key={proj.title} project={proj} />
-					))}
-			</section>
-		</Works>
-	</Layout>
-)
+export default () => {
+	return (
+		<Layout>
+			<div style={{ position: "relative" }}>
+				<Banner bgImage={background} inner h2Content="SUN" spanContent="Developer"></Banner>
+			</div>
+			<Works>
+				<section class="gallery__flex">
+					{projects &&
+						projects.map(proj => (
+							<Project key={proj.title} project={proj} />
+						))}
+				</section>
+			</Works>
+		</Layout>
+	)
+
+}
