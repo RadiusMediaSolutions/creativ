@@ -64,6 +64,10 @@ html {
 		width: 1600px;
 		margin: 0 auto;
 	}
+	.fixed-top {
+		width: 1400px;
+		position: fixed;
+	}
 }
 
 body {
