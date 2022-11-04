@@ -109,7 +109,7 @@ img {
 
 .fixed-top {
 	padding: 1.5rem 4rem;
-	width: var(--container-width);
+	width: 1400px;
 	position: fixed;
 	display: flex;
 	justify-content: end;

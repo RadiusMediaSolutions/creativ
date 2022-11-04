@@ -98,6 +98,7 @@ const FlexBoxIndex = styled.div`
 		justify-content: center;
 		align-items: center;
 		flex-direction: column;
+		margin-left: 2rem;
 	}
 	h2 {
 		font-size: 3rem;
@@ -111,7 +112,7 @@ const FlexBoxIndex = styled.div`
 		color: black;
 		text-align: center;
 		letter-spacing: 0.075em;
-		font-size: 1.5rem;
+		font-size: 1.2rem;
 		margin: 0 auto;
 	}
 `
@@ -167,7 +168,7 @@ const SectionFour = styled.section`
 	}
 	.grid__section4 {
 		display: grid;
-		grid-template-columns: 1fr 1fr 1fr;
+		grid-template-columns: 1fr 1fr;
 		grid-gap: 20px;
 		width: 90%;
 		margin: 0 auto;
@@ -276,6 +277,59 @@ const Works = styled.div`
 		justify-items: center;
 	}
 `
+
+const ContactSection = styled.section`
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-gap: 20px;
+	width: 100%;
+	text-align: center;
+
+	.box {
+		border: 1px solid #ddd;
+		padding: 20px 10px;
+	}
+	p {
+		color: rgba(255, 255, 255, 0.5);
+		font-size: 1.2rem !important;
+		padding: 0;
+		text-align: left;
+	}
+`
+const CntForm = styled.div`
+	h2 {
+		text-align: center !important;
+	}
+	p {
+		color: rgba(255, 255, 255, 0.5);
+		font-size: 1.2rem !important;
+		padding: 0;
+		text-align: left;
+		display: inline;
+		margin-bottom: 20px;
+	}
+	form {
+		margin-top: 20px;
+	}
+	input,
+	textarea {
+		display: block;
+		width: 600px;
+		border: 1px solid #ccc;
+		padding: 10px;
+		margin-bottom: 20px;
+		background: transparent;
+	}
+	button {
+		padding: 15px 30px;
+		cursor: pointer;
+		background: #9b9b01;
+		border: none;
+		font-size: 1.2rem;
+		color: white;
+		text-transform: uppercase;
+	}
+`
 export {
 	MoreText,
 	SectionTwo,
@@ -289,4 +343,6 @@ export {
 	Footer,
 	Copyright,
 	Works,
+	ContactSection,
+	CntForm,
 }

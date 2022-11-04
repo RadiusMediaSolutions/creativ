@@ -1,7 +1,6 @@
 import * as React from "react"
 
 import { GenericPara, MoreText } from "../styles/IndexStyles"
-// import { Projectbackground, background } from "../images"
 import { faCode, faGem, faHeart, fas } from "@fortawesome/free-solid-svg-icons"
 import {
 	faFacebook,
@@ -15,6 +14,7 @@ import Projectbackground from "../images/portfolio.jpg"
 import background from "../images/road.jpeg"
 import styled from "styled-components"
 
+// import { Projectbackground, background } from "../images"
 const Hero = styled.div`
 	& {
 		background: #2b2d2f;
@@ -25,7 +25,7 @@ const Hero = styled.div`
 		z-index: 110;
 		content: "";
 		display: block;
-		height: ${props => props.inner ? `80vh` : `90vh`};
+		height: ${props => (props.inner ? `80vh` : `90vh`)};
 		width: 100%;
 		position: relative;
 		background-image: url(${props => props.bgImage});
@@ -86,7 +86,7 @@ const TextWrapper = styled.div`
 `
 
 const BannerFooter = styled.div`
-	display: ${props => props.inner ? 'none' : 'block'};
+	display: ${props => (props.inner ? "none" : "block")};
 	position: relative;
 	background: linear-gradient(91deg, rgb(195 195 0 / 75%), #ddca7e);
 	height: 10vh;
@@ -122,12 +122,7 @@ const MoreLink = styled.a`
 	top: 50px;
 	left: 70px;
 `
-const Banner = ({
-	bgImage,
-	inner,
-	h2Content,
-	spanContent
-}) => {
+const Banner = ({ bgImage, inner, h2Content, spanContent }) => {
 	return (
 		<>
 			<div>
@@ -159,49 +154,6 @@ const Banner = ({
 					/>
 				</div>
 			</BannerFooter>
-		</>
-	)
-}
-const ProjectHero = styled.div`
-	& {
-		background: #2b2d2f;
-		height: 60vh;
-		// position: absolute;
-	}
-	&:after {
-		z-index: 110;
-		content: "";
-		display: block;
-		height: 60vh;
-		width: 100%;
-		position: relative;
-		background-image: url(${Projectbackground});
-		// background-image: this.props.background-image;
-		background-size: cover;
-		background-repeat: no-repeat;
-		background-position: center;
-		clip-path: polygon(15% 0%, 100% 0%, 100% 100%, 60% 100%);
-	}
-	& > * {
-		z-index: 150;
-	}
-`
-const InnerBanner = props => {
-	return (
-		<>
-			<div>
-				<ProjectHero />
-				<TextWrapper>
-					<div>
-						<h2>SKY</h2>
-						<h1>
-							<span>DEVELOP</span>
-						</h1>
-						<p>Develop your inner beast</p>
-					</div>
-					<MoreLink>Learn More</MoreLink>
-				</TextWrapper>
-			</div>
 		</>
 	)
 }

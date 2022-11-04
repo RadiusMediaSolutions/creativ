@@ -1,6 +1,5 @@
 import * as React from "react"
 import * as styles from "../components/index.module.css"
-import background from "../images/road.jpeg"
 
 import {
 	FlexBoxIndex,
@@ -33,7 +32,10 @@ import Layout from "../components/layout"
 import { Link } from "gatsby"
 import Seo from "../components/seo"
 import { StaticImage } from "gatsby-plugin-image"
+import background from "../images/road.jpeg"
+import bolt from "../images/bolttie.jpeg"
 import { library } from "@fortawesome/fontawesome-svg-core"
+import springhurst from "../images/flats-at-springhurst.jpg"
 import styled from "styled-components"
 
 const MoreButton = styled.a`
@@ -56,7 +58,11 @@ const MoreButton = styled.a`
 const IndexPage = () => (
 	<Layout>
 		<div style={{ position: "relative" }}>
-			<Banner bgImage={background} h2Content="SKY" spanContent="Develop"></Banner>
+			<Banner
+				bgImage={background}
+				h2Content="SKY"
+				spanContent="Develop"
+			></Banner>
 		</div>
 		<SectionTwo>
 			<FlexBoxIndex>
@@ -67,18 +73,15 @@ const IndexPage = () => (
 					/>
 				</div>
 				<div className="text_section3">
-					<GenericH2 none>Website Development</GenericH2>
+					<GenericH2 none>WELCOME – WE ARE SKYNET</GenericH2>
 					<GenericPara lessSize lessSpacing>
-						Hand code beautiful websites using HTML3, CSS3, JS,
-						because they are great
+						Our proven methodology creates a comprehensive strategy
+						combining the services of an architect, an engineer and
+						a construction manager as one unified package towards
+						your construction goals whether its the design of a new
+						building or a renovation or remodel of existing space.
 					</GenericPara>
-					<GenericPara lessSize lessSpacing>
-						Lorem Ipsum is simply dummy text of the printing and
-						typesetting industry. Lorem Ipsum has been the
-						industry's standard dummy text ever since the 1500s,
-						when an unknown printer took a galley of type and
-						scrambled it to make a type specimen book.
-					</GenericPara>
+
 					<MoreButton>Learn More</MoreButton>
 				</div>
 			</FlexBoxIndex>
@@ -146,12 +149,13 @@ const IndexPage = () => (
 							fixedWidth
 						/>
 						<GenericH2 none lessSize>
-							React
+							Project Management
 						</GenericH2>
 					</div>
 					<GenericPara lessSize lessSpacing grey>
-						Modern JS framework which will make your web application
-						extremely fast and handy for every user
+						We all know that great work is achieved with a great
+						team. At Skynet, we have gathered an outstanding team of
+						experts that work together to bring your dreams to life.
 					</GenericPara>
 				</div>
 				<div
@@ -170,12 +174,15 @@ const IndexPage = () => (
 							fixedWidth
 						/>
 						<GenericH2 none lessSize>
-							React Native
+							Design Build
 						</GenericH2>
 					</div>
 					<GenericPara lessSize lessSpacing grey>
-						Modern JS framework which will make your web application
-						extremely fast and handy for every user
+						We implement the Design/Build approach toward projects
+						because it makes a sizable impact on your budget and
+						your timeline. Our proven methodology combines the
+						services of architects, engineers, and construction
+						managers
 					</GenericPara>
 				</div>
 				<div
@@ -194,12 +201,15 @@ const IndexPage = () => (
 							fixedWidth
 						/>
 						<GenericH2 none lessSize>
-							Javascript
+							Take Off
 						</GenericH2>
 					</div>
 					<GenericPara lessSize lessSpacing grey>
-						Modern JS framework which will make your web application
-						extremely fast and handy for every user
+						Once the blueprints are drafted and adopted, the
+						take-off begins. Our highly experienced team will
+						determine the volume and quality of materials required
+						to realize your project. This is a crucial step in the
+						process that supports the precision of the estimate.
 					</GenericPara>
 				</div>
 				<div
@@ -218,60 +228,15 @@ const IndexPage = () => (
 							fixedWidth
 						/>
 						<GenericH2 none lessSize>
-							HTML5
+							Estimate
 						</GenericH2>
 					</div>
 					<GenericPara lessSize lessSpacing grey>
-						Modern JS framework which will make your web application
-						extremely fast and handy for every user
-					</GenericPara>
-				</div>
-				<div
-					className="item5"
-					style={{
-						color: "#000",
-						backgroundColor: "#fff",
-						boxShadow: "0 0 7px #ddd",
-					}}
-				>
-					<div className="flex__section4">
-						<FontAwesomeIcon
-							icon={faCss3}
-							color="#00FFCC"
-							size="3x"
-							fixedWidth
-						/>
-						<GenericH2 none lessSize>
-							CSS3
-						</GenericH2>
-					</div>
-					<GenericPara lessSize lessSpacing grey>
-						Modern JS framework which will make your web application
-						extremely fast and handy for every user
-					</GenericPara>
-				</div>
-				<div
-					className="item6"
-					style={{
-						color: "#000",
-						backgroundColor: "#fff",
-						boxShadow: "0 0 7px #ddd",
-					}}
-				>
-					<div className="flex__section4">
-						<FontAwesomeIcon
-							icon={faGalacticSenate}
-							color="#00FFCC"
-							size="3x"
-							fixedWidth
-						/>
-						<GenericH2 none lessSize>
-							Gatsby
-						</GenericH2>
-					</div>
-					<GenericPara lessSize lessSpacing grey>
-						Modern JS framework which will make your web application
-						extremely fast and handy for every user
+						Your estimate will go through a detailed cost analysis
+						to determine all the materials, manpower, and time
+						required. You will be involved through every step, as we
+						collectively decide, what will work best for your
+						project.
 					</GenericPara>
 				</div>
 			</div>
@@ -280,34 +245,46 @@ const IndexPage = () => (
 			<div className="title__section5">Our Recent Works</div>
 			<FlexBoxIndex>
 				<div className="image">
-					<img
+					<img src={bolt} alt="Logo" width="50" />
+					{/* <img
 						src="https://source.unsplash.com/LXI5kqCdEcE/600x480"
 						alt="Picture 1"
-					/>
+					/> */}
 				</div>
 				<div className="text_section3">
-					<GenericH2 none>Website Development</GenericH2>
+					<GenericH2 none>BOLT + TIE Apartments</GenericH2>
 					<GenericPara lessSize lessSpacing>
-						Hand code beautiful websites using HTML3, CSS3, JS,
-						because they are great
+						This streamlined strategy allows the various
+						stakeholders in a project from the owner, the architect,
+						the engineer and the estimator to communicate
+						effectively and eliminate issues between the design part
+						of the build to the takeoff and estimating part of the
+						build dealing with manufacturers specifications and
+						suppliers.
 					</GenericPara>
 					<MoreButton>View Details</MoreButton>
 				</div>
 			</FlexBoxIndex>
 			<FlexBoxIndex inverse>
 				<div className="text_section3">
-					<GenericH2 none>Website Design</GenericH2>
+					<GenericH2 none>SPRINGHURST Flats</GenericH2>
 					<GenericPara lessSize lessSpacing>
-						Talented and Experienced Web Designers who can design
-						and craft beautiful websites
+						This streamlined strategy allows the various
+						stakeholders in a project from the owner, the architect,
+						the engineer and the estimator to communicate
+						effectively and eliminate issues between the design part
+						of the build to the takeoff and estimating part of the
+						build dealing with manufacturers specifications and
+						suppliers.
 					</GenericPara>
 					<MoreButton>View Details</MoreButton>
 				</div>
 				<div className="image">
-					<img
+					<img src={springhurst} alt="Logo" width="50" />
+					{/* <img
 						src="https://source.unsplash.com/f77Bh3inUpE/600x480"
 						alt="pic2"
-					/>
+					/> */}
 				</div>
 			</FlexBoxIndex>
 		</SectionFive>

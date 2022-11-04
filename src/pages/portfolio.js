@@ -3,8 +3,8 @@ import { GenericH2, Works } from "../styles/IndexStyles"
 import Banner from "../components/banner"
 import Layout from "../components/layout"
 import Project from "../components/project"
-import background from "../images/portfolio.jpg"
 import React from "react"
+import background from "../images/portfolio.jpg"
 
 const projects = [
 	{ title: "Project A", link: "https://www.google.com" },
@@ -24,7 +24,12 @@ export default () => {
 	return (
 		<Layout>
 			<div style={{ position: "relative" }}>
-				<Banner bgImage={background} inner h2Content="SUN" spanContent="Developer"></Banner>
+				<Banner
+					bgImage={background}
+					inner
+					h2Content="SKY"
+					spanContent="Project"
+				></Banner>
 			</div>
 			<Works>
 				<section class="gallery__flex">
@@ -36,5 +41,4 @@ export default () => {
 			</Works>
 		</Layout>
 	)
-
 }
