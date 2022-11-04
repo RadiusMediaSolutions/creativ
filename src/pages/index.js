@@ -73,7 +73,7 @@ const IndexPage = () => (
 					/>
 				</div>
 				<div className="text_section3">
-					<GenericH2 none>WELCOME – WE ARE SKYNET</GenericH2>
+					<GenericH2 none>WELCOME SKY DEVELOP</GenericH2>
 					<GenericPara lessSize lessSpacing>
 						Our proven methodology creates a comprehensive strategy
 						combining the services of an architect, an engineer and
