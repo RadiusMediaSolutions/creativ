@@ -25,6 +25,10 @@ const SiteHeader = styled.header`
 		color:#9b9b00 !important;
 		font-weight:bold;
 	}
+	.active span {
+	color: #9b9b01;
+}
+
 `
 
 const MenuItem = styled.span`
@@ -58,13 +62,33 @@ const Header = ({ siteTitle }) => (
 						/> */}
 					</Link>
 				</div>
-				<Link to="/" style={{ textDecoration: `none` }}>
-					<MenuItem selected>Home</MenuItem>
+				<Link
+					exact
+					activeClassName="active"
+					to="/"
+					style={{ textDecoration: `none` }}
+				>
+					<MenuItem>Home</MenuItem>
 				</Link>
-				<Link to="/portfolio" style={{ textDecoration: `none` }}>
+				<Link
+					activeClassName="active"
+					to="/portfolio"
+					style={{ textDecoration: `none` }}
+				>
 					<MenuItem>Portfolio</MenuItem>
 				</Link>
-				<Link to="/contact" style={{ textDecoration: `none` }}>
+				<Link
+					activeClassName="active"
+					to="/blog"
+					style={{ textDecoration: `none` }}
+				>
+					<MenuItem>Blog</MenuItem>
+				</Link>
+				<Link
+					activeClassName="active"
+					to="/contact"
+					style={{ textDecoration: `none` }}
+				>
 					<MenuItem>Contact</MenuItem>
 				</Link>
 			</div>
