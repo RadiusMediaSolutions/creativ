@@ -7,7 +7,7 @@ import React from "react"
 import background from "../images/portfolio.jpg"
 
 const projects = [
-	{ title: "Project A", link: "https://www.google.com" },
+	{ title: "FLATS AT SPRINGHURST", link: "/clients" },
 	{ title: "Project B", link: "https://www.google.com" },
 	{ title: "Project C", link: "https://www.google.com" },
 	{ title: "Project D", link: "https://www.google.com" },

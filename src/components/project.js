@@ -13,7 +13,7 @@ const Project = ({ project }) => {
 			<div class="card__overlay">
 				<h5 class="card-title">{project.title}</h5>
 				<a class="card-link" href={project.link} target="_blank">
-					Link
+					View Details
 				</a>
 			</div>
 		</div>

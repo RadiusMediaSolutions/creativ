@@ -330,6 +330,25 @@ const CntForm = styled.div`
 		text-transform: uppercase;
 	}
 `
+const Clients = styled.div`
+	h2 {
+		text-align: center !important;
+	}
+	p {
+		color: rgba(255, 255, 255, 0.5);
+		font-size: 1.2rem !important;
+		padding: 0;
+		text-align: left;
+		display: inline;
+		margin-bottom: 20px;
+	}
+	.gallery .card {
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr 1fr;
+		// grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+		grid-gap: 20px;
+	}
+`
 export {
 	MoreText,
 	SectionTwo,
@@ -345,4 +364,5 @@ export {
 	Works,
 	ContactSection,
 	CntForm,
+	Clients,
 }

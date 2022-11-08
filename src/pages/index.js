@@ -142,12 +142,12 @@ const IndexPage = () => (
 					}}
 				>
 					<div className="flex__section4">
-						<FontAwesomeIcon
+						{/* <FontAwesomeIcon
 							icon={faReact}
 							color="#00FFCC"
 							size="3x"
 							fixedWidth
-						/>
+						/> */}
 						<GenericH2 none lessSize>
 							Project Management
 						</GenericH2>
@@ -167,12 +167,12 @@ const IndexPage = () => (
 					}}
 				>
 					<div className="flex__section4">
-						<FontAwesomeIcon
+						{/* <FontAwesomeIcon
 							icon={faCode}
 							color="#00FFCC"
 							size="3x"
 							fixedWidth
-						/>
+						/> */}
 						<GenericH2 none lessSize>
 							Design Build
 						</GenericH2>
@@ -194,12 +194,12 @@ const IndexPage = () => (
 					}}
 				>
 					<div className="flex__section4">
-						<FontAwesomeIcon
+						{/* <FontAwesomeIcon
 							icon={faJs}
 							color="#00FFCC"
 							size="3x"
 							fixedWidth
-						/>
+						/> */}
 						<GenericH2 none lessSize>
 							Take Off
 						</GenericH2>
@@ -221,12 +221,12 @@ const IndexPage = () => (
 					}}
 				>
 					<div className="flex__section4">
-						<FontAwesomeIcon
+						{/* <FontAwesomeIcon
 							icon={faGem}
 							color="#00FFCC"
 							size="3x"
 							fixedWidth
-						/>
+						/> */}
 						<GenericH2 none lessSize>
 							Estimate
 						</GenericH2>

@@ -1,9 +1,14 @@
 import * as React from "react"
 
+import {
+	FlexBoxIndex,
+	GenericH2,
+	GenericH3,
+	GenericPara,
+} from "../styles/IndexStyles"
 import styled, { keyframes } from "styled-components"
 
 import Canvas from "../components/canvas"
-import { FlexBoxIndex } from "../styles/IndexStyles"
 import { Link } from "gatsby"
 
 const cssProps = {
@@ -114,12 +119,19 @@ const Container = styled.div`
 		animation: ${cursor} ${cssProps.speed};
 		animation-iteration-count: 5;
 	}
+	p {
+		color: white;
+	}
 `
-
 const Companies = () => {
 	return (
 		<>
-			<div style={{ display: `flex`, backgroundColor: `#2b2d2f` }}>
+			<div
+				style={{
+					display: `flex`,
+					backgroundColor: `#2b2d2f`,
+				}}
+			>
 				<FlexBoxIndex>
 					<Container>
 						<h1>
@@ -132,6 +144,20 @@ const Companies = () => {
 				</FlexBoxIndex>
 				<FlexBoxIndex inverse>
 					<Canvas />
+					<div className="stats">
+						<div className="design">
+							<GenericH2 none>200</GenericH2>
+							<GenericPara lessSize>Design</GenericPara>
+						</div>
+						<div className="estimate">
+							<GenericH2 none>180</GenericH2>
+							<GenericPara lessSize>Estimate</GenericPara>
+						</div>
+						<div className="execute">
+							<GenericH2 none>100</GenericH2>
+							<GenericPara lessSize>Execute</GenericPara>
+						</div>
+					</div>
 				</FlexBoxIndex>
 			</div>
 		</>

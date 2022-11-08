@@ -134,7 +134,7 @@ const Banner = ({ bgImage, inner, h2Content, spanContent }) => {
 						<h1>
 							<span>{spanContent}</span>
 						</h1>
-						<p>Develop your inner beast</p>
+						{/* <p>Develop your inner beast</p> */}
 					</div>
 					<MoreLink>Learn More</MoreLink>
 				</TextWrapper>
