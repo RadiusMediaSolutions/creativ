@@ -23,6 +23,12 @@ const BlogList = styled.div`
 		padding: 2rem;
 		background: #e9e7e7;
 	}
+	p {
+		margin-bottom: var(--space-3);
+	}
+	a {
+		color: #9b9b01;
+	}
 `
 const BlogPage = ({ data }) => {
 	return (
@@ -38,8 +44,15 @@ const BlogPage = ({ data }) => {
 			<BlogList>
 				{data.allMdx.nodes.map(node => (
 					<article key={node.id}>
-						<h2>{node.frontmatter.title}</h2>
-						<p>Posted: {node.frontmatter.date}</p>
+						<GenericH3 none>
+							<Link to={`/blog/${node.frontmatter.slug}`}>
+								{node.frontmatter.title}
+							</Link>
+						</GenericH3>
+						<span>
+							<b>Posted:</b> {node.frontmatter.date}
+						</span>
+						<p>{node.excerpt}</p>
 					</article>
 				))}
 			</BlogList>
@@ -54,6 +67,7 @@ export const query = graphql`
 				frontmatter {
 					date(formatString: "MMMM D, YYYY")
 					title
+					slug
 				}
 				id
 				excerpt

@@ -117,6 +117,15 @@ const FlexBoxIndex = styled.div`
 	}
 `
 
+const PostPara = styled.p`
+	margin: 0;
+	max-width: 100% !important;
+	letter-spacing: ${props => (props.lessSpacing ? "0.075em" : "")} !important;
+	font-size: ${props => (props.lessSize ? "1rem" : "1.3rem")} !important;
+	line-height: ${props => (props.lessSize ? "2rem" : "3rem")} !important;
+	color: ${props => (props.grey ? "#000000" : "#666666")} !important;
+`
+
 const GenericPara = styled.p`
 	margin: 0 auto;
 	letter-spacing: ${props => (props.lessSpacing ? "0.075em" : "")} !important;
@@ -355,6 +364,7 @@ export {
 	SectionThree,
 	FlexBoxIndex,
 	GenericPara,
+	PostPara,
 	GenericH2,
 	GenericH3,
 	SectionFour,
