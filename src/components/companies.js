@@ -3,13 +3,11 @@ import * as React from "react"
 import {
 	FlexBoxIndex,
 	GenericH2,
-	GenericH3,
 	GenericPara,
 } from "../styles/IndexStyles"
 import styled, { keyframes } from "styled-components"
 
 import Canvas from "../components/canvas"
-import { Link } from "gatsby"
 
 const cssProps = {
 	white: `#fff`,

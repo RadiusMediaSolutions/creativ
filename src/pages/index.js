@@ -7,23 +7,8 @@ import {
 	GenericPara,
 	SectionFive,
 	SectionFour,
-	SectionThree,
 	SectionTwo,
 } from "../styles/IndexStyles"
-import {
-	MoreText,
-	faCode,
-	faGem,
-	faHeart,
-	fas,
-} from "@fortawesome/free-solid-svg-icons"
-import {
-	faCss3,
-	faGalacticSenate,
-	faHtml5,
-	faJs,
-	faReact,
-} from "@fortawesome/free-brands-svg-icons"
 
 import Banner from "../components/banner"
 import Companies from "../components/companies"
@@ -52,7 +37,7 @@ const MoreButton = styled.a`
 	text-align: center;
 	text-decoration: none;
 	text-transform: uppercase;
-	margin-left: 100px;
+	// margin-left: 100px;
 	top: 50px;
 `
 const IndexPage = () => (

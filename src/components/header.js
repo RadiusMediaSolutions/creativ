@@ -1,11 +1,8 @@
 import * as React from "react"
 
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { GenericPara } from "../styles/IndexStyles"
 import { Link } from "gatsby"
 import Logo from "../images/logo-small.png"
 import PropTypes from "prop-types"
-import { faSkyatlas } from "@fortawesome/free-brands-svg-icons"
 import styled from "styled-components"
 
 const SiteHeader = styled.header`
@@ -14,8 +11,6 @@ const SiteHeader = styled.header`
 		margin-top: 0px;
 		background: whitesmoke;
 		text-transform: uppercase;
-		border: 2px solid #9b9b01;
-		// border-left: 6px solid #9b9b01;
 		display: flex;
     	align-items: center;
 	.menu__items > * {
@@ -55,11 +50,6 @@ const Header = ({ siteTitle }) => (
 					>
 						{/* {siteTitle} */}
 						<img src={Logo} alt="Logo" width="50" />
-						{/* <FontAwesomeIcon
-							icon={faSkyatlas}
-							color="#9b9b00 !important;"
-							size="3x"
-						/> */}
 					</Link>
 				</div>
 				<Link

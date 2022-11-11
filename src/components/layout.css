@@ -126,6 +126,25 @@ strong {
 dfn {
 	font-style: italic;
 }
+/* h2 {
+	font-family: poppins;
+	font-size: 3rem;
+	padding: 1.5rem 0;
+	color: #9b9b01;
+	border-bottom: 2px solid #1d9c91;
+	text-transform: uppercase;
+	letter-spacing: 0.6rem;
+	margin: 0;
+}
+h2:after {
+	content: "";
+	display: flex;
+	margin: 0 auto;
+	height: 0.5rem;
+	width: 8rem;
+	background: var(--heading-color);
+	margin-top: 15px;
+} */
 h1 {
 	margin: 0;
 	margin-bottom: 3rem;

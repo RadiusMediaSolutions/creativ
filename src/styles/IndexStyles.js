@@ -37,6 +37,7 @@ const SectionTwo = styled.section`
 	}
 
 	h2 {
+		font-family: poppins;
 		font-size: 3rem;
 		padding: 1.5rem 0;
 		color: #9b9b01;
@@ -62,7 +63,7 @@ const SectionTwo = styled.section`
 		margin: 0 auto;
 		padding-top: 0.5rem;
 		letter-spacing: 0.225em;
-		font-size: 1.5rem;
+		font-size: 1.1rem;
 	}
 
 	h5 {
@@ -129,7 +130,7 @@ const PostPara = styled.p`
 const GenericPara = styled.p`
 	margin: 0 auto;
 	letter-spacing: ${props => (props.lessSpacing ? "0.075em" : "")} !important;
-	font-size: ${props => (props.lessSize ? "1.5rem" : "2.5rem")} !important;
+	font-size: ${props => (props.lessSize ? "1.3rem" : "2.5rem")} !important;
 	line-height: ${props => (props.lessSize ? "2rem" : "3rem")} !important;
 	color: ${props => (props.grey ? "#000000" : "#666666")} !important;
 `
@@ -159,6 +160,7 @@ const SectionFour = styled.section`
 		margin: 0 auto;
 	}
 	.title__section4 {
+		font-family: poppins;
 		font-size: 3rem;
 		padding: 1.35em 0;
 		color: var(--heading-color);
@@ -193,7 +195,10 @@ const SectionFour = styled.section`
 		padding: 1rem;
 	}
 	.flex__section4 > h2 {
+		color: #9b9b01;
 		margin-left: 1rem;
+		// font-family: poppins;
+		font-size: 1.5rem !important;
 	}
 `
 const SectionFive = styled.section`
@@ -205,6 +210,7 @@ const SectionFive = styled.section`
 		margin: 0 auto;
 	}
 	.title__section5 {
+		font-family: poppins;
 		font-size: 3rem;
 		padding: 1.35em 0;
 		color: var(--heading-color);
@@ -240,6 +246,7 @@ const SectionFive = styled.section`
 	}
 	.flex__section4 > h2 {
 		margin-left: 1rem;
+		font-family: poppins;
 	}
 `
 
