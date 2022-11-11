@@ -20,7 +20,7 @@ const projects = [
 	{ title: "Project K", link: "https://www.google.com" },
 ]
 
-export default () => {
+const Portfolio = () => {
 	return (
 		<Layout>
 			<div style={{ position: "relative" }}>
@@ -42,3 +42,4 @@ export default () => {
 		</Layout>
 	)
 }
+export default Portfolio
