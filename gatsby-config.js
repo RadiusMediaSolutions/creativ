@@ -1,8 +1,8 @@
 module.exports = {
 	siteMetadata: {
-		title: `Random Hacker`,
-		description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-		author: `@gatsbyjs`,
+		title: `Skynet`,
+		description: `SkyNet Professional Solutions - We develop your tomorrow `,
+		author: `Radius Media Solutions`,
 		siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`,
 	},
 	plugins: [
