@@ -5,25 +5,40 @@
  * See: https://www.gatsbyjs.com/docs/use-static-query/
  */
 
-import * as React from "react"
-import PropTypes from "prop-types"
-import { useStaticQuery, graphql } from "gatsby"
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { Footer } from "../styles/IndexStyles"
-import Header from "./header"
 import "./layout.css"
-import { faTwitter, faFacebook, faInstagram, faLinkedin, faYoutube, faPinterest } from '@fortawesome/free-brands-svg-icons'
+
+import * as React from "react"
+
+import {
+	Copyright,
+	Footer,
+	GenericH3,
+	GenericPara,
+} from "../styles/IndexStyles"
+import { Link, graphql, useStaticQuery } from "gatsby"
+import {
+	faFacebook,
+	faInstagram,
+	faLinkedin,
+	faPinterest,
+	faTwitter,
+	faYoutube,
+} from "@fortawesome/free-brands-svg-icons"
+
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import Header from "./header"
+import PropTypes from "prop-types"
 
 const Layout = ({ children }) => {
 	const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          title
-        }
-      }
-    }
-  `)
+		query SiteTitleQuery {
+			site {
+				siteMetadata {
+					title
+				}
+			}
+		}
+	`)
 
 	return (
 		<>
@@ -39,20 +54,57 @@ const Layout = ({ children }) => {
 						fontSize: `var(--font-sm)`,
 					}}
 				>
-					<div class="icons">
-						<FontAwesomeIcon icon={faTwitter} size="2x" fixedWidth />
-						<FontAwesomeIcon icon={faFacebook} size="2x" fixedWidth />
-						<FontAwesomeIcon icon={faInstagram} size="2x" fixedWidth />
-						<FontAwesomeIcon icon={faLinkedin} size="2x" fixedWidth />
-						<FontAwesomeIcon icon={faYoutube} size="2x" fixedWidth />
-						<FontAwesomeIcon icon={faPinterest} size="2x" fixedWidth />
+					<div className="ftr1">
+						<GenericH3 none>Sky Develop</GenericH3>
+						<GenericPara lessSize>
+							We use modern and latest technologies which help our
+							clients as they are high scalable and maintainable
+						</GenericPara>
 					</div>
-					<div class="copyright">
-						<span>&copy; {new Date().getFullYear()} , RandomHacker </span>
-						<span>&middot; Built by
-					{` `}RadiusMedia</span>
+					<div className="ftr2">
+						<GenericH3 none>Phone Number</GenericH3>
+						<Link
+							to="/"
+							style={{
+								color: "#666666 ",
+								fontSize: `var(--font-sm)`,
+								textDecoration: `none`,
+							}}
+						>
+							123-456-7890
+						</Link>
+					</div>
+					<div className="ftr3">
+						<GenericH3 none>Email Address</GenericH3>
+						<Link
+							to="/"
+							style={{
+								color: "#666666 ",
+								fontSize: `var(--font-sm)`,
+								textDecoration: `none`,
+							}}
+						>
+							skydevelop@mail.com
+						</Link>
+					</div>
+					<div className="ftr4">
+						<GenericH3 none>Address</GenericH3>
+						<GenericPara lessSize>
+							1234 Prather Road, Louisville KY 47172
+						</GenericPara>
 					</div>
 				</Footer>
+				<Copyright>
+					<div>
+						<span>
+							&copy; {new Date().getFullYear()} , RandomHacker{" "}
+						</span>
+						<span>
+							&middot; Built by
+							{` `}RadiusMedia
+						</span>
+					</div>
+				</Copyright>
 			</div>
 		</>
 	)

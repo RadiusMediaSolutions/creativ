@@ -1,71 +1,87 @@
 import * as React from "react"
-import PropTypes from "prop-types"
+
 import { Link } from "gatsby"
-import { GenericPara } from "../styles/IndexStyles"
-import styled from 'styled-components'
+import Logo from "../images/logo-small.png"
+import PropTypes from "prop-types"
+import styled from "styled-components"
 
 const SiteHeader = styled.header`
-	display: flex;
-	margin: 0 auto;
-	// justify-content: space-between;
-	padding: 40px var(--size-gutter);
-	align-items: center;
-	width: 100%;
-	height: 30px;
-	background-color: transparent;
-	color: #ffffff;
-	padding: 3rem 0;
-	z-index: 1000;
-	position: absolute;
-	top: 0;
-	left: 0;
 	.menu__items {
-		position: fixed;
-		left: 76%;
-		padding:15px 10px;
-		margin-top:0px;
-		transform: translateX(-50%);
+		padding: 10px 30px;
+		margin-top: 0px;
 		background: whitesmoke;
-		display: flex;
 		text-transform: uppercase;
-		border: 2px solid #9b9b01;
-		border-left: 6px solid #9b9b01;
-	}
+		display: flex;
+    	align-items: center;
 	.menu__items > * {
 		margin-right: 1rem;
 	}
+	.site-logo a{
+		color:#9b9b00 !important;
+		font-weight:bold;
+	}
+	.active span {
+	color: #9b9b01;
+}
+
 `
 
 const MenuItem = styled.span`
-	color: ${props => props.selected ? `#9b9b00` : `#666`};
+	color: ${props => (props.selected ? `#9b9b00` : `#666`)};
 	font-size: 24px;
 	font-weight: bold;
-	padding:10px;
-	font-family: 'Poppins';
-    color: ;
-	// background: ${props => props.selected ? 'lightgrey' : 'white'};
+	padding: 10px 20px;
+	font-family: "Poppins";
+	color: ;
+	// background: ${props => (props.selected ? "lightgrey" : "white")};
 `
 const Header = ({ siteTitle }) => (
 	<SiteHeader>
-		<Link
-			to="/"
-			style={{
-				fontSize: `var(--font-sm)`,
-				textDecoration: `none`,
-			}}
-		>
-			{siteTitle}
-		</Link>
-		<div className="menu__items">
-			<Link to="/portfolio" style={{textDecoration: `none`}}>
-				<MenuItem selected>Home</MenuItem>
-			</Link>
-			<Link to="/portfolio" style={{textDecoration: `none`}}>
-				<MenuItem>Portfolio</MenuItem>
-			</Link>
-			<Link to="/contact" style={{textDecoration: `none`}}>
-				<MenuItem>Contact</MenuItem>
-			</Link>
+		<div class="fixed-top">
+			<div className="menu__items">
+				<div class="site-logo">
+					<Link
+						to="/"
+						style={{
+							fontSize: `var(--font-sm)`,
+							textDecoration: `none`,
+							marginRight: `15px`,
+						}}
+					>
+						{/* {siteTitle} */}
+						<img src={Logo} alt="Logo" width="50" />
+					</Link>
+				</div>
+				<Link
+					exact
+					activeClassName="active"
+					to="/"
+					style={{ textDecoration: `none` }}
+				>
+					<MenuItem>Home</MenuItem>
+				</Link>
+				<Link
+					activeClassName="active"
+					to="/portfolio"
+					style={{ textDecoration: `none` }}
+				>
+					<MenuItem>Portfolio</MenuItem>
+				</Link>
+				<Link
+					activeClassName="active"
+					to="/blog"
+					style={{ textDecoration: `none` }}
+				>
+					<MenuItem>Blog</MenuItem>
+				</Link>
+				<Link
+					activeClassName="active"
+					to="/contact"
+					style={{ textDecoration: `none` }}
+				>
+					<MenuItem>Contact</MenuItem>
+				</Link>
+			</div>
 		</div>
 	</SiteHeader>
 )
