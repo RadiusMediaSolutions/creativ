@@ -30,7 +30,7 @@ const SectionTwo = styled.section`
 	position: relative;
 	background-color: whitesmoke;
 	text-align: center;
-	padding: 10rem 0;
+	padding: 7rem 0;
 	div {
 		// width: 66%;
 		margin: 0 auto;
@@ -62,7 +62,6 @@ const SectionTwo = styled.section`
 		text-align: center;
 		margin: 0 auto;
 		padding-top: 0.5rem;
-		letter-spacing: 0.225em;
 		font-size: 1.1rem;
 	}
 
@@ -100,19 +99,18 @@ const FlexBoxIndex = styled.div`
 		align-items: center;
 		flex-direction: column;
 		margin-left: 2rem;
+		padding: 80px 0;
 	}
 	h2 {
 		font-size: 3rem;
 		color: var(--heading-color);
 		text-transform: uppercase;
-		letter-spacing: 0.225rem;
 		margin: 0;
 	}
 	p {
 		// text-transform: uppercase;
 		color: black;
 		text-align: center;
-		letter-spacing: 0.075em;
 		font-size: 1.2rem;
 		margin: 0 auto;
 	}
@@ -121,16 +119,14 @@ const FlexBoxIndex = styled.div`
 const PostPara = styled.p`
 	margin: 0;
 	max-width: 100% !important;
-	letter-spacing: ${props => (props.lessSpacing ? "0.075em" : "")} !important;
-	font-size: ${props => (props.lessSize ? "1rem" : "1.3rem")} !important;
+	font-size: ${props => (props.lessSize ? "1.2rem" : "1.5rem")} !important;
 	line-height: ${props => (props.lessSize ? "2rem" : "3rem")} !important;
 	color: ${props => (props.grey ? "#000000" : "#666666")} !important;
 `
 
 const GenericPara = styled.p`
 	margin: 0 auto;
-	letter-spacing: ${props => (props.lessSpacing ? "0.075em" : "")} !important;
-	font-size: ${props => (props.lessSize ? "1.3rem" : "2.5rem")} !important;
+	font-size: ${props => (props.lessSize ? "1.2rem" : "1.5rem")} !important;
 	line-height: ${props => (props.lessSize ? "2rem" : "3rem")} !important;
 	color: ${props => (props.grey ? "#000000" : "#666666")} !important;
 `
@@ -198,7 +194,7 @@ const SectionFour = styled.section`
 		color: #9b9b01;
 		margin-left: 1rem;
 		// font-family: poppins;
-		font-size: 1.5rem !important;
+		font-size: 1.7rem !important;
 	}
 `
 const SectionFive = styled.section`
@@ -255,7 +251,7 @@ const Footer = styled.footer`
 	grid-template-columns: 1fr 1fr 1fr 1fr;
 	grid-gap: 20px;
 	width: 100%;
-	margin-top: 3rem;
+	// margin-top: 3rem;
 	padding: 3rem;
 	background-color: #1d242a;
 

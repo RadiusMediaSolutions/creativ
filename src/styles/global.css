@@ -128,17 +128,42 @@ img {
 	justify-content: space-between;
 }
 
-/*
-
-.fixed-top {
-	position: fixed;
-	top: 0;
-	right: 0;
-	left: 0;
-	z-index: 1030;
-	display: flex;
-	justify-content: space-around;
-	margin: 0 auto;
-	align-items: center;
+.item1:after {
+	position: relative;
+	content: "01";
+	font-size: 4rem;
+	left: 40%;
+	bottom: -10%;
+	color: #ededed;
+	font-style: italic;
 }
-*/
+
+.item2:after {
+	position: relative;
+	content: "02";
+	font-size: 4rem;
+	left: 40%;
+	bottom: -10%;
+	color: #ededed;
+	font-style: italic;
+}
+
+.item3:after {
+	position: relative;
+	content: "03";
+	font-size: 4rem;
+	left: 40%;
+	bottom: -10%;
+	color: #ededed;
+	font-style: italic;
+}
+
+.item4:after {
+	position: relative;
+	content: "04";
+	font-size: 4rem;
+	left: 40%;
+	bottom: -10%;
+	color: #ededed;
+	font-style: italic;
+}

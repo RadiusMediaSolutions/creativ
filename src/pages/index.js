@@ -17,7 +17,7 @@ import Layout from "../components/layout"
 import { Link } from "gatsby"
 import Seo from "../components/seo"
 import { StaticImage } from "gatsby-plugin-image"
-import background from "../images/road.jpeg"
+import background from "../images/skynet_heroImg.jpg"
 import bolt from "../images/bolttie.jpeg"
 import { library } from "@fortawesome/fontawesome-svg-core"
 import springhurst from "../images/flats-at-springhurst.jpg"
@@ -52,10 +52,7 @@ const IndexPage = () => (
 		<SectionTwo>
 			<FlexBoxIndex>
 				<div className="image">
-					<img
-						src="https://source.unsplash.com/XJXWbfSo2f0/600x400"
-						alt="Picture 1"
-					/>
+					<img src={background} alt="about" width="50" />
 				</div>
 				<div className="text_section3">
 					<GenericH2 none>WELCOME SKY DEVELOP</GenericH2>
@@ -108,11 +105,10 @@ const IndexPage = () => (
 			</div>
 		</SectionThree> */}
 
-		<Companies></Companies>
 		<SectionFour>
 			<div className="header__section4">
 				<div className="title__section4">Our Services</div>
-				<GenericPara lessSize grey>
+				<GenericPara>
 					We use modern and latest technologies which help our clients
 					<br /> as they are high scalable and maintainable
 				</GenericPara>
@@ -273,6 +269,7 @@ const IndexPage = () => (
 				</div>
 			</FlexBoxIndex>
 		</SectionFive>
+		<Companies></Companies>
 	</Layout>
 )
 

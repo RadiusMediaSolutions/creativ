@@ -59,6 +59,13 @@ a,
 	div {
 		grid-template-columns: 1fr !important;
 	}
+
+	.image,
+	.text_section3 {
+		display: flex !important;
+		flex-direction: column !important;
+		width: 100%;
+	}
 }
 @media (min-width: 1231px) and (max-width: 1399px) {
 	body {
