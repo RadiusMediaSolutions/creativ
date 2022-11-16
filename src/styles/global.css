@@ -45,8 +45,7 @@ img {
 	padding: 10px; */
 	position: relative;
 	width: 100%;
-	/* height: 200px; */
-	margin: 50px 10px;
+
 	color: white;
 	text-align: left;
 }
@@ -127,43 +126,30 @@ img {
 	display: flex;
 	justify-content: space-between;
 }
-
-.item1:after {
-	position: relative;
-	content: "01";
-	font-size: 4rem;
-	left: 40%;
-	bottom: -10%;
-	color: #ededed;
-	font-style: italic;
+.stats h2 {
+	color: #fff;
+}
+.stats p {
+	color: #fff !important;
 }
 
-.item2:after {
-	position: relative;
-	content: "02";
-	font-size: 4rem;
-	left: 40%;
-	bottom: -10%;
-	color: #ededed;
-	font-style: italic;
+.item1 {
+	background-image: url(../images/project-management-small.jpg);
+	background-size: cover;
+}
+.item2 {
+	background-image: url(../images/design-build-small.jpg);
+	background-size: cover;
+}
+.item3 {
+	background-image: url(../images/take-small.jpg);
+	background-size: cover;
+}
+.item4 {
+	background-image: url(../images/estimate-small.jpg);
+	background-size: cover;
 }
 
-.item3:after {
-	position: relative;
-	content: "03";
-	font-size: 4rem;
-	left: 40%;
-	bottom: -10%;
-	color: #ededed;
-	font-style: italic;
-}
-
-.item4:after {
-	position: relative;
-	content: "04";
-	font-size: 4rem;
-	left: 40%;
-	bottom: -10%;
-	color: #ededed;
-	font-style: italic;
+.grid__section4 p {
+	color: #fff !important;
 }

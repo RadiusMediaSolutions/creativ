@@ -4,7 +4,7 @@ import Banner from "../components/banner"
 import Layout from "../components/layout"
 import Project from "../components/project"
 import React from "react"
-import background from "../images/portfolio.jpg"
+import background from "../images/porfolio_bg.jpg"
 
 const projects = [
 	{ title: "FLATS AT SPRINGHURST", link: "/clients" },
@@ -27,11 +27,14 @@ const Portfolio = () => {
 				<Banner
 					bgImage={background}
 					inner
-					h2Content="SKY"
-					spanContent="Project"
+					h2Content="OUR PORTFOLIO"
+					// spanContent="Portfolio"
 				></Banner>
 			</div>
 			<Works>
+				<h2>
+					<span>SKYNET</span> COMMERCIAL WORKS
+				</h2>
 				<section class="gallery__flex">
 					{projects &&
 						projects.map(proj => (

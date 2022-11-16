@@ -30,7 +30,7 @@ const SectionTwo = styled.section`
 	position: relative;
 	background-color: whitesmoke;
 	text-align: center;
-	padding: 7rem 0;
+	padding: 5rem 0 2rem 0;
 	div {
 		// width: 66%;
 		margin: 0 auto;
@@ -39,16 +39,15 @@ const SectionTwo = styled.section`
 	h2 {
 		font-family: poppins;
 		font-size: 3rem;
+		font-weight: 400;
 		padding: 1.5rem 0;
 		color: #9b9b01;
-		border-bottom: 2px solid #1d9c91;
 		text-transform: uppercase;
-		letter-spacing: 0.6rem;
 		margin: 0;
+		text-align: left;
 		&:after {
 			content: "";
 			display: flex;
-			margin: 0 auto;
 			height: 0.5rem;
 			width: 8rem;
 			background: var(--heading-color);
@@ -59,8 +58,7 @@ const SectionTwo = styled.section`
 	p {
 		// text-transform: uppercase;
 		color: #c8ece9;
-		text-align: center;
-		margin: 0 auto;
+		text-align: justify;
 		padding-top: 0.5rem;
 		font-size: 1.1rem;
 	}
@@ -69,7 +67,6 @@ const SectionTwo = styled.section`
 		font-size: 1.4rem;
 		line-height: 2rem;
 		color: #ffffff;
-		border-bottom: 2px solid #1d9c91;
 		font-weight: 800;
 		letter-spacing: 0.225em;
 		text-transform: uppercase;
@@ -85,6 +82,7 @@ const SectionThree = styled.section`
 
 const FlexBoxIndex = styled.div`
 	display: flex;
+	align-items: center;
 	.image {
 		width: ${props => (props.inverse ? "50%" : "50%")};
 	}
@@ -96,23 +94,52 @@ const FlexBoxIndex = styled.div`
 		width: ${props => (props.inverse ? "50%" : "50%")};
 		display: flex;
 		justify-content: center;
-		align-items: center;
+		// align-items: center;
 		flex-direction: column;
 		margin-left: 2rem;
-		padding: 80px 0;
 	}
 	h2 {
 		font-size: 3rem;
+		font-weight: 400;
 		color: var(--heading-color);
 		text-transform: uppercase;
 		margin: 0;
 	}
+	h3 {
+		font-size: 1.5rem;
+		text-align: left;
+		text-transform: uppercase;
+	}
 	p {
 		// text-transform: uppercase;
 		color: black;
-		text-align: center;
+		text-align: justify;
 		font-size: 1.2rem;
-		margin: 0 auto;
+		// margin: 0 auto;
+	}
+	.processList {
+		display: flex;
+		margin-left: 0;
+	}
+	.processList li {
+		list-style: outside none;
+		margin-right: 10px;
+		padding-left: 50px;
+		position: relative;
+		font-weight: 600;
+
+		&::before {
+			content: "";
+			position: absolute;
+			top: 50%;
+			left: 0;
+			width: 40px;
+			height: 1px;
+			background: var(--heading-color);
+			&:hover {
+				transform: rotate(45deg);
+			}
+		}
 	}
 `
 
@@ -133,14 +160,14 @@ const GenericPara = styled.p`
 
 const GenericH2 = styled.h2`
 	font-size: ${props => (props.lessSize ? "2rem" : "3rem")} !important;
-	padding: ${props => (props.none ? "" : "1.35em 0")} !important;
+	padding: ${props => (props.none ? "" : "1em 0")} !important;
 	border-top: ${props => (props.none ? "0" : "2px solid #1d9c91")} !important;
 	border-bottom: ${props =>
 		props.none ? "0" : "2px solid #1d9c91"} !important;
 `
 const GenericH3 = styled.h3`
 	font-size: ${props => (props.lessSize ? "1rem" : "1.5rem")} !important;
-	padding: ${props => (props.none ? "" : "1.35em 0")} !important;
+	padding: ${props => (props.none ? "" : "1em 0")} !important;
 	margin-bottom: ${props => (props.none ? "0.5rem" : "1rem")} !important;
 	border-top: ${props => (props.none ? "0" : "2px solid #1d9c91")} !important;
 	border-bottom: ${props =>
@@ -158,7 +185,8 @@ const SectionFour = styled.section`
 	.title__section4 {
 		font-family: poppins;
 		font-size: 3rem;
-		padding: 1.35em 0;
+		font-weight: 400;
+		padding: 1em 0;
 		color: var(--heading-color);
 		// border-bottom: 2px solid #464981;
 		text-transform: uppercase;
@@ -172,17 +200,20 @@ const SectionFour = styled.section`
 			background: var(--heading-color);
 			margin-top: 15px;
 		}
+		span {
+			font-weight: 800;
+		}
 	}
 	.grid__section4 {
 		display: grid;
 		grid-template-columns: 1fr 1fr;
-		grid-gap: 20px;
-		width: 90%;
+		grid-gap: 50px;
+		width: 100%;
 		margin: 0 auto;
 		padding: 3rem 0;
 	}
 	.grid__section4 > * {
-		padding: 3rem;
+		padding: 5rem 3rem;
 	}
 	.flex__section4 {
 		display: flex;
@@ -191,16 +222,18 @@ const SectionFour = styled.section`
 		padding: 1rem;
 	}
 	.flex__section4 > h2 {
-		color: #9b9b01;
+		color: #fff;
 		margin-left: 1rem;
-		// font-family: poppins;
 		font-size: 1.7rem !important;
+		text-transform: uppercase;
+		font-weight: 500;
 	}
 `
 const SectionFive = styled.section`
 	// background-color: #505393;
 	color: #ffffff;
 	text-align: center;
+	padding: 3rem 0;
 	.header__section4 {
 		width: 66%;
 		margin: 0 auto;
@@ -208,7 +241,8 @@ const SectionFive = styled.section`
 	.title__section5 {
 		font-family: poppins;
 		font-size: 3rem;
-		padding: 1.35em 0;
+		font-weight: 400;
+		padding-bottom: 1em;
 		color: var(--heading-color);
 		// border-bottom: 2px solid #464981;
 		text-transform: uppercase;
@@ -222,12 +256,15 @@ const SectionFive = styled.section`
 			background: var(--heading-color);
 			margin-top: 15px;
 		}
+		span {
+			font-weight: 800;
+		}
 	}
 	.grid__section4 {
 		display: grid;
 		grid-template-columns: 1fr 1fr 1fr;
 		grid-gap: 20px;
-		width: 90%;
+		width: 100%;
 		margin: 0 auto;
 		padding: 3rem 0;
 	}
@@ -243,6 +280,9 @@ const SectionFive = styled.section`
 	.flex__section4 > h2 {
 		margin-left: 1rem;
 		font-family: poppins;
+	}
+	.flex__section4 p {
+		color: #fff !important;
 	}
 `
 
@@ -254,6 +294,7 @@ const Footer = styled.footer`
 	// margin-top: 3rem;
 	padding: 3rem;
 	background-color: #1d242a;
+	color: #999;
 
 	.icons > * {
 		cursor: pointer;
@@ -299,18 +340,22 @@ const ContactSection = styled.section`
 
 	.box {
 		border: 1px solid #ddd;
-		padding: 20px 10px;
+		padding: 50px;
 	}
 	p {
 		color: rgba(255, 255, 255, 0.5);
 		font-size: 1.2rem !important;
 		padding: 0;
-		text-align: left;
+		text-align: center;
 	}
 `
 const CntForm = styled.div`
+	margin: 3rem 0;
 	h2 {
-		text-align: center !important;
+		font-size: 2rem;
+		span {
+			font-weight: 800;
+		}
 	}
 	p {
 		color: rgba(255, 255, 255, 0.5);
@@ -343,15 +388,17 @@ const CntForm = styled.div`
 	}
 `
 const Clients = styled.div`
+	margin: 5rem 0;
 	h2 {
 		text-align: center !important;
 	}
 	p {
 		color: rgba(255, 255, 255, 0.5);
 		font-size: 1.2rem !important;
-		padding: 0;
+		padding: 1rem 0;
 		text-align: left;
-		display: inline;
+		display: block;
+		max-width: 100%;
 		margin-bottom: 20px;
 	}
 	.gallery .card {

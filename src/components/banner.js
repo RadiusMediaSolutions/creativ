@@ -18,14 +18,14 @@ import styled from "styled-components"
 const Hero = styled.div`
 	& {
 		background: #2b2d2f;
-		height: 80vh;
+		height: 70vh;
 		// position: absolute;
 	}
 	&:after {
 		z-index: 110;
 		content: "";
 		display: block;
-		height: ${props => (props.inner ? `80vh` : `90vh`)};
+		height: ${props => (props.inner ? `70vh` : `80vh`)};
 		width: 100%;
 		position: relative;
 		background-image: url(${props => props.bgImage});
@@ -74,6 +74,9 @@ const TextWrapper = styled.div`
 		z-index: 1000;
 		font-size: 150px;
 	}
+	h3 span {
+		font-size: 50px;
+	}
 	p {
 		text-transform: uppercase;
 		padding-left: 20px;
@@ -93,9 +96,9 @@ const BannerFooter = styled.div`
 	z-index: 100;
 	.icon-set-group {
 		padding-left: 150px;
-		padding-top: 10px;
+		padding-top: 20px;
 		color: #666;
-		font-size: 5vh;
+		font-size: 4vh;
 		font-weight: bold;
 		margin-left: 50px;
 	}
@@ -122,7 +125,7 @@ const MoreLink = styled.a`
 	top: 50px;
 	left: 70px;
 `
-const Banner = ({ bgImage, inner, h2Content, spanContent }) => {
+const Banner = ({ bgImage, inner, h2Content, h1Content, spanContent }) => {
 	return (
 		<>
 			<div>
@@ -134,6 +137,7 @@ const Banner = ({ bgImage, inner, h2Content, spanContent }) => {
 						<h1>
 							<span>{spanContent}</span>
 						</h1>
+						<h1>{h1Content}</h1>
 						<p>Develop your inner beast</p>
 					</div>
 					<MoreLink>Learn More</MoreLink>
