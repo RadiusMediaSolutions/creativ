@@ -1,10 +1,6 @@
 import * as React from "react"
 
-import {
-	FlexBoxIndex,
-	GenericH2,
-	GenericPara,
-} from "../styles/IndexStyles"
+import { FlexBoxIndex, GenericH2, GenericPara } from "../styles/IndexStyles"
 import styled, { keyframes } from "styled-components"
 
 import Canvas from "../components/canvas"
@@ -140,7 +136,7 @@ const Companies = () => {
 						</h1>
 					</Container>
 				</FlexBoxIndex>
-				<FlexBoxIndex inverse>
+				<FlexBoxIndex inverse className="statsPara">
 					<Canvas />
 					<div className="stats">
 						<div className="design">

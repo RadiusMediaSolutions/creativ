@@ -21,14 +21,12 @@ const MoreButton = styled.a`
 	cursor: pointer;
 	font-size: 1.2rem;
 	font-weight: 600;
-	/*     letter-spacing: 0.1em; */
 	padding: 1rem 0.8rem;
-	text-align: center;
-	text-decoration: none;
 	text-transform: uppercase;
-	margin-left: 100px;
-	top: 50px;
+	margin-top: 50px;
+	display: inline-block;
 `
+
 export default () => {
 	return (
 		<Layout>
@@ -40,7 +38,7 @@ export default () => {
 					// spanContent="Project"
 				></Banner>
 			</div>
-			<Clients>
+			<Clients className="singlePjt">
 				<GenericH3 none>PROJECT GALLERY</GenericH3>
 				<GenericPara lessSize>
 					There are many variations of passages of Lorem Ipsum

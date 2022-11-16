@@ -13,12 +13,17 @@ import background from "../images/roofingblog.jpg"
 import styled from "styled-components"
 
 const BlogList = styled.div`
-	display: grid;
-	// grid-template-columns: 1fr 1fr 1fr;
-	grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-	grid-gap: 20px;
-	margin: 4rem 0;
-
+	.blogGrid {
+		display: grid;
+		// grid-template-columns: 1fr 1fr 1fr;
+		grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+		grid-gap: 20px;
+		margin: 4rem 0;
+	}
+	h2 {
+		margin: 3rem 0;
+		font-size: 3rem;
+	}
 	article {
 		padding: 2rem;
 		background: #e9e7e7;
@@ -38,23 +43,29 @@ const BlogPage = ({ data }) => {
 					bgImage={background}
 					inner
 					h2Content="SKY"
-					spanContent="ArticleS"
+					spanContent="Resources"
 				></Banner>
 			</div>
+
 			<BlogList>
-				{data.allMdx.nodes.map(node => (
-					<article key={node.id}>
-						<GenericH3 none>
-							<Link to={`/blog/${node.frontmatter.slug}`}>
-								{node.frontmatter.title}
-							</Link>
-						</GenericH3>
-						<span>
-							<b>Posted:</b> {node.frontmatter.date}
-						</span>
-						<p>{node.excerpt}</p>
-					</article>
-				))}
+				<h2>
+					<span>SKYNET</span> RECENT ARTICLES
+				</h2>
+				<div className="blogGrid">
+					{data.allMdx.nodes.map(node => (
+						<article key={node.id}>
+							<GenericH3 none>
+								<Link to={`/blog/${node.frontmatter.slug}`}>
+									{node.frontmatter.title}
+								</Link>
+							</GenericH3>
+							<span>
+								<b>Posted:</b> {node.frontmatter.date}
+							</span>
+							<p>{node.excerpt}</p>
+						</article>
+					))}
+				</div>
 			</BlogList>
 		</Layout>
 	)

@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;800;900&display=swap");
 :root {
 	--body-bg: whitesmoke;
 	--border-radius: 4px;
@@ -53,11 +53,32 @@ a,
 		padding: 0 30px;
 	}
 	.fixed-top {
-		width: var(--min-container-width);
+		right: 21%;
+		transform: translateX(17%);
 	}
 
 	div {
 		grid-template-columns: 1fr !important;
+	}
+
+	.text_section3,
+	.image {
+		display: flex !important;
+		flex-direction: column !important;
+		width: 100% !important;
+		margin: 0 auto !important;
+	}
+	.text_section3 p {
+		max-width: 100% !important;
+	}
+	.text_section3 a {
+		margin: 2rem auto;
+	}
+	.mColumn {
+		display: flex !important;
+		flex-direction: column;
+		width: 100%;
+		margin: 0 auto !important;
 	}
 }
 @media (min-width: 1231px) and (max-width: 1399px) {
@@ -66,7 +87,8 @@ a,
 		padding: 0 30px;
 	}
 	.fixed-top {
-		width: 1230px;
+		right: 20%;
+		transform: translateX(17%);
 	}
 }
 @media screen and (min-width: 1400px) and (max-width: 1600px) {
@@ -74,6 +96,10 @@ a,
 		display: flex;
 		width: 1400px;
 		margin: 0 auto;
+	}
+	.fixed-top {
+		right: 17%;
+		transform: translateX(15%);
 	}
 }
 @media screen and (min-width: 1601px) {
@@ -151,6 +177,19 @@ h1 {
 	padding: 0;
 	line-height: var(--line-height-dense);
 	letter-spacing: -0.01em;
+}
+.title__section5 {
+	font-size: 3rem;
+	font-weight: 400;
+	color: var(--heading-color);
+	text-transform: uppercase;
+	margin: 0;
+}
+h2 {
+	font-size: 2rem;
+}
+h2 span {
+	font-weight: 800;
 }
 h1 > b {
 	color: var(--color-primary);

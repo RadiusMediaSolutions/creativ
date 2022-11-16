@@ -22,10 +22,11 @@ const Contact = () => (
 				spanContent="Contact"
 			></Banner>
 		</div>
-		<GenericH2 none style={{ textAlign: "center" }}>
-			FEEL FREE TO CONTACT US
-		</GenericH2>
-		<ContactSection>
+		<h2 style={{ marginTop: "5rem" }}>
+			FEEL FREE TO <span>CONTACT US</span>
+		</h2>
+
+		<ContactSection className="mColumn">
 			<div className="box">
 				<GenericH3 none>CALL US</GenericH3>
 				<Link
@@ -60,7 +61,9 @@ const Contact = () => (
 			</div>
 		</ContactSection>
 		<CntForm>
-			<GenericH2 none>SEND US A MESSAGE</GenericH2>
+			<h2 style={{ marginTop: "5rem" }}>
+				HAVE QUESTIONS? <span>SEND US A MESSAGE</span>
+			</h2>
 			<GenericPara lessSize>
 				Please fill out the contact form below so we know what types of
 				interest you have!. We want to make sure that our clients are
@@ -69,7 +72,16 @@ const Contact = () => (
 				form–we’ll be emailing back within 24 hours with all the info
 				you need!
 			</GenericPara>
-			<form method="post" action="#">
+			<form
+				method="POST"
+				action="https://getform.io/f/aff1bedd-c396-40a6-88f3-4bceadf69fd4"
+			>
+				{/* Hidden Honeypot input to prevent spams  */}
+				<input
+					type="hidden"
+					name="_gotcha"
+					style={{ display: "none !important" }}
+				></input>
 				<label>
 					Name
 					<input type="text" name="name" id="name" />
