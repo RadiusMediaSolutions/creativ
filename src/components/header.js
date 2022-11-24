@@ -40,18 +40,21 @@ const MenuItem = styled.span`
 
 const Header = ({ siteTitle }) => {
 	const onScroll = useRef(null)
+	const onActive = useRef(null)
 	const changeBackground = () => {
 		if (window.scrollY >= 100) {
 			onScroll.current.className = "menu__items navbar"
+			onActive.current.className = "fixed-top onactive"
 		} else {
 			onScroll.current.className = "menu__items"
+			onActive.current.className = "fixed-top"
 		}
 	}
 	window.addEventListener("scroll", changeBackground)
 
 	return (
 		<SiteHeader>
-			<div class="fixed-top">
+			<div class="fixed-top" ref={onActive}>
 				<div className="menu__items" ref={onScroll}>
 					<div class="site-logo">
 						<Link

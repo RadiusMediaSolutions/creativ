@@ -157,13 +157,13 @@ img {
 }
 
 .navbar {
-	background: rgb(245, 245, 245, 0.8) !important;
+	/* background: rgb(245, 245, 245, 0.8) !important; */
 	width: 100%;
 	margin: 0 auto;
 	display: flex;
 	justify-content: end;
 }
-/* .fixed-top:after {
+.navbar:after {
 	background: rgb(245, 245, 245, 0.8) !important;
 	content: "";
 	position: absolute;
@@ -171,4 +171,8 @@ img {
 	width: 100%;
 	left: 64px;
 	z-index: 1;
-} */
+}
+
+.onactive .menu__items {
+	background: none !important;
+}
