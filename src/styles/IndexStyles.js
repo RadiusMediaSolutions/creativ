@@ -191,6 +191,7 @@ const SectionFour = styled.section`
 		// border-bottom: 2px solid #464981;
 		text-transform: uppercase;
 		margin: 0;
+		position: relative;
 		&:after {
 			content: "";
 			display: flex;
@@ -199,6 +200,9 @@ const SectionFour = styled.section`
 			width: 8rem;
 			background: var(--heading-color);
 			margin-top: 15px;
+			position: absolute;
+			left: 35%;
+			bottom: 30px;
 		}
 		span {
 			font-weight: 800;
@@ -247,14 +251,17 @@ const SectionFive = styled.section`
 		// border-bottom: 2px solid #464981;
 		text-transform: uppercase;
 		margin: 0;
+		position: relative;
 		&:after {
 			content: "";
 			display: flex;
-			margin: 0 auto;
 			height: 0.5rem;
 			width: 8rem;
 			background: var(--heading-color);
 			margin-top: 15px;
+			position: absolute;
+			left: 34%;
+			bottom: 30px;
 		}
 		span {
 			font-weight: 800;
@@ -294,7 +301,7 @@ const Footer = styled.footer`
 	// margin-top: 3rem;
 	padding: 3rem;
 	background-color: #1d242a;
-	color: #999;
+	color: rgba(255, 255, 255, 0.8) !important;
 
 	.icons > * {
 		cursor: pointer;
@@ -302,9 +309,12 @@ const Footer = styled.footer`
 		color: rgba(255, 255, 255, 0.5);
 	}
 	p {
-		color: rgba(255, 255, 255, 0.5);
+		color: rgba(255, 255, 255, 0.8) !important;
 		font-size: 1.2rem !important;
 		padding: 0;
+	}
+	a {
+		color: rgba(255, 255, 255, 0.8) !important;
 	}
 	// .copyright {
 	// 	display: flex;

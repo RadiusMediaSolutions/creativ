@@ -7,8 +7,6 @@
 
 import "./layout.css"
 
-import * as React from "react"
-
 import {
 	Copyright,
 	Footer,
@@ -16,6 +14,7 @@ import {
 	GenericPara,
 } from "../styles/IndexStyles"
 import { Link, graphql, useStaticQuery } from "gatsby"
+import React, { useRef } from "react"
 import {
 	faFacebook,
 	faInstagram,
@@ -28,6 +27,8 @@ import {
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import Header from "./header"
 import PropTypes from "prop-types"
+
+// import * as React from "react"
 
 const Layout = ({ children }) => {
 	const data = useStaticQuery(graphql`
@@ -45,7 +46,7 @@ const Layout = ({ children }) => {
 			<Header siteTitle={data.site.siteMetadata?.title || `Title`} />
 			<div
 				style={{
-					margin: `0 auto`,
+					marginTop: `-50px`,
 				}}
 			>
 				<main>{children}</main>
@@ -96,9 +97,7 @@ const Layout = ({ children }) => {
 				</Footer>
 				<Copyright>
 					<div>
-						<span>
-							&copy; {new Date().getFullYear()} , RandomHacker{" "}
-						</span>
+						<span>&copy; {new Date().getFullYear()} , Skynet </span>
 						<span>
 							&middot; Built by
 							{` `}RadiusMedia
