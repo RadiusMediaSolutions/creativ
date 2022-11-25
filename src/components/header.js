@@ -50,13 +50,15 @@ const Header = ({ siteTitle }) => {
 			onActive.current.className = "fixed-top"
 		}
 	}
-	window.addEventListener("scroll", changeBackground)
+	// window.addEventListener("scroll", changeBackground)
+	const isBrowser = () => typeof window !== "undefined"
+	isBrowser() && window.addEventListener("scroll", changeBackground)
 
 	return (
 		<SiteHeader>
-			<div class="fixed-top" ref={onActive}>
+			<div className="fixed-top" ref={onActive}>
 				<div className="menu__items" ref={onScroll}>
-					<div class="site-logo">
+					<div className="site-logo">
 						<Link
 							to="/"
 							style={{

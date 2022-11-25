@@ -1,4 +1,7 @@
 module.exports = {
+	flags: {
+		DEV_SSR: true,
+	},
 	siteMetadata: {
 		title: `Skynet`,
 		description: `SkyNet Professional Solutions - We develop your tomorrow `,
@@ -16,7 +19,7 @@ module.exports = {
 			options: {
 				name: `images`,
 				path: `${__dirname}/src/images`,
-			}
+			},
 		},
 		{
 			resolve: `gatsby-source-filesystem`,
