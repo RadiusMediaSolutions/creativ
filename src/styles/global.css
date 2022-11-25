@@ -120,14 +120,15 @@ img {
 	left: 50%;
 	transform: translate(-10%);
 	grid-gap: 100px;
-	/* margin-top: 4rem; */
+	margin-top: 1rem;
 	padding: 3rem;
 	display: flex;
 	justify-content: space-between;
 }
 .stats h2 {
 	font-size: 4rem !important;
-	color: #fff;
+	color: #fbbc05 !important;
+	font-weight: 600 !important;
 }
 .stats p {
 	margin-left: 1rem;
@@ -167,7 +168,7 @@ img {
 	background: rgb(245, 245, 245, 0.8) !important;
 	content: "";
 	position: absolute;
-	height: 80px;
+	height: 130px;
 	width: 100%;
 	left: 64px;
 	z-index: 1;
