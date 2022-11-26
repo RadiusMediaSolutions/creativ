@@ -136,7 +136,14 @@ const Companies = () => {
 						</h1>
 					</Container>
 				</FlexBoxIndex>
-				<FlexBoxIndex inverse className="statsPara">
+				<FlexBoxIndex
+					inverse
+					className="statsPara"
+					style={{
+						display: `flex`,
+						alignItems: `baseline`,
+					}}
+				>
 					<Canvas />
 					<div className="stats">
 						<div className="design">

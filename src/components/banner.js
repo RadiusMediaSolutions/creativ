@@ -144,7 +144,7 @@ const Banner = ({ bgImage, inner, h2Content, h1Content, spanContent }) => {
 				</TextWrapper>
 			</div>
 			<BannerFooter inner={inner}>
-				<div class="icon-set-group">
+				<div className="icon-set-group">
 					<FontAwesomeIcon icon={faTwitter} color="#666;" size="1x" />
 					<FontAwesomeIcon
 						icon={faFacebook}
