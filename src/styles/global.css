@@ -107,7 +107,7 @@ img {
 }
 
 .fixed-top {
-	padding: 1.5rem 4rem;
+	padding: 1.2rem 4rem;
 	position: relative;
 	display: flex;
 	justify-content: end;
@@ -168,7 +168,7 @@ img {
 	background: rgb(245, 245, 245, 0.8) !important;
 	content: "";
 	position: absolute;
-	height: 130px;
+	height: 95px;
 	width: 100%;
 	left: 64px;
 	z-index: 1;

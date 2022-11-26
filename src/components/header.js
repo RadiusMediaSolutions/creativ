@@ -37,12 +37,14 @@ const MenuItem = styled.span`
 	color: ;
 	// background: ${props => (props.selected ? "lightgrey" : "white")};
 `
+const isBrowser = () => typeof window !== "undefined"
 
 const Header = ({ siteTitle }) => {
 	const onScroll = useRef(null)
 	const onActive = useRef(null)
+
 	const changeBackground = () => {
-		if (window.scrollY >= 100) {
+		if (isBrowser() && window.scrollY >= 100) {
 			onScroll.current.className = "menu__items navbar"
 			onActive.current.className = "fixed-top onactive"
 		} else {
@@ -50,15 +52,14 @@ const Header = ({ siteTitle }) => {
 			onActive.current.className = "fixed-top"
 		}
 	}
-	// window.addEventListener("scroll", changeBackground)
-	const isBrowser = () => typeof window !== "undefined"
 	isBrowser() && window.addEventListener("scroll", changeBackground)
+	// window.addEventListener("scroll", changeBackground)
 
 	return (
 		<SiteHeader>
-			<div className="fixed-top" ref={onActive}>
-				<div className="menu__items" ref={onScroll}>
-					<div className="site-logo">
+			<div class="fixed-top" ref={onActive}>
+				<div class="menu__items" ref={onScroll}>
+					<div class="site-logo">
 						<Link
 							to="/"
 							style={{

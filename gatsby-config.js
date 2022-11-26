@@ -1,7 +1,4 @@
 module.exports = {
-	flags: {
-		DEV_SSR: true,
-	},
 	siteMetadata: {
 		title: `Skynet`,
 		description: `SkyNet Professional Solutions - We develop your tomorrow `,
