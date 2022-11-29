@@ -12,6 +12,7 @@ import {
 
 import Banner from "../components/banner"
 import Companies from "../components/companies"
+import FeaturedClients from "../components/clients/FeaturedClients"
 import Layout from "../components/layout"
 import { Link } from "gatsby"
 import Seo from "../components/seo"
@@ -47,6 +48,7 @@ const IndexPage = () => (
 				spanContent="Develop"
 			></Banner>
 		</div>
+		<FeaturedClients />
 		<SectionTwo>
 			<FlexBoxIndex className="mColumn">
 				<div className="image">
@@ -241,7 +243,7 @@ const IndexPage = () => (
 			<div className="title__section5">
 				Our Featured <span>Works</span>
 			</div>
-			<h2>{/* OUR FEATURED <span>WORKS</span> */}</h2>
+			{/* <h2>OUR FEATURED <span>WORKS</span></h2> */}
 			<FlexBoxIndex className="mColumn">
 				<div className="image">
 					<img src={bolt} alt="Logo" width="50" />

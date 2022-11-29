@@ -29,6 +29,8 @@
 	--container-width: 1600px;
 	--min-container-width: 990px;
 	--heading-color: #9b9b00;
+	--lightShadow: 0 0 7px #ddd;
+	/* --darkShadow: 4px 10px 5px 0px rgba(0, 0, 0, 0.5); */
 }
 html {
 	-webkit-text-size-adjust: 100%;
