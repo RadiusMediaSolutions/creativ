@@ -4,6 +4,7 @@ import Banner from "../components/banner"
 import Layout from "../components/layout"
 import Project from "../components/project"
 import React from "react"
+import { StaticImage } from "gatsby-plugin-image"
 import background from "../images/porfolio_bg.jpg"
 
 const projects = [
@@ -27,9 +28,16 @@ const Portfolio = () => {
 				<Banner
 					bgImage={background}
 					inner
-					h2Content="OUR PORTFOLIO"
-					// spanContent="Portfolio"
-				></Banner>
+					h2Content="SKY"
+					spanContent="Portfolio"
+				>
+					<StaticImage
+						src="../images/porfolio_bg.jpg"
+						alt="landscape"
+						style={{ height: `80vh`, width: `100%` }}
+						aspectRatio={2 / 1}
+					/>
+				</Banner>
 			</div>
 			<Works>
 				<h2>

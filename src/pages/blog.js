@@ -9,6 +9,7 @@ import { Link, graphql } from "gatsby"
 import Banner from "../components/banner"
 import Layout from "../components/layout"
 import React from "react"
+import { StaticImage } from "gatsby-plugin-image"
 import background from "../images/roofingblog.jpg"
 import styled from "styled-components"
 
@@ -44,7 +45,14 @@ const BlogPage = ({ data }) => {
 					inner
 					h2Content="SKY"
 					spanContent="Resources"
-				></Banner>
+				>
+					<StaticImage
+						src="../images/roofingblog.jpg"
+						alt="landscape"
+						style={{ height: `80vh`, width: `100%` }}
+						aspectRatio={2 / 1}
+					/>
+				</Banner>
 			</div>
 
 			<BlogList>

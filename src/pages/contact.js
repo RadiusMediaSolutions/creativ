@@ -10,8 +10,8 @@ import { Link, graphql, useStaticQuery } from "gatsby"
 import Banner from "../components/banner"
 import Layout from "../components/layout"
 import React from "react"
-import background from "../images/contactus.jpg"
 import { StaticImage } from "gatsby-plugin-image"
+import background from "../images/contactus.jpg"
 import styled from "styled-components"
 
 const Contact = () => (
@@ -26,11 +26,10 @@ const Contact = () => (
 				<StaticImage
 					src="../images/contactus.jpg"
 					alt="landscape"
-					style={{height: `80vh`}}
+					style={{ height: `80vh` }}
 					aspectRatio={2 / 1}
 				/>
 			</Banner>
-
 		</div>
 
 		<h2 style={{ marginTop: "5rem" }}>

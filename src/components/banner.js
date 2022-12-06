@@ -1,7 +1,5 @@
 import * as React from "react"
 
-import { GenericPara, MoreText } from "../styles/IndexStyles"
-import { faCode, faGem, faHeart, fas } from "@fortawesome/free-solid-svg-icons"
 import {
 	faFacebook,
 	faLinkedin,
@@ -29,7 +27,7 @@ const Hero = styled.div`
 	// 	height: ${props => (props.inner ? `70vh` : `80vh`)};
 	// 	width: 100%;
 	// 	position: relative;
-	// 	// background-image: url(${props => props.bgImage});
+	// background-image: url(${props => props.bgImage});
 	// 	background-size: cover;
 	// 	background-repeat: no-repeat;
 	// 	background-position: center;
@@ -126,14 +124,27 @@ const MoreLink = styled.a`
 	top: 50px;
 	left: 70px;
 `
-const Banner = ({ bgImage, inner, h2Content, h1Content, spanContent, children }) => {
+const Banner = ({
+	bgImage,
+	inner,
+	h2Content,
+	h1Content,
+	spanContent,
+	children,
+}) => {
 	return (
 		<>
-			<div style={{background:`#2b2d2f`, height: `80vh`}}>
-				<Hero bgImage={bgImage} inner={!!inner} >
+			<div
+				style={{
+					background: `#2b2d2f`,
+					height: `80vh`,
+					position: `inherit`,
+					zIndex: `1050`,
+				}}
+			>
+				<Hero bgImage={bgImage} inner={!!inner}>
 					{children}
 				</Hero>
-
 
 				<TextWrapper bgImage={bgImage}>
 					<div>

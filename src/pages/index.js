@@ -9,6 +9,7 @@ import {
 	SectionFour,
 	SectionTwo,
 } from "../styles/IndexStyles"
+import { StaticImage, getImage } from "gatsby-plugin-image"
 
 import Banner from "../components/banner"
 import Companies from "../components/companies"
@@ -16,7 +17,6 @@ import FeaturedClients from "../components/clients/FeaturedClients"
 import Layout from "../components/layout"
 import { Link } from "gatsby"
 import Seo from "../components/seo"
-import { StaticImage, GatsbyImage, getImage } from "gatsby-plugin-image"
 import about from "../images/feature_bg.jpg"
 import background from "../images/skynet_heroImg.jpg"
 import bolt from "../images/bolttie.jpeg"
@@ -43,16 +43,16 @@ const image = getImage(background)
 const IndexPage = () => (
 	<Layout>
 		<div style={{ position: "relative" }}>
-			<Banner
-				bgImage={image}
-				h2Content="SKY"
-				spanContent="Develop"
-			>
-				<GatsbyImage
-					image={background}
+			<Banner bgImage={background} h2Content="SKY" spanContent="Develop">
+				<StaticImage
+					src="../images/skynet_heroImg.jpg"
 					alt="landscape"
-					style={{height: `80vh`}}
-					aspectRatio={2 / 1}
+					style={{
+						height: `80vh`,
+						width: `100%`,
+						position: `inherit`,
+						zIndex: `1050`,
+					}}
 				/>
 			</Banner>
 		</div>

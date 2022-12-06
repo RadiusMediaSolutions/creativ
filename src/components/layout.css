@@ -104,6 +104,12 @@ a,
 	.title__section5:after {
 		left: 27% !important;
 	}
+	.navbar {
+		width: 1205px;
+	}
+	.onactive .onLeft {
+		margin-left: 120px;
+	}
 }
 @media screen and (min-width: 1400px) and (max-width: 1600px) {
 	body {
@@ -111,10 +117,12 @@ a,
 		width: 1400px;
 		margin: 0 auto;
 	}
-	/* .fixed-top {
-		right: 17%;
-		transform: translateX(15%);
-	} */
+	.navbar {
+		width: 1400px;
+	}
+	.onLeft {
+		margin-left: 120px;
+	}
 	.title__section4:after {
 		left: 33% !important;
 	}
@@ -128,10 +136,12 @@ a,
 		width: 1600px;
 		margin: 0 auto;
 	}
-	/* .fixed-top {
+	.navbar {
 		width: 1600px;
-		position: fixed;
-	} */
+	}
+	.onLeft {
+		margin-left: 120px;
+	}
 }
 
 body {
