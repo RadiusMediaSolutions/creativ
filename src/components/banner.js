@@ -18,25 +18,26 @@ import styled from "styled-components"
 const Hero = styled.div`
 	& {
 		background: #2b2d2f;
-		height: 70vh;
+		// height: 80vh;
+		clip-path: polygon(15% 0%, 100% 0%, 100% 100%, 60% 100%);
 		// position: absolute;
 	}
-	&:after {
-		z-index: 110;
-		content: "";
-		display: block;
-		height: ${props => (props.inner ? `70vh` : `80vh`)};
-		width: 100%;
-		position: relative;
-		background-image: url(${props => props.bgImage});
-		background-size: cover;
-		background-repeat: no-repeat;
-		background-position: center;
-		clip-path: polygon(15% 0%, 100% 0%, 100% 100%, 60% 100%);
-	}
-	& > * {
-		z-index: 150;
-	}
+	// &:after {
+	// 	z-index: 110;
+	// 	content: "";
+	// 	display: block;
+	// 	height: ${props => (props.inner ? `70vh` : `80vh`)};
+	// 	width: 100%;
+	// 	position: relative;
+	// 	// background-image: url(${props => props.bgImage});
+	// 	background-size: cover;
+	// 	background-repeat: no-repeat;
+	// 	background-position: center;
+	// 	clip-path: polygon(15% 0%, 100% 0%, 100% 100%, 60% 100%);
+	// }
+	// & > * {
+	// 	z-index: 150;
+	// }
 `
 
 const TextWrapper = styled.div`
@@ -125,11 +126,14 @@ const MoreLink = styled.a`
 	top: 50px;
 	left: 70px;
 `
-const Banner = ({ bgImage, inner, h2Content, h1Content, spanContent }) => {
+const Banner = ({ bgImage, inner, h2Content, h1Content, spanContent, children }) => {
 	return (
 		<>
-			<div>
-				<Hero bgImage={bgImage} inner={!!inner} />
+			<div style={{background:`#2b2d2f`, height: `80vh`}}>
+				<Hero bgImage={bgImage} inner={!!inner} >
+					{children}
+				</Hero>
+
 
 				<TextWrapper bgImage={bgImage}>
 					<div>

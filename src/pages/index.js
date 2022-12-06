@@ -16,7 +16,7 @@ import FeaturedClients from "../components/clients/FeaturedClients"
 import Layout from "../components/layout"
 import { Link } from "gatsby"
 import Seo from "../components/seo"
-import { StaticImage } from "gatsby-plugin-image"
+import { StaticImage, GatsbyImage, getImage } from "gatsby-plugin-image"
 import about from "../images/feature_bg.jpg"
 import background from "../images/skynet_heroImg.jpg"
 import bolt from "../images/bolttie.jpeg"
@@ -39,14 +39,22 @@ const MoreButton = styled.a`
 	margin: 0 auto;
 	width: fit-content;
 `
+const image = getImage(background)
 const IndexPage = () => (
 	<Layout>
 		<div style={{ position: "relative" }}>
 			<Banner
-				bgImage={background}
+				bgImage={image}
 				h2Content="SKY"
 				spanContent="Develop"
-			></Banner>
+			>
+				<GatsbyImage
+					image={background}
+					alt="landscape"
+					style={{height: `80vh`}}
+					aspectRatio={2 / 1}
+				/>
+			</Banner>
 		</div>
 		<FeaturedClients />
 

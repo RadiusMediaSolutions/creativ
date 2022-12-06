@@ -11,35 +11,28 @@ import Banner from "../components/banner"
 import Layout from "../components/layout"
 import React from "react"
 import background from "../images/contactus.jpg"
-import StaticImage from "gatsby-plugin-image"
-
-const getContact = graphql`
-	query contactus {
-		contactImage: file(relativePath: { eq: "contactus.jpg" }) {
-			childImageSharp {
-				fluid(maxWidth: 600) {
-					...GatsbyImageSharpFluid_tracedSVG
-				}
-			}
-		}
-	}
-`
+import { StaticImage } from "gatsby-plugin-image"
+import styled from "styled-components"
 
 const Contact = () => (
 	<Layout>
-		const {contactImage} = useStaticQuery(getContact);
 		<div style={{ position: "relative" }}>
-			{/* <Banner
+			<Banner
 				bgImage={background}
 				inner
 				h2Content="SKY"
 				spanContent="Contact"
-			></Banner> */}
-			<StaticImage
-				fluid={contactImage.childImageSharp.fluid}
-				alt="landscape"
-			/>
+			>
+				<StaticImage
+					src="../images/contactus.jpg"
+					alt="landscape"
+					style={{height: `80vh`}}
+					aspectRatio={2 / 1}
+				/>
+			</Banner>
+
 		</div>
+
 		<h2 style={{ marginTop: "5rem" }}>
 			FEEL FREE TO <span>CONTACT US</span>
 		</h2>
