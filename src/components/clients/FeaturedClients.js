@@ -7,7 +7,24 @@ import { GenericH2 } from "../../styles/IndexStyles.js"
 import { Link } from "gatsby"
 import React from "react"
 import Title from "../Title"
+import styled from "styled-components"
 
+const MoreButton = styled.a`
+	border: 1px solid #9b9b01;
+	box-shadow: none;
+	color: #9b9b01;
+	border-radius: 5px;
+	cursor: pointer;
+	font-size: 1.2rem;
+	font-weight: 600;
+	/*     letter-spacing: 0.1em; */
+	padding: 0.8rem;
+	text-align: center;
+	text-decoration: none;
+	text-transform: uppercase;
+	margin: 0 auto;
+	width: fit-content;
+`
 const getFeaturedClients = graphql`
 	query {
 		clients: allContentfulRecentProjects(
@@ -48,6 +65,18 @@ const FeaturedClients = () => {
 					return <Client key={node.contentful_id} client={node} />
 				})}
 			</div>
+			<MoreButton>
+				<Link
+					to="/portfolio"
+					style={{
+						color: "#9b9b01 ",
+						fontWeight: "600",
+						textDecoration: `none`,
+					}}
+				>
+					View Details
+				</Link>
+			</MoreButton>
 		</section>
 	)
 }

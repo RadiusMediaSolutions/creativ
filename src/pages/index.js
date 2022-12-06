@@ -49,6 +49,7 @@ const IndexPage = () => (
 			></Banner>
 		</div>
 		<FeaturedClients />
+
 		<SectionTwo>
 			<FlexBoxIndex className="mColumn">
 				<div className="image">
