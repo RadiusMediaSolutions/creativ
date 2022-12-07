@@ -1,25 +1,11 @@
 import { GenericH2, Works } from "../styles/IndexStyles"
 
 import Banner from "../components/banner"
+import Clients from "../components/clients/Clients"
 import Layout from "../components/layout"
-import Project from "../components/project"
 import React from "react"
 import { StaticImage } from "gatsby-plugin-image"
 import background from "../images/porfolio_bg.jpg"
-
-const projects = [
-	{ title: "FLATS AT SPRINGHURST", link: "/clients" },
-	{ title: "Project B", link: "https://www.google.com" },
-	{ title: "Project C", link: "https://www.google.com" },
-	{ title: "Project D", link: "https://www.google.com" },
-	{ title: "Project E", link: "https://www.google.com" },
-	{ title: "Project F", link: "https://www.google.com" },
-	{ title: "Project G", link: "https://www.google.com" },
-	{ title: "Project H", link: "https://www.google.com" },
-	{ title: "Project I", link: "https://www.google.com" },
-	{ title: "Project J", link: "https://www.google.com" },
-	{ title: "Project K", link: "https://www.google.com" },
-]
 
 const Portfolio = () => {
 	return (
@@ -39,17 +25,16 @@ const Portfolio = () => {
 					/>
 				</Banner>
 			</div>
-			<Works>
-				<h2>
-					<span>SKYNET</span> COMMERCIAL WORKS
-				</h2>
+			<Clients />
+			{/* <Works>
+
 				<section class="gallery__flex">
 					{projects &&
 						projects.map(proj => (
 							<Project key={proj.title} project={proj} />
 						))}
 				</section>
-			</Works>
+			</Works> */}
 		</Layout>
 	)
 }

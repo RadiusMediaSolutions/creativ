@@ -25,19 +25,29 @@ const MoreButton = styled.a`
 const Client = ({ client }) => {
 	const { clientName, slug, images } = client
 	const image = getImage(client.images[0])
-	console.log(client.images[0])
 	return (
-		<article className={styles.place}>
-			{/* <div className={styles.imgContainer}></div> */}
-			<GatsbyImage image={image} alt="single Client" />
+		// <article className={styles.place}>
+		// 	{/* <div className={styles.imgContainer}></div> */}
+		// 	<GatsbyImage image={image} alt="single Client" />
 
-			<div className={styles.footer}>
-				<h3>{clientName}</h3>
+		// 	<div className={styles.footer}>
+		// 		<h3>{clientName}</h3>
+		// 	</div>
+		// 	<Link className={styles.link} to={`/portfolio/${slug}`}>
+		// 		View Details
+		// 	</Link>
+		// </article>
+
+		<div className="card">
+			<GatsbyImage image={image} alt="single Client" />
+			<div className="card__overlay">
+				<h5 className="card-title">{clientName}</h5>
+
+				<Link className="card-link" to={`/portfolio/${slug}`}>
+					View Details
+				</Link>
 			</div>
-			<Link className={styles.link} to={`/portfolio/${slug}`}>
-				View Details
-			</Link>
-		</article>
+		</div>
 	)
 }
 export default Client

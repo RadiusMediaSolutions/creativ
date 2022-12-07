@@ -5,6 +5,7 @@ import Banner from "../../components/banner"
 import Layout from "../../components/layout"
 import React from "react"
 import Seo from "../../components/seo"
+import { StaticImage } from "gatsby-plugin-image"
 import background from "../../images/roofingblog.jpg"
 import styled from "styled-components"
 
@@ -24,7 +25,14 @@ const BlogPost = ({ data, children }) => {
 					inner
 					h2Content=""
 					spanContent="POST ONE"
-				></Banner>
+				>
+					<StaticImage
+						src="../../images/roofingblog.jpg"
+						alt="landscape"
+						style={{ height: `80vh`, width: `100%` }}
+						aspectRatio={2 / 1}
+					/>
+				</Banner>
 			</div>
 			<BlogPosts>
 				<GenericH2 none>{data.mdx.frontmatter.title}</GenericH2>

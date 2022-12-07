@@ -1,17 +1,16 @@
-import React from "react"
+import { graphql, useStaticQuery } from "gatsby"
+
 import ClientList from "../../components/clients/ClientList"
-import { useStaticQuery, graphql } from "gatsby"
+import React from "react"
+
 const getClients = graphql`
 	query {
-		clients: allContentfulRecentProjects(
-			filter: { featured: { eq: true } }
-		) {
+		clients: allContentfulRecentProjects {
 			edges {
 				node {
 					contentful_id
 					clientName
 					slug
-					featured
 					images {
 						gatsbyImageData(
 							height: 500
@@ -25,7 +24,8 @@ const getClients = graphql`
 	}
 `
 const Clients = () => {
-	const { clients } = useStaticQuery(getPlaces)
+	const { clients } = useStaticQuery(getClients)
+	console.log(clients)
 	return <ClientList Clients={clients} />
 }
 export default Clients

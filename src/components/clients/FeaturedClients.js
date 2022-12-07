@@ -52,7 +52,6 @@ const getFeaturedClients = graphql`
 const FeaturedClients = () => {
 	const response = useStaticQuery(getFeaturedClients)
 	const clients = response.clients.edges
-	console.log(response)
 	return (
 		<section className={styles.clients}>
 			<h2>
