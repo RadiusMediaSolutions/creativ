@@ -1,4 +1,4 @@
-import * as styles from "../../components/client.module.css"
+import * as styles from "../../styles/client.module.css"
 
 import { GatsbyImage, StaticImage, getImage } from "gatsby-plugin-image"
 

@@ -1,4 +1,4 @@
-import * as styles from "../../components/items.module.css"
+import * as styles from "../../styles/items.module.css"
 
 import { graphql, useStaticQuery } from "gatsby"
 

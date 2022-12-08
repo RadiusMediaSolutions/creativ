@@ -26,7 +26,7 @@ const Contact = () => (
 				<StaticImage
 					src="../images/contactus.jpg"
 					alt="landscape"
-					style={{ height: `80vh` }}
+					style={{ height: `70vh` }}
 					aspectRatio={2 / 1}
 				/>
 			</Banner>

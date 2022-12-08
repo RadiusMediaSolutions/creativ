@@ -137,7 +137,7 @@ const Banner = ({
 			<div
 				style={{
 					background: `#2b2d2f`,
-					height: `80vh`,
+					height: `70vh`,
 					position: `inherit`,
 					zIndex: `1050`,
 				}}

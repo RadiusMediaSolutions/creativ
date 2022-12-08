@@ -23,7 +23,7 @@ const BlogList = styled.div`
 	}
 	h2 {
 		margin: 3rem 0;
-		font-size: 3rem;
+		font-size: 2rem;
 	}
 	article {
 		padding: 2rem;
@@ -49,7 +49,7 @@ const BlogPage = ({ data }) => {
 					<StaticImage
 						src="../images/roofingblog.jpg"
 						alt="landscape"
-						style={{ height: `80vh`, width: `100%` }}
+						style={{ height: `70vh`, width: `100%` }}
 						aspectRatio={2 / 1}
 					/>
 				</Banner>

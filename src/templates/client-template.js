@@ -26,7 +26,7 @@ const Template = ({ data }) => {
 					<StaticImage
 						src="../images/roofingblog.jpg"
 						alt="landscape"
-						style={{ height: `80vh`, width: `100%` }}
+						style={{ height: `70vh`, width: `100%` }}
 						aspectRatio={2 / 1}
 					/>
 				</Banner>

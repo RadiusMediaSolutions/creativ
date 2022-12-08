@@ -165,7 +165,8 @@ img {
 	justify-content: end;
 }
 .navbar:after {
-	background: rgb(245, 245, 245, 0.8) !important;
+	background: rgb(245, 245, 245, 1) !important;
+	border-bottom: 3px solid #9b9b0091;
 	content: "";
 	position: absolute;
 	height: 110px;

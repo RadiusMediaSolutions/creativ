@@ -1,5 +1,5 @@
 import * as React from "react"
-import * as styles from "../components/index.module.css"
+import * as styles from "../styles/index.module.css"
 
 import {
 	FlexBoxIndex,
@@ -50,13 +50,11 @@ const IndexPage = () => (
 					style={{
 						height: `80vh`,
 						width: `100%`,
-						position: `inherit`,
-						zIndex: `1050`,
 					}}
 				/>
 			</Banner>
 		</div>
-		<FeaturedClients />
+		{/* <FeaturedClients /> */}
 
 		<SectionTwo>
 			<FlexBoxIndex className="mColumn">
