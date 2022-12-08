@@ -1,6 +1,6 @@
+import Client from "./clients/Client"
 import React from "react"
 import springhurst from "../images/flats-at-springhurst.jpg"
-
 const Project = ({ project }) => {
 	return (
 		<div class="card">

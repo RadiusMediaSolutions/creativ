@@ -1,5 +1,5 @@
 import * as React from "react"
-import * as styles from "../components/index.module.css"
+import * as styles from "../styles/index.module.css"
 
 import {
 	FlexBoxIndex,
@@ -9,13 +9,14 @@ import {
 	SectionFour,
 	SectionTwo,
 } from "../styles/IndexStyles"
+import { StaticImage, getImage } from "gatsby-plugin-image"
 
 import Banner from "../components/banner"
 import Companies from "../components/companies"
+import FeaturedClients from "../components/clients/FeaturedClients"
 import Layout from "../components/layout"
 import { Link } from "gatsby"
 import Seo from "../components/seo"
-import { StaticImage } from "gatsby-plugin-image"
 import about from "../images/feature_bg.jpg"
 import background from "../images/skynet_heroImg.jpg"
 import bolt from "../images/bolttie.jpeg"
@@ -38,15 +39,23 @@ const MoreButton = styled.a`
 	margin: 0 auto;
 	width: fit-content;
 `
+const image = getImage(background)
 const IndexPage = () => (
 	<Layout>
 		<div style={{ position: "relative" }}>
-			<Banner
-				bgImage={background}
-				h2Content="SKY"
-				spanContent="Develop"
-			></Banner>
+			<Banner bgImage={background} h2Content="SKY" spanContent="Develop">
+				<StaticImage
+					src="../images/skynet_heroImg.jpg"
+					alt="landscape"
+					style={{
+						height: `80vh`,
+						width: `100%`,
+					}}
+				/>
+			</Banner>
 		</div>
+		{/* <FeaturedClients /> */}
+
 		<SectionTwo>
 			<FlexBoxIndex className="mColumn">
 				<div className="image">
@@ -241,7 +250,7 @@ const IndexPage = () => (
 			<div className="title__section5">
 				Our Featured <span>Works</span>
 			</div>
-			<h2>{/* OUR FEATURED <span>WORKS</span> */}</h2>
+			{/* <h2>OUR FEATURED <span>WORKS</span></h2> */}
 			<FlexBoxIndex className="mColumn">
 				<div className="image">
 					<img src={bolt} alt="Logo" width="50" />

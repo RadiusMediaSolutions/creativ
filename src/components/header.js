@@ -42,24 +42,26 @@ const isBrowser = () => typeof window !== "undefined"
 const Header = ({ siteTitle }) => {
 	const onScroll = useRef(null)
 	const onActive = useRef(null)
+	const onLeft = useRef(null)
 
 	const changeBackground = () => {
 		if (isBrowser() && window.scrollY >= 100) {
-			onScroll.current.className = "menu__items navbar"
 			onActive.current.className = "fixed-top onactive"
+			onScroll.current.className = "menu__items navbar"
+			onLeft.current.className = "site-logo onLeft"
 		} else {
-			onScroll.current.className = "menu__items"
 			onActive.current.className = "fixed-top"
+			onScroll.current.className = "menu__items"
+			onLeft.current.className = "site-logo"
 		}
 	}
 	isBrowser() && window.addEventListener("scroll", changeBackground)
-	// window.addEventListener("scroll", changeBackground)
 
 	return (
 		<SiteHeader>
-			<div class="fixed-top" ref={onActive}>
-				<div class="menu__items" ref={onScroll}>
-					<div class="site-logo">
+			<div className="fixed-top" ref={onActive}>
+				<div className="menu__items" ref={onScroll}>
+					<div className="site-logo" ref={onLeft}>
 						<Link
 							to="/"
 							style={{

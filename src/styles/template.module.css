@@ -1,0 +1,81 @@
+.singleClient h2 {
+	font-size: 3rem;
+	margin: 1rem 0;
+	color: var(--heading-color);
+}
+.singleClient p {
+	max-width: 100% !important;
+	font-size: 1.3rem;
+}
+
+.singleClient img {
+	margin: 2rem auto;
+}
+
+.backLink {
+	box-shadow: none;
+	color: #9b9b01;
+	border-radius: 5px;
+	cursor: pointer;
+	font-size: 1rem;
+	font-weight: 600;
+	text-transform: uppercase;
+	display: flex;
+	justify-content: center;
+	margin: 1.5rem 0;
+}
+.template {
+	padding: 4rem 0;
+}
+.center {
+	width: 100%;
+	margin: 0 auto;
+}
+.images {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+	grid-column-gap: 1rem;
+	grid-row-gap: 1rem;
+	margin-bottom: 2rem;
+}
+.image {
+	box-shadow: var(--lightShadow);
+}
+.template h2 {
+	text-transform: capitalize;
+	letter-spacing: var(--mainSpacing);
+	margin-bottom: 1rem;
+}
+.info {
+	display: flex;
+	flex-wrap: wrap;
+}
+.info p {
+	display: flex;
+	align-items: center;
+	margin-right: 2rem;
+	text-transform: capitalize;
+}
+.icon {
+	color: var(--primaryColor);
+	font-size: 1.4rem;
+	margin-right: 0.5rem;
+}
+.desc {
+	line-height: 2;
+}
+.template h4 {
+	text-transform: capitalize;
+}
+.template h2 {
+	margin: 2rem 0;
+}
+.journey {
+	margin: 3rem 0;
+}
+@media screen and (min-width: 992px) {
+	.journey,
+	.desc {
+		width: 70vw;
+	}
+}

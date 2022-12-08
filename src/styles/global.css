@@ -68,11 +68,11 @@ img {
 	text-decoration: none;
 }
 
-.card__img {
+.card img {
 	display: block;
 
 	width: 100%;
-	height: auto;
+	height: 400px;
 	object-fit: cover;
 }
 
@@ -165,15 +165,21 @@ img {
 	justify-content: end;
 }
 .navbar:after {
-	background: rgb(245, 245, 245, 0.8) !important;
+	background: rgb(245, 245, 245, 1) !important;
+	border-bottom: 3px solid #9b9b0091;
 	content: "";
 	position: absolute;
-	height: 95px;
+	height: 110px;
 	width: 100%;
 	left: 64px;
 	z-index: 1;
+	top: -21px;
 }
 
 .onactive .menu__items {
 	background: none !important;
+}
+
+.onLeft {
+	margin-right: auto;
 }

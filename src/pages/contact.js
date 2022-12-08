@@ -10,7 +10,9 @@ import { Link, graphql, useStaticQuery } from "gatsby"
 import Banner from "../components/banner"
 import Layout from "../components/layout"
 import React from "react"
+import { StaticImage } from "gatsby-plugin-image"
 import background from "../images/contactus.jpg"
+import styled from "styled-components"
 
 const Contact = () => (
 	<Layout>
@@ -20,12 +22,19 @@ const Contact = () => (
 				inner
 				h2Content="SKY"
 				spanContent="Contact"
-			></Banner>
+			>
+				<StaticImage
+					src="../images/contactus.jpg"
+					alt="landscape"
+					style={{ height: `70vh` }}
+					aspectRatio={2 / 1}
+				/>
+			</Banner>
 		</div>
+
 		<h2 style={{ marginTop: "5rem" }}>
 			FEEL FREE TO <span>CONTACT US</span>
 		</h2>
-
 		<ContactSection className="mColumn">
 			<div className="box">
 				<GenericH3 none>CALL US</GenericH3>
