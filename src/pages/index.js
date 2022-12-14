@@ -58,7 +58,12 @@ const IndexPage = () => (
 
 		<SectionTwo>
 			<FlexBoxIndex className="mColumn">
-				<div className="image">
+				<div
+					className="image"
+					data-scroll
+					data-scroll-direction="vertical"
+					data-scroll-speed="2"
+				>
 					<img src={about} alt="about" style={{ width: "70%" }} />
 				</div>
 				<div className="text_section3">
@@ -86,49 +91,25 @@ const IndexPage = () => (
 						<li>DESIGN & CREATE</li>
 						<li>BUILD & FINISH</li>
 					</ul>
-					<MoreButton>Learn More</MoreButton>
+					<MoreButton
+						data-scroll
+						data-scroll-direction="vertical"
+						data-scroll-speed="1"
+					>
+						Learn More
+					</MoreButton>
 				</div>
 			</FlexBoxIndex>
 		</SectionTwo>
-		{/* <SectionThree>
-			<div>
-				<GenericH2>Our Passion</GenericH2>
-				<GenericPara lessSize grey>
-					Most good programmers program because they love doing what
-					they do
-				</GenericPara>
-				<h5>Some dude</h5>
-				<span>
-					<FontAwesomeIcon
-						icon="gem"
-						color="#04F5C6"
-						size="6x"
-						style={{ marginRight: "3rem" }}
-						fixedWidth
-						border
-					/>
-					<FontAwesomeIcon
-						icon="heart"
-						color="#04F5C6"
-						size="6x"
-						style={{ marginRight: "3rem" }}
-						fixedWidth
-						border
-					/>
-					<FontAwesomeIcon
-						icon="faGem"
-						color="#04F5C6"
-						size="6x"
-						style={{ marginRight: "3rem" }}
-						fixedWidth
-						border
-					/>
-				</span>
-			</div>
-		</SectionThree> */}
 
 		<SectionFour>
-			<div className="header__section4">
+			<div
+				className="header__section4 op-class"
+				data-scroll
+				data-scroll-class="fadeIn"
+				data-scroll-repeat="true"
+				data-scroll-speed="2"
+			>
 				<div className="title__section4">
 					Our <span>Services</span>
 				</div>
@@ -139,6 +120,8 @@ const IndexPage = () => (
 			</div>
 			<div className="grid__section4">
 				<div
+					data-scroll
+					data-scroll-speed="5"
 					className="item1"
 					style={{
 						color: "#fff",
@@ -164,6 +147,8 @@ const IndexPage = () => (
 					</GenericPara>
 				</div>
 				<div
+					data-scroll
+					data-scroll-speed="5"
 					className="item2"
 					style={{
 						color: "#fff",
@@ -191,6 +176,8 @@ const IndexPage = () => (
 					</GenericPara>
 				</div>
 				<div
+					data-scroll
+					data-scroll-speed="3"
 					className="item3"
 					style={{
 						color: "#000",
@@ -218,6 +205,8 @@ const IndexPage = () => (
 					</GenericPara>
 				</div>
 				<div
+					data-scroll
+					data-scroll-speed="3"
 					className="item4"
 					style={{
 						color: "#000",
@@ -247,7 +236,13 @@ const IndexPage = () => (
 			</div>
 		</SectionFour>
 		<SectionFive>
-			<div className="title__section5">
+			<div
+				className="title__section5 op-class"
+				data-scroll
+				data-scroll-class="fadeIn"
+				data-scroll-repeat="true"
+				data-scroll-speed="2"
+			>
 				Our Featured <span>Works</span>
 			</div>
 			{/* <h2>OUR FEATURED <span>WORKS</span></h2> */}

@@ -147,7 +147,13 @@ const Banner = ({
 				</Hero>
 
 				<TextWrapper bgImage={bgImage}>
-					<div>
+					<div
+						className="op-class"
+						data-scroll
+						data-scroll-class="fadeIn"
+						data-scroll-repeat="true"
+						data-scroll-speed="1"
+					>
 						<h2>{h2Content}</h2>
 						<h1>
 							<span>{spanContent}</span>

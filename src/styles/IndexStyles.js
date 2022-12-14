@@ -76,7 +76,7 @@ const SectionTwo = styled.section`
 `
 
 const SectionThree = styled.section`
-	background-color: #2b343d;
+	background-color: whitesmoke;
 	color: #ffffff;
 `
 
@@ -175,7 +175,7 @@ const GenericH3 = styled.h3`
 `
 
 const SectionFour = styled.section`
-	// background-color: #505393;
+	background-color: whitesmoke;
 	color: #ffffff;
 	text-align: center;
 	.header__section4 {
@@ -234,7 +234,7 @@ const SectionFour = styled.section`
 	}
 `
 const SectionFive = styled.section`
-	// background-color: #505393;
+	background-color: whitesmoke;
 	color: #ffffff;
 	text-align: center;
 	padding: 3rem 0;
