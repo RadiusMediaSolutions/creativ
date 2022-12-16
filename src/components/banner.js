@@ -158,7 +158,7 @@ const Banner = ({
 						<h1>
 							<span>{spanContent}</span>
 						</h1>
-						<h1>{h1Content}</h1>
+						{h1Content}
 						<p>Develop your inner beast</p>
 					</div>
 					<MoreLink>Learn More</MoreLink>

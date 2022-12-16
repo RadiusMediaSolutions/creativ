@@ -51,6 +51,9 @@ const IndexPage = () => (
 						height: `80vh`,
 						width: `100%`,
 					}}
+					data-scroll
+					data-scroll-direction="vertical"
+					data-scroll-speed="-1"
 				/>
 			</Banner>
 		</div>
@@ -87,9 +90,27 @@ const IndexPage = () => (
 					</GenericPara>
 					<h3>Our process</h3>
 					<ul className="processList">
-						<li>IDEA & START</li>
-						<li>DESIGN & CREATE</li>
-						<li>BUILD & FINISH</li>
+						<li
+							data-scroll
+							data-scroll-direction="vertical"
+							data-scroll-speed="1"
+						>
+							IDEA & START
+						</li>
+						<li
+							data-scroll
+							data-scroll-direction="vertical"
+							data-scroll-speed="2"
+						>
+							DESIGN & CREATE
+						</li>
+						<li
+							data-scroll
+							data-scroll-direction="vertical"
+							data-scroll-speed="3"
+						>
+							BUILD & FINISH
+						</li>
 					</ul>
 					<MoreButton
 						data-scroll
@@ -121,7 +142,8 @@ const IndexPage = () => (
 			<div className="grid__section4">
 				<div
 					data-scroll
-					data-scroll-speed="5"
+					data-scroll-speed="1"
+					data-scroll-sticky
 					className="item1"
 					style={{
 						color: "#fff",
@@ -148,7 +170,7 @@ const IndexPage = () => (
 				</div>
 				<div
 					data-scroll
-					data-scroll-speed="5"
+					data-scroll-speed="1"
 					className="item2"
 					style={{
 						color: "#fff",
@@ -177,7 +199,7 @@ const IndexPage = () => (
 				</div>
 				<div
 					data-scroll
-					data-scroll-speed="3"
+					data-scroll-speed="1"
 					className="item3"
 					style={{
 						color: "#000",
@@ -206,7 +228,8 @@ const IndexPage = () => (
 				</div>
 				<div
 					data-scroll
-					data-scroll-speed="3"
+					data-scroll-speed="1"
+					data-scroll-sticky
 					className="item4"
 					style={{
 						color: "#000",
@@ -247,12 +270,13 @@ const IndexPage = () => (
 			</div>
 			{/* <h2>OUR FEATURED <span>WORKS</span></h2> */}
 			<FlexBoxIndex className="mColumn">
-				<div className="image">
+				<div
+					className="image"
+					data-scroll
+					data-scroll-direction="vertical"
+					data-scroll-speed="2"
+				>
 					<img src={bolt} alt="Logo" width="50" />
-					{/* <img
-						src="https://source.unsplash.com/LXI5kqCdEcE/600x480"
-						alt="Picture 1"
-					/> */}
 				</div>
 				<div className="text_section3">
 					<GenericH2 none>
@@ -267,7 +291,11 @@ const IndexPage = () => (
 						build dealing with manufacturers specifications and
 						suppliers.
 					</GenericPara>
-					<MoreButton>
+					<MoreButton
+						data-scroll
+						data-scroll-direction="vertical"
+						data-scroll-speed="-1"
+					>
 						<Link
 							to="/clients"
 							style={{
@@ -282,7 +310,7 @@ const IndexPage = () => (
 				</div>
 			</FlexBoxIndex>
 			<FlexBoxIndex inverse className="mColumn">
-				<div className="text_section3">
+				<div className="text_section3" style={{ marginRight: "2rem" }}>
 					<GenericH2 none>
 						SPRINGHURST <span>Flats</span>
 					</GenericH2>
@@ -308,12 +336,13 @@ const IndexPage = () => (
 						</Link>
 					</MoreButton>
 				</div>
-				<div className="image">
+				<div
+					className="image"
+					data-scroll
+					data-scroll-direction="vertical"
+					data-scroll-speed="2"
+				>
 					<img src={springhurst} alt="Logo" width="50" />
-					{/* <img
-						src="https://source.unsplash.com/f77Bh3inUpE/600x480"
-						alt="pic2"
-					/> */}
 				</div>
 			</FlexBoxIndex>
 		</SectionFive>

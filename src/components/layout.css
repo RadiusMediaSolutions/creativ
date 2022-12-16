@@ -39,6 +39,7 @@ html {
 	font-size: var(--font-md);
 	line-height: var(--line-height-normal);
 	overflow-y: scroll;
+	scroll-behavior: smooth;
 }
 a,
 *,
@@ -203,7 +204,7 @@ h2:after {
 } */
 h1 {
 	margin: 0;
-	margin-bottom: 3rem;
+	/* margin-bottom: 3rem; */
 	padding: 0;
 	line-height: var(--line-height-dense);
 	letter-spacing: -0.01em;

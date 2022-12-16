@@ -126,7 +126,11 @@ const Companies = () => {
 					backgroundColor: `#2b2d2f`,
 				}}
 			>
-				<FlexBoxIndex>
+				<FlexBoxIndex
+					data-scroll
+					data-scroll-direction="vertical"
+					data-scroll-speed="2"
+				>
 					<Container>
 						<h1>
 							<i></i>
@@ -145,7 +149,12 @@ const Companies = () => {
 					}}
 				>
 					<Canvas />
-					<div className="stats">
+					<div
+						className="stats"
+						data-scroll
+						data-scroll-direction="vertical"
+						data-scroll-speed="-1"
+					>
 						<div className="design">
 							<GenericH2 none>200</GenericH2>
 							<GenericPara lessSize>Design</GenericPara>

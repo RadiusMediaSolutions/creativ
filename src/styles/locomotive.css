@@ -83,13 +83,6 @@ main {
 	flex-direction: column;
 }
 
-.intro {
-	display: grid;
-	grid-template-columns: 1fr 1fr;
-	align-items: center;
-	background-color: greenyellow;
-}
-
 .left img {
 	transform: translateY(-100px);
 }
@@ -99,5 +92,12 @@ main {
 }
 .fadeIn {
 	opacity: 1;
-	transition: opacity 4s;
+	transition: opacity 3s;
+}
+
+.tr-class {
+	transform: translateY(5);
+}
+.transForm {
+	transform: translateY(5);
 }

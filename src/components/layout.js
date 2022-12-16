@@ -56,7 +56,7 @@ const Layout = ({ children }) => {
 							data-scroll
 							data-scroll-class="fadeIn"
 							data-scroll-repeat="true"
-							data-scroll-speed="1"
+							data-scroll-speed="2"
 							style={{
 								fontSize: `var(--font-sm)`,
 							}}
@@ -102,7 +102,13 @@ const Layout = ({ children }) => {
 								</GenericPara>
 							</div>
 						</Footer>
-						<Copyright>
+						<Copyright
+							className="op-class"
+							data-scroll
+							data-scroll-class="fadeIn"
+							data-scroll-repeat="true"
+							data-scroll-speed="1"
+						>
 							<div>
 								<span>
 									&copy; {new Date().getFullYear()} , Skynet{" "}
