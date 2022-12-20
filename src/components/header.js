@@ -5,6 +5,8 @@ import Logo from "../images/logo-small.png"
 import PropTypes from "prop-types"
 import styled from "styled-components"
 
+// import { useLocomotiveScroll } from "react-locomotive-scroll"
+
 const SiteHeader = styled.header`
 	.menu__items {
 		padding: 10px 30px;
@@ -45,6 +47,7 @@ const Header = ({ siteTitle }) => {
 	const onLeft = useRef(null)
 
 	const changeBackground = () => {
+		console.log("testing...")
 		if (isBrowser() && window.scrollY >= 100) {
 			onActive.current.className = "fixed-top onactive"
 			onScroll.current.className = "menu__items navbar"
@@ -55,13 +58,32 @@ const Header = ({ siteTitle }) => {
 			onLeft.current.className = "site-logo"
 		}
 	}
+
 	isBrowser() && window.addEventListener("scroll", changeBackground)
 
+	// const { scroll } = useLocomotiveScroll()
+
+	// const scroller = new LocomotiveScroll()
+	// console.log(new LocomotiveScroll())
+
+	// scroll.on("scroll", console.log("Hello"))
+	// console.log(scroll)
+
 	return (
-		<SiteHeader>
-			<div className="fixed-top" ref={onActive}>
-				<div className="menu__items" ref={onScroll}>
-					<div className="site-logo" ref={onLeft}>
+		<SiteHeader data-scroll-section>
+			<div className="fixed-top" data-scroll data-scroll-class="onactive">
+				<div
+					className="menu__items"
+					ref={onScroll}
+					data-scroll
+					data-scroll-class="navbar"
+				>
+					<div
+						className="site-logo"
+						ref={onLeft}
+						data-scroll
+						data-scroll-class="onLeft"
+					>
 						<Link
 							to="/"
 							style={{
@@ -75,7 +97,7 @@ const Header = ({ siteTitle }) => {
 						</Link>
 					</div>
 					<Link
-						exact
+						exact="true"
 						activeClassName="active"
 						to="/"
 						style={{ textDecoration: `none` }}

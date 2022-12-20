@@ -1,5 +1,5 @@
 /*! locomotive-scroll v4.1.3 | MIT License | https://github.com/locomotivemtl/locomotive-scroll */
-html.has-scroll-smooth {
+.has-scroll-smooth {
 	overflow: hidden;
 }
 
@@ -10,9 +10,9 @@ html.has-scroll-dragging {
 	user-select: none;
 }
 
-.has-scroll-smooth [data-scroll-container] {
+/* .has-scroll-smooth [data-scroll-container] {
 	min-height: 100vh;
-}
+} */
 
 [data-scroll-direction="horizontal"] [data-scroll-container] {
 	height: 100vh;
@@ -93,11 +93,4 @@ main {
 .fadeIn {
 	opacity: 1;
 	transition: opacity 3s;
-}
-
-.tr-class {
-	transform: translateY(5);
-}
-.transForm {
-	transform: translateY(5);
 }

@@ -36,7 +36,7 @@ const MoreButton = styled.a`
 	text-align: center;
 	text-decoration: none;
 	text-transform: uppercase;
-	margin: 0 auto;
+	margin: 30px auto;
 	width: fit-content;
 `
 const image = getImage(background)
@@ -65,6 +65,7 @@ const IndexPage = () => (
 					className="image"
 					data-scroll
 					data-scroll-direction="vertical"
+					data-scroll-repeat="true"
 					data-scroll-speed="2"
 				>
 					<img src={about} alt="about" style={{ width: "70%" }} />
@@ -302,6 +303,7 @@ const IndexPage = () => (
 								color: "#9b9b01 ",
 								fontWeight: "600",
 								textDecoration: `none`,
+								marginTop: "1.5rem",
 							}}
 						>
 							View Details

@@ -7,7 +7,7 @@ const MoreText = styled.div`
 	text-transform: uppercase;
 	letter-spacing: 0.225em;
 	font-weight: 600;
-	font-size: 1.2rem;
+	font-size: 1rem;
 	z-index: 1;
 	left: 50%;
 	bottom: 10%;
@@ -37,9 +37,9 @@ const SectionTwo = styled.section`
 	}
 
 	h2 {
-		font-family: poppins;
+		font-family: Roboto;
 		font-size: 3rem;
-		font-weight: 400;
+		font-weight: 100;
 		padding: 1.5rem 0;
 		color: #9b9b01;
 		text-transform: uppercase;
@@ -67,7 +67,7 @@ const SectionTwo = styled.section`
 		font-size: 1.4rem;
 		line-height: 2rem;
 		color: #ffffff;
-		font-weight: 800;
+		font-weight: 700
 		letter-spacing: 0.225em;
 		text-transform: uppercase;
 		padding-bottom: 0.5rem;
@@ -100,7 +100,7 @@ const FlexBoxIndex = styled.div`
 	}
 	h2 {
 		font-size: 3rem;
-		font-weight: 400;
+		font-weight: 100;
 		color: var(--heading-color);
 		text-transform: uppercase;
 		margin: 0;
@@ -114,7 +114,7 @@ const FlexBoxIndex = styled.div`
 		// text-transform: uppercase;
 		color: black;
 		text-align: justify;
-		font-size: 1.2rem;
+		font-size: 1rem;
 		// margin: 0 auto;
 	}
 	.processList {
@@ -122,6 +122,7 @@ const FlexBoxIndex = styled.div`
 		margin-left: 0;
 	}
 	.processList li {
+		font-size: 14px;
 		list-style: outside none;
 		margin-right: 10px;
 		padding-left: 50px;
@@ -146,14 +147,14 @@ const FlexBoxIndex = styled.div`
 const PostPara = styled.p`
 	margin: 0;
 	max-width: 100% !important;
-	font-size: ${props => (props.lessSize ? "1.2rem" : "1.5rem")} !important;
+	font-size: ${props => (props.lessSize ? "1rem" : "1rem")} !important;
 	line-height: ${props => (props.lessSize ? "2rem" : "3rem")} !important;
 	color: ${props => (props.grey ? "#000000" : "#666666")} !important;
 `
 
 const GenericPara = styled.p`
 	margin: 0 auto;
-	font-size: ${props => (props.lessSize ? "1.2rem" : "1.5rem")} !important;
+	font-size: ${props => (props.lessSize ? "1rem" : "1rem")} !important;
 	line-height: ${props => (props.lessSize ? "2rem" : "3rem")} !important;
 	color: ${props => (props.grey ? "#000000" : "#666666")} !important;
 `
@@ -183,9 +184,9 @@ const SectionFour = styled.section`
 		margin: 0 auto;
 	}
 	.title__section4 {
-		font-family: poppins;
+		font-family: Roboto;
 		font-size: 3rem;
-		font-weight: 400;
+		font-weight: 100;
 		padding: 1em 0;
 		color: var(--heading-color);
 		// border-bottom: 2px solid #464981;
@@ -205,7 +206,7 @@ const SectionFour = styled.section`
 			bottom: 30px;
 		}
 		span {
-			font-weight: 800;
+			font-weight: 700;
 		}
 	}
 	.grid__section4 {
@@ -243,9 +244,9 @@ const SectionFive = styled.section`
 		margin: 0 auto;
 	}
 	.title__section5 {
-		font-family: poppins;
+		font-family: Roboto;
 		font-size: 3rem;
-		font-weight: 400;
+		font-weight: 100;
 		padding-bottom: 1em;
 		color: var(--heading-color);
 		// border-bottom: 2px solid #464981;
@@ -264,7 +265,7 @@ const SectionFive = styled.section`
 			bottom: 30px;
 		}
 		span {
-			font-weight: 800;
+			font-weight: 700;
 		}
 	}
 	.grid__section4 {
@@ -286,14 +287,14 @@ const SectionFive = styled.section`
 	}
 	.flex__section4 > h2 {
 		margin-left: 1rem;
-		font-family: poppins;
+		font-family: Roboto;
 	}
 	.flex__section4 p {
 		color: #fff !important;
 	}
 `
 
-const Footer = styled.footer`
+const Ftr = styled.footer`
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr 1fr;
 	grid-gap: 20px;
@@ -310,7 +311,8 @@ const Footer = styled.footer`
 	}
 	p {
 		color: rgba(255, 255, 255, 0.8) !important;
-		font-size: 1.2rem !important;
+		font-size: 1rem !important;
+		font-weight: 400;
 		padding: 0;
 	}
 	a {
@@ -328,7 +330,7 @@ const Copyright = styled.div`
 	justify-content: center;
 	background: #171b1e;
 	padding: 10px 0;
-	margin-bottom: 15px;
+	margin-bottom: 38px;
 `
 const Works = styled.div`
 	color: #4e4852;
@@ -355,7 +357,8 @@ const ContactSection = styled.section`
 	}
 	p {
 		color: rgba(255, 255, 255, 0.5);
-		font-size: 1.2rem !important;
+		font-size: 1rem !important;
+		font-weight: 400;
 		padding: 0;
 		text-align: center;
 	}
@@ -365,12 +368,13 @@ const CntForm = styled.div`
 	h2 {
 		font-size: 2rem;
 		span {
-			font-weight: 800;
+			font-weight: 700;
 		}
 	}
 	p {
 		color: rgba(255, 255, 255, 0.5);
-		font-size: 1.2rem !important;
+		font-size: 1rem !important;
+		font-weight: 400;
 		padding: 0;
 		text-align: left;
 		display: inline;
@@ -393,7 +397,7 @@ const CntForm = styled.div`
 		cursor: pointer;
 		background: #9b9b01;
 		border: none;
-		font-size: 1.2rem;
+		font-size: 1rem;
 		color: white;
 		text-transform: uppercase;
 	}
@@ -405,7 +409,8 @@ const Clients = styled.div`
 	}
 	p {
 		color: rgba(255, 255, 255, 0.5);
-		font-size: 1.2rem !important;
+		font-size: 1rem !important;
+		font-weight: 400;
 		padding: 1rem 0;
 		text-align: left;
 		display: block;
@@ -430,7 +435,7 @@ export {
 	GenericH3,
 	SectionFour,
 	SectionFive,
-	Footer,
+	Ftr,
 	Copyright,
 	Works,
 	ContactSection,

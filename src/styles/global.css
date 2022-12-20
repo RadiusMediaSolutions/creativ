@@ -197,3 +197,10 @@ img {
 	background-image: url(../images/bg-dec.png);
 	opacity: 0.5;
 } */
+
+.statsPara {
+	background-image: url(../images//canvas-bg.jpg);
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}

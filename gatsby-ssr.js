@@ -5,5 +5,5 @@
  */
 
 exports.onRenderBody = ({ setHtmlAttributes }) => {
-  setHtmlAttributes({ lang: `en` })
+	setHtmlAttributes({ lang: `en`, className: `has-scroll-smooth` })
 }

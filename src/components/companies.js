@@ -60,6 +60,7 @@ const cursor = keyframes`
 	}
 `
 const Container = styled.div`
+	background: url(../images/canvas-bg.jpg);
 	position: relative;
 	height: 100%;
 	width: 100%;
@@ -126,12 +127,12 @@ const Companies = () => {
 					backgroundColor: `#2b2d2f`,
 				}}
 			>
-				<FlexBoxIndex
-					data-scroll
-					data-scroll-direction="vertical"
-					data-scroll-speed="2"
-				>
-					<Container>
+				<FlexBoxIndex>
+					<Container
+						data-scroll
+						data-scroll-direction="vertical"
+						data-scroll-speed="2"
+					>
 						<h1>
 							<i></i>
 							<span id="a">Prepared</span>
