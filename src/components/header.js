@@ -1,5 +1,8 @@
+import * as styles from "../styles/navbar.module.css"
+
 import React, { useRef, useState } from "react"
 
+import { FaAlignRight } from "react-icons/fa"
 import { Link } from "gatsby"
 import Logo from "../images/logo-small.png"
 import PropTypes from "prop-types"
@@ -47,16 +50,19 @@ const Header = ({ siteTitle }) => {
 	const onLeft = useRef(null)
 
 	const changeBackground = () => {
-		console.log("testing...")
 		if (isBrowser() && window.scrollY >= 100) {
 			onActive.current.className = "fixed-top onactive"
-			onScroll.current.className = "menu__items navbar"
+			onScroll.current.className = "nav-center navbar"
 			onLeft.current.className = "site-logo onLeft"
 		} else {
 			onActive.current.className = "fixed-top"
-			onScroll.current.className = "menu__items"
+			onScroll.current.className = "nav-center"
 			onLeft.current.className = "site-logo"
 		}
+	}
+	const [isOpen, setNav] = useState(false)
+	const toggleNav = () => {
+		setNav(isOpen => !isOpen)
 	}
 
 	isBrowser() && window.addEventListener("scroll", changeBackground)
@@ -71,61 +77,64 @@ const Header = ({ siteTitle }) => {
 
 	return (
 		<SiteHeader data-scroll-section>
-			<div className="fixed-top" data-scroll data-scroll-class="onactive">
-				<div
-					className="menu__items"
-					ref={onScroll}
-					data-scroll
-					data-scroll-class="navbar"
-				>
-					<div
-						className="site-logo"
-						ref={onLeft}
-						data-scroll
-						data-scroll-class="onLeft"
-					>
-						<Link
-							to="/"
-							style={{
-								fontSize: `var(--font-sm)`,
-								textDecoration: `none`,
-								marginRight: `15px`,
-							}}
+			<div className="fixed-top" ref={onActive}>
+				<nav className="menubar">
+					<div className={styles.navCenter} ref={onScroll}>
+						<div className={styles.navHeader} ref={onLeft}>
+							<Link to="/">
+								<img
+									src={Logo}
+									className={styles.brandLogo}
+									alt="backroads logo"
+								/>
+							</Link>
+							<button
+								type="button"
+								className={styles.logoBtn}
+								onClick={toggleNav}
+							>
+								<FaAlignRight className={styles.logoIcon} />
+							</button>
+						</div>
+						<ul
+							className={
+								isOpen
+									? `${styles.navLinks} ${styles.showNav}`
+									: `${styles.navLinks}`
+							}
 						>
-							{/* {siteTitle} */}
-							<img src={Logo} alt="Logo" width="50" />
-						</Link>
+							<Link
+								exact="true"
+								activeClassName="active"
+								to="/"
+								style={{ textDecoration: `none` }}
+							>
+								<MenuItem>Home</MenuItem>
+							</Link>
+							<Link
+								activeClassName="active"
+								to="/portfolio"
+								style={{ textDecoration: `none` }}
+							>
+								<MenuItem>Portfolio</MenuItem>
+							</Link>
+							<Link
+								activeClassName="active"
+								to="/blog"
+								style={{ textDecoration: `none` }}
+							>
+								<MenuItem>Blog</MenuItem>
+							</Link>
+							<Link
+								activeClassName="active"
+								to="/contact"
+								style={{ textDecoration: `none` }}
+							>
+								<MenuItem>Contact</MenuItem>
+							</Link>
+						</ul>
 					</div>
-					<Link
-						exact="true"
-						activeClassName="active"
-						to="/"
-						style={{ textDecoration: `none` }}
-					>
-						<MenuItem>Home</MenuItem>
-					</Link>
-					<Link
-						activeClassName="active"
-						to="/portfolio"
-						style={{ textDecoration: `none` }}
-					>
-						<MenuItem>Portfolio</MenuItem>
-					</Link>
-					<Link
-						activeClassName="active"
-						to="/blog"
-						style={{ textDecoration: `none` }}
-					>
-						<MenuItem>Blog</MenuItem>
-					</Link>
-					<Link
-						activeClassName="active"
-						to="/contact"
-						style={{ textDecoration: `none` }}
-					>
-						<MenuItem>Contact</MenuItem>
-					</Link>
-				</div>
+				</nav>
 			</div>
 		</SiteHeader>
 	)

@@ -82,6 +82,7 @@ const Contact = () => (
 				you need!
 			</GenericPara>
 			<form
+				className="cntForm"
 				method="POST"
 				action="https://getform.io/f/aff1bedd-c396-40a6-88f3-4bceadf69fd4"
 			>

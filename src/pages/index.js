@@ -62,18 +62,31 @@ const IndexPage = () => (
 		<SectionTwo>
 			<FlexBoxIndex className="mColumn">
 				<div
-					className="image"
+					className="image lg"
 					data-scroll
 					data-scroll-direction="vertical"
 					data-scroll-repeat="true"
 					data-scroll-speed="2"
 				>
-					<img src={about} alt="about" style={{ width: "70%" }} />
+					<img src={about} alt="about" style={{ maxWidth: "70%" }} />
 				</div>
 				<div className="text_section3">
 					<h2>
 						WELCOME – WE ARE <span>SKYNET</span>
 					</h2>
+					<div
+						className="image small"
+						data-scroll
+						data-scroll-direction="vertical"
+						data-scroll-repeat="true"
+						data-scroll-speed="2"
+					>
+						<img
+							src={about}
+							alt="about"
+							style={{ maxWidth: "70%" }}
+						/>
+					</div>
 					{/* <GenericH2 none>WELCOME SKY DEVELOP</GenericH2> */}
 					<GenericPara lessSize lessSpacing style={{ margin: "0" }}>
 						Our proven methodology creates a comprehensive strategy

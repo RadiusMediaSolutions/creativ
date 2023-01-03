@@ -39,6 +39,7 @@ const Hero = styled.div`
 `
 
 const TextWrapper = styled.div`
+	margin-top: 70px;
 	position: absolute;
 	z-index: 1000;
 	left: 10%;
@@ -148,7 +149,7 @@ const Banner = ({
 
 				<TextWrapper bgImage={bgImage}>
 					<div
-						className="op-class"
+						className="op-class heroTitle"
 						data-scroll
 						data-scroll-class="fadeIn"
 						data-scroll-repeat="true"
@@ -161,7 +162,7 @@ const Banner = ({
 						{h1Content}
 						<p>Develop your inner beast</p>
 					</div>
-					<MoreLink>Learn More</MoreLink>
+					<MoreLink className="moreBtn">Learn More</MoreLink>
 				</TextWrapper>
 			</div>
 			<BannerFooter inner={inner}>

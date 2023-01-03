@@ -122,6 +122,7 @@ const Companies = () => {
 	return (
 		<>
 			<div
+				className="flexCol"
 				style={{
 					display: `flex`,
 					backgroundColor: `#2b2d2f`,

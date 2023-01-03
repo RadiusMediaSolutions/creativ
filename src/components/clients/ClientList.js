@@ -18,7 +18,7 @@ class ClientList extends Component {
 	}
 	render() {
 		return (
-			<section className={styles}>
+			<section className="innerTitle">
 				{/* <Title title="hampi" subtitle="clients" /> */}
 				<h2>
 					<span>SKYNET</span> COMMERCIAL WORKS

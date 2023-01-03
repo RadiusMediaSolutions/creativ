@@ -14,13 +14,6 @@ import background from "../images/roofingblog.jpg"
 import styled from "styled-components"
 
 const BlogList = styled.div`
-	.blogGrid {
-		display: grid;
-		// grid-template-columns: 1fr 1fr 1fr;
-		grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-		grid-gap: 20px;
-		margin: 4rem 0;
-	}
 	h2 {
 		margin: 3rem 0;
 		font-size: 2rem;
@@ -47,6 +40,7 @@ const BlogPage = ({ data }) => {
 					spanContent="Resources"
 				>
 					<StaticImage
+						className="image"
 						src="../images/roofingblog.jpg"
 						alt="landscape"
 						style={{ height: `70vh`, width: `100%` }}
@@ -55,7 +49,7 @@ const BlogPage = ({ data }) => {
 				</Banner>
 			</div>
 
-			<BlogList>
+			<BlogList className="innerTitle">
 				<h2>
 					<span>SKYNET</span> RECENT ARTICLES
 				</h2>
