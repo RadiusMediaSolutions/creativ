@@ -258,6 +258,10 @@ img {
 		height: 400px;
 	}
 
+	.grid__section4 {
+		grid-template-columns: 1fr !important;
+	}
+
 	/* Portfolio */
 	.innerTitle h2 {
 		text-align: center;

@@ -3,12 +3,12 @@
 	overflow: hidden;
 }
 
-html.has-scroll-dragging {
+/* html.has-scroll-dragging {
 	-webkit-user-select: none;
 	-moz-user-select: none;
 	-ms-user-select: none;
 	user-select: none;
-}
+} */
 
 /* .has-scroll-smooth [data-scroll-container] {
 	min-height: 100vh;
