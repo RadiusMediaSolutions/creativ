@@ -25,7 +25,14 @@ const Layout = ({ children }) => {
 
 	const options = {
 		smooth: true,
+		smartphone: {
+			smooth: true,
+		},
+		tablet: {
+			smooth: true,
+		},
 	}
+
 	const data = useStaticQuery(graphql`
 		query SiteTitleQuery {
 			site {

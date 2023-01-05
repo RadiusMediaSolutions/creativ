@@ -8,11 +8,11 @@
 	-moz-user-select: none;
 	-ms-user-select: none;
 	user-select: none;
-} */
+}
 
-/* .has-scroll-smooth [data-scroll-container] {
+.has-scroll-smooth [data-scroll-container] {
 	min-height: 100vh;
-} */
+}
 
 [data-scroll-direction="horizontal"] [data-scroll-container] {
 	height: 100vh;
@@ -76,7 +76,7 @@
 	right: auto;
 	bottom: 0;
 }
-
+*/
 main {
 	min-height: 100vh;
 	display: flex;

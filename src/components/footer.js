@@ -7,6 +7,7 @@ const Footer = () => {
 	return (
 		<>
 			<Ftr
+				className="ftrNav"
 				style={{
 					fontSize: `var(--font-sm)`,
 				}}

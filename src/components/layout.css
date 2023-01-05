@@ -50,9 +50,6 @@ a,
 }
 @media (max-width: 1024px) {
 	body {
-		display: flex;
-		width: auto;
-		margin: 0 auto;
 		padding: 0 30px;
 	}
 	/* .fixed-top {
@@ -86,9 +83,7 @@ a,
 		width: 100%;
 		margin: 0 auto !important;
 	}
-	.title__section4:after {
-		left: 29% !important;
-	}
+
 	.title__section5:after {
 		left: 27% !important;
 	}

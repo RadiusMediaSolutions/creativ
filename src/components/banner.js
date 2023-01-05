@@ -147,7 +147,7 @@ const Banner = ({
 					{children}
 				</Hero>
 
-				<TextWrapper bgImage={bgImage}>
+				<TextWrapper bgImage={bgImage} className="test">
 					<div
 						className="op-class heroTitle"
 						data-scroll
