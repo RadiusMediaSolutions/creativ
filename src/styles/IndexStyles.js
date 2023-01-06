@@ -330,7 +330,7 @@ const Copyright = styled.div`
 	justify-content: center;
 	background: #171b1e;
 	padding: 10px 0;
-	margin-bottom: 38px;
+	margin-bottom: -42px;
 `
 const Works = styled.div`
 	color: #4e4852;

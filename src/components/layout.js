@@ -49,9 +49,9 @@ const Layout = ({ children }) => {
 			<LocomotiveScrollProvider options={options} containerRef={ref}>
 				<main data-scroll-container ref={ref}>
 					<div
-						style={{
-							marginTop: `-50px`,
-						}}
+					// style={{
+					// 	marginTop: `-50px`,
+					// }}
 					>
 						{children}
 					</div>
