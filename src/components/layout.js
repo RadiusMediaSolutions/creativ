@@ -16,11 +16,10 @@ import Header from "./header"
 import { LocomotiveScrollProvider } from "react-locomotive-scroll"
 import PropTypes from "prop-types"
 import React from "react"
-import { useRef } from "react"
-
-// import * as React from "react"
+import { useRef, useState } from "react"
 
 const Layout = ({ children }) => {
+	const [sticky, setSticky] = useState(false)
 	const ref = useRef(null)
 
 	const options = {
@@ -31,6 +30,9 @@ const Layout = ({ children }) => {
 		tablet: {
 			smooth: true,
 		},
+	}
+	const stickNav = (value) => {
+		value.scroll.y >= 100 ? setSticky(true) : setSticky(false)
 	}
 
 	const data = useStaticQuery(graphql`
@@ -45,8 +47,12 @@ const Layout = ({ children }) => {
 
 	return (
 		<>
-			<Header siteTitle={data.site.siteMetadata?.title || `Title`} />
-			<LocomotiveScrollProvider options={options} containerRef={ref}>
+			<Header sticky={sticky} siteTitle={data.site.siteMetadata?.title || `Title`} />
+			<LocomotiveScrollProvider
+				options={options}
+				containerRef={ref}
+				watch={[]}
+				onUpdate={(scroll) => { scroll.on('scroll', stickNav) }}>
 				<main data-scroll-container ref={ref}>
 					<div
 					// style={{

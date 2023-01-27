@@ -1,14 +1,12 @@
 import * as styles from "../styles/navbar.module.css"
 
-import React, { useRef, useState } from "react"
+import React, { useRef, useState, useEffect } from "react"
 
 import { FaAlignRight } from "react-icons/fa"
 import { Link } from "gatsby"
 import Logo from "../images/logo-small.png"
 import PropTypes from "prop-types"
 import styled from "styled-components"
-
-// import { useLocomotiveScroll } from "react-locomotive-scroll"
 
 const SiteHeader = styled.header`
 	.menu__items {
@@ -42,45 +40,20 @@ const MenuItem = styled.span`
 	color: ;
 	// background: ${props => (props.selected ? "lightgrey" : "white")};
 `
-const isBrowser = () => typeof window !== "undefined"
+// const isBrowser = () => typeof window !== "undefined"
 
-const Header = ({ siteTitle }) => {
-	const onScroll = useRef(null)
-	const onActive = useRef(null)
-	const onLeft = useRef(null)
-
-	const changeBackground = () => {
-		if (isBrowser() && window.scrollY >= 100) {
-			onActive.current.className = "fixed-top onactive"
-			onScroll.current.className = "nav-center navbar"
-			onLeft.current.className = "site-logo onLeft"
-		} else {
-			onActive.current.className = "fixed-top"
-			onScroll.current.className = "nav-center"
-			onLeft.current.className = "site-logo"
-		}
-	}
+const Header = ({ sticky, siteTitle }) => {
 	const [isOpen, setNav] = useState(false)
 	const toggleNav = () => {
 		setNav(isOpen => !isOpen)
 	}
 
-	isBrowser() && window.addEventListener("scroll", changeBackground)
-
-	// const { scroll } = useLocomotiveScroll()
-
-	// const scroller = new LocomotiveScroll()
-	// console.log(new LocomotiveScroll())
-
-	// scroll.on("scroll", console.log("Hello"))
-	// console.log(scroll)
-
 	return (
-		<SiteHeader data-scroll-section>
-			<div className="fixed-top" ref={onActive}>
+		<SiteHeader>
+			<div className={sticky ? `fixed-top onactive` : `fixed-top`}>
 				<nav className="menubar">
-					<div className={styles.navCenter} ref={onScroll}>
-						<div className={styles.navHeader} ref={onLeft}>
+					<div className={styles.navCenter}>
+						<div className={styles.navHeader}>
 							<Link to="/">
 								<img
 									src={Logo}
