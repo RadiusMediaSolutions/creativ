@@ -1,7 +1,8 @@
 import { Copyright, Ftr, GenericH3, GenericPara } from "../styles/IndexStyles"
-import React, { useRef, useState } from "react"
+import { FaMapMarkerAlt, FaPhoneAlt, FaRegEnvelope } from "react-icons/fa"
 
 import { Link } from "gatsby"
+import React from "react"
 
 const Footer = () => {
 	return (
@@ -21,11 +22,12 @@ const Footer = () => {
 				</div>
 				<div className="ftr2">
 					<GenericH3 none>Phone Number</GenericH3>
+					<FaPhoneAlt className="ftr-icon" />
 					<Link
 						to="/"
 						style={{
 							color: "#666666 ",
-							fontSize: `var(--font-sm)`,
+							fontSize: `var(--font-lg)`,
 							textDecoration: `none`,
 						}}
 					>
@@ -34,11 +36,12 @@ const Footer = () => {
 				</div>
 				<div className="ftr3">
 					<GenericH3 none>Email Address</GenericH3>
+					<FaRegEnvelope className="ftr-icon" />
 					<Link
 						to="/"
 						style={{
 							color: "#666666 ",
-							fontSize: `var(--font-sm)`,
+							fontSize: `var(--font-lg)`,
 							textDecoration: `none`,
 						}}
 					>
@@ -47,8 +50,10 @@ const Footer = () => {
 				</div>
 				<div className="ftr4">
 					<GenericH3 none>Address</GenericH3>
+
 					<GenericPara lessSize>
-						1234 Prather Road, Louisville KY 47172
+						<FaMapMarkerAlt className="ftr-icon" /> 1234 Prather
+						Road, Louisville KY 47172
 					</GenericPara>
 				</div>
 			</Ftr>

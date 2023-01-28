@@ -7,9 +7,9 @@ import {
 } from "@fortawesome/free-brands-svg-icons"
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { Link } from "gatsby"
-import Projectbackground from "../images/portfolio.jpg"
-import background from "../images/road.jpeg"
+// import { Link } from "gatsby"
+// import Projectbackground from "../images/portfolio.jpg"
+// import background from "../images/road.jpeg"
 import styled from "styled-components"
 
 // import { Projectbackground, background } from "../images"
@@ -141,6 +141,7 @@ const Banner = ({
 					height: `70vh`,
 					position: `inherit`,
 					zIndex: `1050`,
+					marginTop: `-130px`,
 				}}
 			>
 				<Hero bgImage={bgImage} inner={!!inner}>

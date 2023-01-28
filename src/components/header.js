@@ -1,6 +1,6 @@
 import * as styles from "../styles/navbar.module.css"
 
-import React, { useRef, useState, useEffect } from "react"
+import React, { useState } from "react"
 
 import { FaAlignRight } from "react-icons/fa"
 import { Link } from "gatsby"
@@ -53,59 +53,61 @@ const Header = ({ sticky, siteTitle }) => {
 			<div className={sticky ? `fixed-top onactive` : `fixed-top`}>
 				<nav className="menubar">
 					<div className={styles.navCenter}>
-						<div className={styles.navHeader}>
-							<Link to="/">
-								<img
-									src={Logo}
-									className={styles.brandLogo}
-									alt="backroads logo"
-								/>
-							</Link>
-							<button
-								type="button"
-								className={styles.logoBtn}
-								onClick={toggleNav}
+						<div className="navBg">
+							<div className={styles.navHeader}>
+								<Link to="/" className="onLeft">
+									<img
+										src={Logo}
+										className={styles.brandLogo}
+										alt="backroads logo"
+									/>
+								</Link>
+								<button
+									type="button"
+									className={styles.logoBtn}
+									onClick={toggleNav}
+								>
+									<FaAlignRight className={styles.logoIcon} />
+								</button>
+							</div>
+							<ul
+								className={
+									isOpen
+										? `${styles.navLinks} ${styles.showNav}`
+										: `${styles.navLinks}`
+								}
 							>
-								<FaAlignRight className={styles.logoIcon} />
-							</button>
+								<Link
+									exact="true"
+									activeClassName="active"
+									to="/"
+									style={{ textDecoration: `none` }}
+								>
+									<MenuItem>Home</MenuItem>
+								</Link>
+								<Link
+									activeClassName="active"
+									to="/portfolio"
+									style={{ textDecoration: `none` }}
+								>
+									<MenuItem>Portfolio</MenuItem>
+								</Link>
+								<Link
+									activeClassName="active"
+									to="/blog"
+									style={{ textDecoration: `none` }}
+								>
+									<MenuItem>Blog</MenuItem>
+								</Link>
+								<Link
+									activeClassName="active"
+									to="/contact"
+									style={{ textDecoration: `none` }}
+								>
+									<MenuItem>Contact</MenuItem>
+								</Link>
+							</ul>
 						</div>
-						<ul
-							className={
-								isOpen
-									? `${styles.navLinks} ${styles.showNav}`
-									: `${styles.navLinks}`
-							}
-						>
-							<Link
-								exact="true"
-								activeClassName="active"
-								to="/"
-								style={{ textDecoration: `none` }}
-							>
-								<MenuItem>Home</MenuItem>
-							</Link>
-							<Link
-								activeClassName="active"
-								to="/portfolio"
-								style={{ textDecoration: `none` }}
-							>
-								<MenuItem>Portfolio</MenuItem>
-							</Link>
-							<Link
-								activeClassName="active"
-								to="/blog"
-								style={{ textDecoration: `none` }}
-							>
-								<MenuItem>Blog</MenuItem>
-							</Link>
-							<Link
-								activeClassName="active"
-								to="/contact"
-								style={{ textDecoration: `none` }}
-							>
-								<MenuItem>Contact</MenuItem>
-							</Link>
-						</ul>
 					</div>
 				</nav>
 			</div>

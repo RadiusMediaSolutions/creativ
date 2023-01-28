@@ -1,12 +1,7 @@
-import {
-	Clients,
-	GenericH2,
-	GenericH3,
-	GenericPara,
-} from "../styles/IndexStyles"
 import { Link, graphql } from "gatsby"
 
 import Banner from "../components/banner"
+import { GenericH3 } from "../styles/IndexStyles"
 import Layout from "../components/layout"
 import React from "react"
 import { StaticImage } from "gatsby-plugin-image"
@@ -75,10 +70,15 @@ const BlogPage = ({ data }) => {
 
 export const query = graphql`
 	query {
-		allMdx(sort: { fields: frontmatter___date, order: DESC }) {
+		allMdx(sort: { frontmatter: { date: DESC } }) {
 			nodes {
 				frontmatter {
 					date(formatString: "MMMM D, YYYY")
+					featured_image {
+						childrenImageSharp {
+							gatsbyImageData
+						}
+					}
 					title
 					slug
 				}

@@ -1,12 +1,11 @@
-import { GenericH2, GenericH3, PostPara } from "../../styles/IndexStyles"
-import { Link, graphql } from "gatsby"
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
+import { GenericH2, PostPara } from "../../styles/IndexStyles"
 
 import Banner from "../../components/banner"
 import Layout from "../../components/layout"
 import React from "react"
 import Seo from "../../components/seo"
-import { StaticImage } from "gatsby-plugin-image"
-import background from "../../images/roofingblog.jpg"
+import { graphql } from "gatsby"
 import styled from "styled-components"
 
 const BlogPosts = styled.div`
@@ -17,38 +16,44 @@ const BlogPosts = styled.div`
 	}
 `
 const BlogPost = ({ data, children }) => {
+	const image = getImage(data.mdx.frontmatter.featured_image)
 	return (
 		<Layout pageTitle={data.mdx.frontmatter.title}>
 			<div style={{ position: "relative" }}>
-				<Banner
-					bgImage={background}
-					inner
-					h2Content=""
-					spanContent="POST ONE"
-				>
-					<StaticImage
-						src="../../images/roofingblog.jpg"
-						alt="landscape"
-						style={{ height: `80vh`, width: `100%` }}
-						aspectRatio={2 / 1}
+				<Banner>
+					<p>Posted: {data.mdx.frontmatter.date}</p>
+					<GatsbyImage
+						image={image}
+						alt={data.mdx.frontmatter.featured_image_alt}
 					/>
 				</Banner>
 			</div>
 			<BlogPosts>
 				<GenericH2 none>{data.mdx.frontmatter.title}</GenericH2>
 				<PostPara>{data.mdx.frontmatter.date}</PostPara>
+				<GatsbyImage
+					image={image}
+					alt={data.mdx.frontmatter.featured_image_alt}
+				/>
 				{children}
-				<GenericH3 none>This is Another Post Title</GenericH3>
+				{/* <GenericH3 none>This is Another Post Title</GenericH3> */}
 			</BlogPosts>
 		</Layout>
 	)
 }
+
 export const query = graphql`
 	query ($id: String) {
 		mdx(id: { eq: $id }) {
 			frontmatter {
 				title
 				date(formatString: "MMMM D, YYYY")
+				featured_image_alt
+				featured_image {
+					childrenImageSharp {
+						gatsbyImageData(layout: FULL_WIDTH)
+					}
+				}
 			}
 		}
 	}

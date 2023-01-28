@@ -8,15 +8,19 @@
 import "./layout.css"
 import "../styles/locomotive.css"
 
-// import { Copyright, Ftr, GenericH3, GenericPara } from "../styles/IndexStyles"
-import { Link, graphql, useStaticQuery } from "gatsby"
+import { graphql, useStaticQuery } from "gatsby"
+import { useRef, useState } from "react"
 
 import Footer from "./footer"
 import Header from "./header"
 import { LocomotiveScrollProvider } from "react-locomotive-scroll"
+import { MDXProvider } from "@mdx-js/react"
+import MessageComponent from "./message"
 import PropTypes from "prop-types"
 import React from "react"
-import { useRef, useState } from "react"
+
+const shortcodes = { MessageComponent }
+// import { Copyright, Ftr, GenericH3, GenericPara } from "../styles/IndexStyles"
 
 const Layout = ({ children }) => {
 	const [sticky, setSticky] = useState(false)
@@ -31,7 +35,7 @@ const Layout = ({ children }) => {
 			smooth: true,
 		},
 	}
-	const stickNav = (value) => {
+	const stickNav = value => {
 		value.scroll.y >= 100 ? setSticky(true) : setSticky(false)
 	}
 
@@ -46,17 +50,24 @@ const Layout = ({ children }) => {
 	`)
 
 	return (
-		<>
-			<Header sticky={sticky} siteTitle={data.site.siteMetadata?.title || `Title`} />
+		<MDXProvider components={shortcodes}>
+			<Header
+				sticky={sticky}
+				siteTitle={data.site.siteMetadata?.title || `Title`}
+			/>
+
 			<LocomotiveScrollProvider
 				options={options}
 				containerRef={ref}
 				watch={[]}
-				onUpdate={(scroll) => { scroll.on('scroll', stickNav) }}>
+				onUpdate={scroll => {
+					scroll.on("scroll", stickNav)
+				}}
+			>
 				<main data-scroll-container ref={ref}>
 					<div
 					// style={{
-					// 	marginTop: `-50px`,
+					// 	marginTop: `-105px`,
 					// }}
 					>
 						{children}
@@ -64,7 +75,7 @@ const Layout = ({ children }) => {
 					<Footer />
 				</main>
 			</LocomotiveScrollProvider>
-		</>
+		</MDXProvider>
 	)
 }
 

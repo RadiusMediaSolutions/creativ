@@ -1,5 +1,4 @@
 import * as React from "react"
-import * as styles from "../styles/index.module.css"
 
 import {
 	FlexBoxIndex,
@@ -13,7 +12,7 @@ import { StaticImage, getImage } from "gatsby-plugin-image"
 
 import Banner from "../components/banner"
 import Companies from "../components/companies"
-import FeaturedClients from "../components/clients/FeaturedClients"
+// import FeaturedClients from "../components/clients/FeaturedClients"
 import Layout from "../components/layout"
 import { Link } from "gatsby"
 import Seo from "../components/seo"
