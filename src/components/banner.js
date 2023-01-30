@@ -7,12 +7,8 @@ import {
 } from "@fortawesome/free-brands-svg-icons"
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-// import { Link } from "gatsby"
-// import Projectbackground from "../images/portfolio.jpg"
-// import background from "../images/road.jpeg"
 import styled from "styled-components"
 
-// import { Projectbackground, background } from "../images"
 const Hero = styled.div`
 	& {
 		background: #2b2d2f;

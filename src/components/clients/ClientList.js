@@ -3,7 +3,6 @@ import * as styles from "../../styles/items.module.css"
 import React, { Component } from "react"
 
 import Client from "./Client"
-import Title from "../../components/Title"
 
 class ClientList extends Component {
 	state = {

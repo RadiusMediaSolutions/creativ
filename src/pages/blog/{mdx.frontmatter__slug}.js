@@ -20,8 +20,7 @@ const BlogPost = ({ data, children }) => {
 	return (
 		<Layout pageTitle={data.mdx.frontmatter.title}>
 			<div style={{ position: "relative" }}>
-				<Banner>
-					<p>Posted: {data.mdx.frontmatter.date}</p>
+				<Banner inner>
 					<GatsbyImage
 						image={image}
 						alt={data.mdx.frontmatter.featured_image_alt}
@@ -31,12 +30,7 @@ const BlogPost = ({ data, children }) => {
 			<BlogPosts>
 				<GenericH2 none>{data.mdx.frontmatter.title}</GenericH2>
 				<PostPara>{data.mdx.frontmatter.date}</PostPara>
-				<GatsbyImage
-					image={image}
-					alt={data.mdx.frontmatter.featured_image_alt}
-				/>
 				{children}
-				{/* <GenericH3 none>This is Another Post Title</GenericH3> */}
 			</BlogPosts>
 		</Layout>
 	)
@@ -50,8 +44,8 @@ export const query = graphql`
 				date(formatString: "MMMM D, YYYY")
 				featured_image_alt
 				featured_image {
-					childrenImageSharp {
-						gatsbyImageData(layout: FULL_WIDTH)
+					childImageSharp {
+						gatsbyImageData(width: 1600, height: 656)
 					}
 				}
 			}

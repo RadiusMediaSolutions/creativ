@@ -8,7 +8,6 @@ import {
 	SectionFour,
 	SectionTwo,
 } from "../styles/IndexStyles"
-import { StaticImage, getImage } from "gatsby-plugin-image"
 
 import Banner from "../components/banner"
 import Companies from "../components/companies"
@@ -16,6 +15,7 @@ import Companies from "../components/companies"
 import Layout from "../components/layout"
 import { Link } from "gatsby"
 import Seo from "../components/seo"
+import { StaticImage } from "gatsby-plugin-image"
 import about from "../images/feature_bg.jpg"
 import background from "../images/skynet_heroImg.jpg"
 import bolt from "../images/bolttie.jpeg"
@@ -38,7 +38,6 @@ const MoreButton = styled.a`
 	margin: 30px auto;
 	width: fit-content;
 `
-const image = getImage(background)
 const IndexPage = () => (
 	<Layout>
 		<div style={{ position: "relative" }}>

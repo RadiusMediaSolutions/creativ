@@ -1,5 +1,3 @@
-import { GenericH2, Works } from "../styles/IndexStyles"
-
 import Banner from "../components/banner"
 import Clients from "../components/clients/Clients"
 import Layout from "../components/layout"

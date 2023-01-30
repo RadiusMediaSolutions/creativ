@@ -1,18 +1,16 @@
 import {
 	CntForm,
 	ContactSection,
-	GenericH2,
 	GenericH3,
 	GenericPara,
 } from "../styles/IndexStyles"
-import { Link, graphql, useStaticQuery } from "gatsby"
 
 import Banner from "../components/banner"
 import Layout from "../components/layout"
+import { Link } from "gatsby"
 import React from "react"
 import { StaticImage } from "gatsby-plugin-image"
 import background from "../images/contactus.jpg"
-import styled from "styled-components"
 
 const Contact = () => (
 	<Layout>

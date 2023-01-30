@@ -46,7 +46,7 @@ const Canvas = props => {
 				0.5 -
 			0.5
 
-		const offset = 8 / 10
+		// const offset = 8 / 10
 
 		let t = 0
 
