@@ -47,8 +47,9 @@
 
 @media screen and (min-width: 576px) {
 	.center {
-		grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
-		/* grid-template-columns: 1fr 1fr 1fr; */
+		/* grid-template-columns: repeat(auto-fill, minmax(400px, 1fr)); */
+		grid-template-columns: 2fr 2fr 2fr;
+		margin: 0 auto;
 	}
 }
 @media screen and (min-width: 1200px) {
