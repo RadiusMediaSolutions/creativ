@@ -12,7 +12,7 @@ const Portfolio = () => {
 				<Banner
 					bgImage={background}
 					inner
-					h2Content="SKY"
+					h2Content="SKYNET"
 					spanContent="Portfolio"
 				>
 					<StaticImage

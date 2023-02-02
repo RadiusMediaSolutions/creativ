@@ -48,7 +48,7 @@ const SectionTwo = styled.section`
 		&:after {
 			content: "";
 			display: flex;
-			height: 0.5rem;
+			height: 0.2rem;
 			width: 8rem;
 			background: var(--heading-color);
 			margin-top: 15px;
@@ -177,7 +177,7 @@ const GenericH3 = styled.h3`
 
 const SectionFour = styled.section`
 	background-color: whitesmoke;
-	color: #ffffff;
+	color: #000;
 	text-align: center;
 	.header__section4 {
 		width: 66%;
@@ -197,7 +197,7 @@ const SectionFour = styled.section`
 			content: "";
 			display: flex;
 			margin: 0 auto;
-			height: 0.5rem;
+			height: 0.2rem;
 			width: 8rem;
 			background: var(--heading-color);
 			margin-top: 15px;
@@ -243,6 +243,9 @@ const SectionFive = styled.section`
 		width: 66%;
 		margin: 0 auto;
 	}
+	.header__section4 p {
+		color: #000;
+	}
 	.title__section5 {
 		font-family: Roboto;
 		font-size: 3rem;
@@ -256,7 +259,7 @@ const SectionFive = styled.section`
 		&:after {
 			content: "";
 			display: flex;
-			height: 0.5rem;
+			height: 0.2rem;
 			width: 8rem;
 			background: var(--heading-color);
 			margin-top: 15px;
@@ -299,7 +302,7 @@ const Ftr = styled.footer`
 	grid-template-columns: 1fr 1fr 1fr 1fr;
 	grid-gap: 20px;
 	width: 100%;
-	// margin-top: 3rem;
+	margin-top: 3rem;
 	padding: 3rem;
 	background-color: #1d242a;
 	color: rgba(255, 255, 255, 0.8) !important;

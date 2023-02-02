@@ -86,7 +86,7 @@ const Canvas = props => {
 		setInterval(drawLines, 300)
 	}, [])
 
-	return <AnimatedCanvas ref={canvasRef} />
+	return <AnimatedCanvas className="canvasMobile" ref={canvasRef} />
 }
 
 export default Canvas

@@ -7,12 +7,7 @@
 		margin-top: 20px;
 	}
 }
-.nav-header {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	padding: 1rem 1.25rem;
-}
+
 .brand-logo {
 	width: auto;
 	height: 50px;
@@ -36,6 +31,7 @@
 	transition: var(--mainTransition);
 	height: 0;
 	overflow: hidden;
+	margin: 0;
 }
 .show-nav {
 	height: 300px;
@@ -58,7 +54,21 @@
 	display: none;
 }
 
+@media (max-width: 1024px) {
+	.nav-header {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 10px 1.25rem;
+	}
+}
 @media screen and (min-width: 1025px) {
+	.nav-header {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 1rem 1.25rem;
+	}
 	.logo-btn {
 		display: none;
 	}

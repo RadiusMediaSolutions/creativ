@@ -10,7 +10,7 @@ import styled from "styled-components"
 
 const BlogPosts = styled.div`
 	margin: 4rem 0;
-	padding: 0 1.5rem;
+	// padding: 0 1.5rem;
 	h2 {
 		margin-bottom: 0;
 	}
@@ -19,15 +19,27 @@ const BlogPost = ({ data, children }) => {
 	const image = getImage(data.mdx.frontmatter.featured_image)
 	return (
 		<Layout pageTitle={data.mdx.frontmatter.title}>
-			<div style={{ position: "relative" }}>
-				<Banner inner>
+			<div
+				style={{ position: "relative", top: "20%" }}
+				className="mdxBanner"
+			>
+				<Banner
+					inner
+					h2Content={data.mdx.frontmatter.title}
+					className="dNone"
+				>
 					<GatsbyImage
 						image={image}
 						alt={data.mdx.frontmatter.featured_image_alt}
+						style={{
+							height: `70vh`,
+							width: `100%`,
+							overflow: `hidden`,
+						}}
 					/>
 				</Banner>
 			</div>
-			<BlogPosts>
+			<BlogPosts className="mdxContent">
 				<GenericH2 none>{data.mdx.frontmatter.title}</GenericH2>
 				<PostPara>{data.mdx.frontmatter.date}</PostPara>
 				{children}
@@ -45,7 +57,7 @@ export const query = graphql`
 				featured_image_alt
 				featured_image {
 					childImageSharp {
-						gatsbyImageData(width: 1600, height: 656)
+						gatsbyImageData
 					}
 				}
 			}

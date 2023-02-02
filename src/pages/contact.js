@@ -4,6 +4,7 @@ import {
 	GenericH3,
 	GenericPara,
 } from "../styles/IndexStyles"
+import { FaMapMarkerAlt, FaPhoneAlt, FaRegEnvelope } from "react-icons/fa"
 
 import Banner from "../components/banner"
 import Layout from "../components/layout"
@@ -18,8 +19,8 @@ const Contact = () => (
 			<Banner
 				bgImage={background}
 				inner
-				h2Content="SKY"
 				spanContent="Contact"
+				h1Content=""
 			>
 				<StaticImage
 					src="../images/contactus.jpg"
@@ -30,17 +31,21 @@ const Contact = () => (
 			</Banner>
 		</div>
 
-		<h2 style={{ marginTop: "5rem" }}>
-			FEEL FREE TO <span>CONTACT US</span>
-		</h2>
+		<div className="innerTitle">
+			<h2>
+				FEEL FREE TO <span>CONTACT US</span>
+			</h2>
+		</div>
 		<ContactSection className="mColumn">
 			<div className="box">
+				{/* <FaPhoneAlt className="ftr-icon" /> */}
 				<GenericH3 none>CALL US</GenericH3>
+
 				<Link
 					to="/"
 					style={{
 						color: "#666666 ",
-						fontSize: `var(--font-sm)`,
+						fontSize: `var(--font-lg)`,
 						textDecoration: `none`,
 					}}
 				>
@@ -68,9 +73,11 @@ const Contact = () => (
 			</div>
 		</ContactSection>
 		<CntForm>
-			<h2 style={{ marginTop: "5rem" }}>
-				HAVE QUESTIONS? <span>SEND US A MESSAGE</span>
-			</h2>
+			<div className="innerTitle">
+				<h2>
+					HAVE QUESTIONS? <span>SEND US A MESSAGE</span>
+				</h2>
+			</div>
 			<GenericPara lessSize>
 				Please fill out the contact form below so we know what types of
 				interest you have!. We want to make sure that our clients are

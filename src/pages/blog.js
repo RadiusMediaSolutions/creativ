@@ -31,11 +31,11 @@ const BlogPage = ({ data }) => {
 				<Banner
 					bgImage={background}
 					inner
-					h2Content="SKY"
+					h2Content="SKYNET"
 					spanContent="Resources"
 				>
 					<StaticImage
-						className="image"
+						className=""
 						src="../images/roofingblog.jpg"
 						alt="landscape"
 						style={{ height: `70vh`, width: `100%` }}
@@ -46,7 +46,7 @@ const BlogPage = ({ data }) => {
 
 			<BlogList className="innerTitle">
 				<h2>
-					<span>SKYNET</span> RECENT ARTICLES
+					RECENT <span> ARTICLES</span>
 				</h2>
 				<div className="blogGrid">
 					{data.allMdx.nodes.map(node => (
@@ -56,7 +56,7 @@ const BlogPage = ({ data }) => {
 									{node.frontmatter.title}
 								</Link>
 							</GenericH3>
-							<span>
+							<span style={{ marginBottom: `0.5rem` }}>
 								<b>Posted:</b> {node.frontmatter.date}
 							</span>
 							<p>{node.excerpt}</p>

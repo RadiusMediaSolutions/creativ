@@ -41,7 +41,12 @@ const MoreButton = styled.a`
 const IndexPage = () => (
 	<Layout>
 		<div style={{ position: "relative" }}>
-			<Banner bgImage={background} h2Content="SKY" spanContent="Develop">
+			<Banner
+				bgImage={background}
+				h2Content="SKYNET"
+				spanContent="Develop"
+				h1Content="Develop your inner beast"
+			>
 				<StaticImage
 					src="../images/skynet_heroImg.jpg"
 					alt="landscape"
@@ -146,10 +151,10 @@ const IndexPage = () => (
 				<div className="title__section4">
 					Our <span>Services</span>
 				</div>
-				<GenericPara>
+				<p>
 					We use modern and latest technologies which help our clients
-					<br /> as they are high scalable and maintainable
-				</GenericPara>
+					as they are high scalable and maintainable
+				</p>
 			</div>
 			<div className="grid__section4">
 				<div
@@ -327,6 +332,14 @@ const IndexPage = () => (
 					<GenericH2 none>
 						SPRINGHURST <span>Flats</span>
 					</GenericH2>
+					<div
+						className="image mview"
+						data-scroll
+						data-scroll-direction="vertical"
+						data-scroll-speed="2"
+					>
+						<img src={springhurst} alt="Logo" width="50" />
+					</div>
 					<GenericPara lessSize lessSpacing>
 						This streamlined strategy allows the various
 						stakeholders in a project from the owner, the architect,
@@ -350,7 +363,7 @@ const IndexPage = () => (
 					</MoreButton>
 				</div>
 				<div
-					className="image"
+					className="image lview"
 					data-scroll
 					data-scroll-direction="vertical"
 					data-scroll-speed="2"

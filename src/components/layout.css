@@ -49,13 +49,22 @@ a,
 	z-index: 100;
 }
 @media (max-width: 1230px) {
+	.stats {
+		left: 5% !important;
+	}
+	.mdxBanner .textWrapper {
+		top: 60%;
+		width: 100% !important;
+		left: 10% !important;
+		font-size: 3rem !important;
+	}
 	body {
 		padding: 0 30px;
 	}
 
 	.text_section3,
 	.image {
-		display: flex !important;
+		display: flex;
 		flex-direction: column !important;
 		width: 100% !important;
 		margin: 0 auto !important;
@@ -81,6 +90,11 @@ a,
 	}
 }
 @media (min-width: 1231px) and (max-width: 1399px) {
+	.mdxBanner .textWrapper {
+		width: 50% !important;
+		left: 10% !important;
+		font-size: 3rem !important;
+	}
 	body {
 		margin: 0 auto;
 		padding: 0 30px;
@@ -100,6 +114,11 @@ a,
 	}
 }
 @media screen and (min-width: 1400px) and (max-width: 1600px) {
+	.mdxBanner .textWrapper {
+		width: 50% !important;
+		left: 10% !important;
+		font-size: 3rem !important;
+	}
 	body {
 		display: flex;
 		width: 1400px;

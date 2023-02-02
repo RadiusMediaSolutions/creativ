@@ -17,10 +17,11 @@ class ClientList extends Component {
 	}
 	render() {
 		return (
-			<section className="innerTitle">
+			<section className="innerTitle imgGrid">
 				{/* <Title title="hampi" subtitle="clients" /> */}
+
 				<h2>
-					<span>SKYNET</span> COMMERCIAL WORKS
+					COMMERCIAL <span>PROJECTS</span>
 				</h2>
 				<div className={styles.center}>
 					{this.state.sortedclients &&
