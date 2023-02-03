@@ -7,17 +7,14 @@ import {
 } from "@fortawesome/free-brands-svg-icons"
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { Link } from "gatsby"
-import Projectbackground from "../images/portfolio.jpg"
-import background from "../images/road.jpeg"
+import { GenericPara } from "../styles/IndexStyles"
 import styled from "styled-components"
 
-// import { Projectbackground, background } from "../images"
 const Hero = styled.div`
 	& {
 		background: #2b2d2f;
 		// height: 80vh;
-		clip-path: polygon(15% 0%, 100% 0%, 100% 100%, 60% 100%);
+		clip-path: none;
 		// position: absolute;
 	}
 	// &:after {
@@ -39,6 +36,7 @@ const Hero = styled.div`
 `
 
 const TextWrapper = styled.div`
+	margin-top: 70px;
 	position: absolute;
 	z-index: 1000;
 	left: 10%;
@@ -106,6 +104,7 @@ const BannerFooter = styled.div`
 	}
 `
 const MoreLink = styled.a`
+	display: ${props => (props.inner ? "none" : "inline-block")};
 	position: relative;
 	background-color: #ed4933;
 	box-shadow: none;
@@ -134,28 +133,28 @@ const Banner = ({
 }) => {
 	return (
 		<>
-			<div
-				style={{
-					background: `#2b2d2f`,
-					height: `70vh`,
-					position: `inherit`,
-					zIndex: `1050`,
-				}}
-			>
-				<Hero bgImage={bgImage} inner={!!inner}>
+			<div className="mbanner">
+				<Hero className="clipath" bgImage={bgImage} inner={!!inner}>
 					{children}
 				</Hero>
 
-				<TextWrapper bgImage={bgImage}>
-					<div>
+				<TextWrapper bgImage={bgImage} className="textWrapper">
+					<div
+						className="op-class heroTitle"
+						data-scroll
+						data-scroll-class="fadeIn"
+						data-scroll-repeat="true"
+						data-scroll-speed="1"
+					>
 						<h2>{h2Content}</h2>
 						<h1>
 							<span>{spanContent}</span>
 						</h1>
 						<h1>{h1Content}</h1>
-						<p>Develop your inner beast</p>
 					</div>
-					<MoreLink>Learn More</MoreLink>
+					<MoreLink inner={inner} className="moreBtn">
+						Learn More
+					</MoreLink>
 				</TextWrapper>
 			</div>
 			<BannerFooter inner={inner}>

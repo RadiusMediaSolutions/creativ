@@ -3,7 +3,6 @@ import * as styles from "../../styles/items.module.css"
 import React, { Component } from "react"
 
 import Client from "./Client"
-import Title from "../../components/Title"
 
 class ClientList extends Component {
 	state = {
@@ -18,10 +17,11 @@ class ClientList extends Component {
 	}
 	render() {
 		return (
-			<section className={styles}>
+			<section className="innerTitle imgGrid">
 				{/* <Title title="hampi" subtitle="clients" /> */}
+
 				<h2>
-					<span>SKYNET</span> COMMERCIAL WORKS
+					COMMERCIAL <span>PROJECTS</span>
 				</h2>
 				<div className={styles.center}>
 					{this.state.sortedclients &&

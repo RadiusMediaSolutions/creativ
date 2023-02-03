@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "skynet-professional-solutions",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "description": "SkyNet Professional Solutions - We develop your tomorrow",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Radius Media Solutions",
   "dependencies": {
     "@babel/preset-typescript": "^7.18.6",
     "@fortawesome/fontawesome-svg-core": "^6.2.0",
@@ -20,13 +20,17 @@
     "gatsby-plugin-mdx": "^5.0.0",
     "gatsby-plugin-sharp": "^5.2.0",
     "gatsby-plugin-styled-components": "^6.0.0",
-    "gatsby-remark-images": "^7.0.0",
+    "gatsby-remark-images": "^7.5.0",
     "gatsby-source-contentful": "^8.2.0",
     "gatsby-source-filesystem": "^5.0.0",
+    "gatsby-transformer-remark": "^6.5.0",
     "gatsby-transformer-sharp": "^5.2.0",
+    "locomotive-scroll": "^4.1.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-icons": "^4.7.1",
     "react-is": "^18.2.0",
+    "react-locomotive-scroll": "^0.2.2",
     "styled-components": "^5.3.6"
   },
   "devDependencies": {

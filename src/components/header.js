@@ -1,5 +1,8 @@
-import React, { useRef, useState } from "react"
+import * as styles from "../styles/navbar.module.css"
 
+import React, { useState } from "react"
+
+import { FaAlignRight } from "react-icons/fa"
 import { Link } from "gatsby"
 import Logo from "../images/logo-small.png"
 import PropTypes from "prop-types"
@@ -37,73 +40,76 @@ const MenuItem = styled.span`
 	color: ;
 	// background: ${props => (props.selected ? "lightgrey" : "white")};
 `
-const isBrowser = () => typeof window !== "undefined"
+// const isBrowser = () => typeof window !== "undefined"
 
-const Header = ({ siteTitle }) => {
-	const onScroll = useRef(null)
-	const onActive = useRef(null)
-	const onLeft = useRef(null)
-
-	const changeBackground = () => {
-		if (isBrowser() && window.scrollY >= 100) {
-			onActive.current.className = "fixed-top onactive"
-			onScroll.current.className = "menu__items navbar"
-			onLeft.current.className = "site-logo onLeft"
-		} else {
-			onActive.current.className = "fixed-top"
-			onScroll.current.className = "menu__items"
-			onLeft.current.className = "site-logo"
-		}
+const Header = ({ sticky, siteTitle }) => {
+	const [isOpen, setNav] = useState(false)
+	const toggleNav = () => {
+		setNav(isOpen => !isOpen)
 	}
-	isBrowser() && window.addEventListener("scroll", changeBackground)
 
 	return (
 		<SiteHeader>
-			<div className="fixed-top" ref={onActive}>
-				<div className="menu__items" ref={onScroll}>
-					<div className="site-logo" ref={onLeft}>
-						<Link
-							to="/"
-							style={{
-								fontSize: `var(--font-sm)`,
-								textDecoration: `none`,
-								marginRight: `15px`,
-							}}
-						>
-							{/* {siteTitle} */}
-							<img src={Logo} alt="Logo" width="50" />
-						</Link>
+			<div className={sticky ? `fixed-top onactive` : `fixed-top`}>
+				<nav className="menubar">
+					<div className={styles.navCenter}>
+						<div className="navBg">
+							<div className={styles.navHeader}>
+								<Link to="/" className="onLeft">
+									<img
+										src={Logo}
+										className={styles.brandLogo}
+										alt="backroads logo"
+									/>
+								</Link>
+								<button
+									type="button"
+									className={styles.logoBtn}
+									onClick={toggleNav}
+								>
+									<FaAlignRight className={styles.logoIcon} />
+								</button>
+							</div>
+							<ul
+								className={
+									isOpen
+										? `${styles.navLinks} ${styles.showNav}`
+										: `${styles.navLinks}`
+								}
+							>
+								<Link
+									exact="true"
+									activeClassName="active"
+									to="/"
+									style={{ textDecoration: `none` }}
+								>
+									<MenuItem>Home</MenuItem>
+								</Link>
+								<Link
+									activeClassName="active"
+									to="/portfolio"
+									style={{ textDecoration: `none` }}
+								>
+									<MenuItem>Portfolio</MenuItem>
+								</Link>
+								<Link
+									activeClassName="active"
+									to="/blog"
+									style={{ textDecoration: `none` }}
+								>
+									<MenuItem>Blog</MenuItem>
+								</Link>
+								<Link
+									activeClassName="active"
+									to="/contact"
+									style={{ textDecoration: `none` }}
+								>
+									<MenuItem>Contact</MenuItem>
+								</Link>
+							</ul>
+						</div>
 					</div>
-					<Link
-						exact
-						activeClassName="active"
-						to="/"
-						style={{ textDecoration: `none` }}
-					>
-						<MenuItem>Home</MenuItem>
-					</Link>
-					<Link
-						activeClassName="active"
-						to="/portfolio"
-						style={{ textDecoration: `none` }}
-					>
-						<MenuItem>Portfolio</MenuItem>
-					</Link>
-					<Link
-						activeClassName="active"
-						to="/blog"
-						style={{ textDecoration: `none` }}
-					>
-						<MenuItem>Blog</MenuItem>
-					</Link>
-					<Link
-						activeClassName="active"
-						to="/contact"
-						style={{ textDecoration: `none` }}
-					>
-						<MenuItem>Contact</MenuItem>
-					</Link>
-				</div>
+				</nav>
 			</div>
 		</SiteHeader>
 	)

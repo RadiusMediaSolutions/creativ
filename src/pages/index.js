@@ -1,5 +1,4 @@
 import * as React from "react"
-import * as styles from "../styles/index.module.css"
 
 import {
 	FlexBoxIndex,
@@ -9,14 +8,14 @@ import {
 	SectionFour,
 	SectionTwo,
 } from "../styles/IndexStyles"
-import { StaticImage, getImage } from "gatsby-plugin-image"
 
 import Banner from "../components/banner"
 import Companies from "../components/companies"
-import FeaturedClients from "../components/clients/FeaturedClients"
+// import FeaturedClients from "../components/clients/FeaturedClients"
 import Layout from "../components/layout"
 import { Link } from "gatsby"
 import Seo from "../components/seo"
+import { StaticImage } from "gatsby-plugin-image"
 import about from "../images/feature_bg.jpg"
 import background from "../images/skynet_heroImg.jpg"
 import bolt from "../images/bolttie.jpeg"
@@ -36,14 +35,18 @@ const MoreButton = styled.a`
 	text-align: center;
 	text-decoration: none;
 	text-transform: uppercase;
-	margin: 0 auto;
+	margin: 30px auto;
 	width: fit-content;
 `
-const image = getImage(background)
 const IndexPage = () => (
 	<Layout>
 		<div style={{ position: "relative" }}>
-			<Banner bgImage={background} h2Content="SKY" spanContent="Develop">
+			<Banner
+				bgImage={background}
+				h2Content="SKYNET"
+				spanContent="Develop"
+				h1Content="Develop your inner beast"
+			>
 				<StaticImage
 					src="../images/skynet_heroImg.jpg"
 					alt="landscape"
@@ -51,6 +54,9 @@ const IndexPage = () => (
 						height: `80vh`,
 						width: `100%`,
 					}}
+					data-scroll
+					data-scroll-direction="vertical"
+					data-scroll-speed="-1"
 				/>
 			</Banner>
 		</div>
@@ -58,13 +64,32 @@ const IndexPage = () => (
 
 		<SectionTwo>
 			<FlexBoxIndex className="mColumn">
-				<div className="image">
-					<img src={about} alt="about" style={{ width: "70%" }} />
+				<div
+					className="image lg"
+					data-scroll
+					data-scroll-direction="vertical"
+					data-scroll-repeat="true"
+					data-scroll-speed="2"
+				>
+					<img src={about} alt="about" style={{ maxWidth: "70%" }} />
 				</div>
 				<div className="text_section3">
 					<h2>
 						WELCOME – WE ARE <span>SKYNET</span>
 					</h2>
+					<div
+						className="image small"
+						data-scroll
+						data-scroll-direction="vertical"
+						data-scroll-repeat="true"
+						data-scroll-speed="2"
+					>
+						<img
+							src={about}
+							alt="about"
+							style={{ maxWidth: "70%" }}
+						/>
+					</div>
 					{/* <GenericH2 none>WELCOME SKY DEVELOP</GenericH2> */}
 					<GenericPara lessSize lessSpacing style={{ margin: "0" }}>
 						Our proven methodology creates a comprehensive strategy
@@ -82,63 +107,60 @@ const IndexPage = () => (
 					</GenericPara>
 					<h3>Our process</h3>
 					<ul className="processList">
-						<li>IDEA & START</li>
-						<li>DESIGN & CREATE</li>
-						<li>BUILD & FINISH</li>
+						<li
+							data-scroll
+							data-scroll-direction="vertical"
+							data-scroll-speed="1"
+						>
+							IDEA & START
+						</li>
+						<li
+							data-scroll
+							data-scroll-direction="vertical"
+							data-scroll-speed="2"
+						>
+							DESIGN & CREATE
+						</li>
+						<li
+							data-scroll
+							data-scroll-direction="vertical"
+							data-scroll-speed="3"
+						>
+							BUILD & FINISH
+						</li>
 					</ul>
-					<MoreButton>Learn More</MoreButton>
+					<MoreButton
+						data-scroll
+						data-scroll-direction="vertical"
+						data-scroll-speed="1"
+					>
+						Learn More
+					</MoreButton>
 				</div>
 			</FlexBoxIndex>
 		</SectionTwo>
-		{/* <SectionThree>
-			<div>
-				<GenericH2>Our Passion</GenericH2>
-				<GenericPara lessSize grey>
-					Most good programmers program because they love doing what
-					they do
-				</GenericPara>
-				<h5>Some dude</h5>
-				<span>
-					<FontAwesomeIcon
-						icon="gem"
-						color="#04F5C6"
-						size="6x"
-						style={{ marginRight: "3rem" }}
-						fixedWidth
-						border
-					/>
-					<FontAwesomeIcon
-						icon="heart"
-						color="#04F5C6"
-						size="6x"
-						style={{ marginRight: "3rem" }}
-						fixedWidth
-						border
-					/>
-					<FontAwesomeIcon
-						icon="faGem"
-						color="#04F5C6"
-						size="6x"
-						style={{ marginRight: "3rem" }}
-						fixedWidth
-						border
-					/>
-				</span>
-			</div>
-		</SectionThree> */}
 
 		<SectionFour>
-			<div className="header__section4">
+			<div
+				className="header__section4 op-class"
+				data-scroll
+				data-scroll-class="fadeIn"
+				data-scroll-repeat="true"
+				data-scroll-speed="2"
+			>
 				<div className="title__section4">
 					Our <span>Services</span>
 				</div>
-				<GenericPara>
+				<p>
 					We use modern and latest technologies which help our clients
-					<br /> as they are high scalable and maintainable
-				</GenericPara>
+					as they are high scalable and maintainable
+				</p>
 			</div>
 			<div className="grid__section4">
 				<div
+					data-scroll
+					data-scroll-speed="1"
+					data-scroll-sticky
 					className="item1"
 					style={{
 						color: "#fff",
@@ -164,6 +186,8 @@ const IndexPage = () => (
 					</GenericPara>
 				</div>
 				<div
+					data-scroll
+					data-scroll-speed="1"
 					className="item2"
 					style={{
 						color: "#fff",
@@ -191,6 +215,8 @@ const IndexPage = () => (
 					</GenericPara>
 				</div>
 				<div
+					data-scroll
+					data-scroll-speed="1"
 					className="item3"
 					style={{
 						color: "#000",
@@ -218,6 +244,9 @@ const IndexPage = () => (
 					</GenericPara>
 				</div>
 				<div
+					data-scroll
+					data-scroll-speed="1"
+					data-scroll-sticky
 					className="item4"
 					style={{
 						color: "#000",
@@ -247,17 +276,24 @@ const IndexPage = () => (
 			</div>
 		</SectionFour>
 		<SectionFive>
-			<div className="title__section5">
+			<div
+				className="title__section5 op-class"
+				data-scroll
+				data-scroll-class="fadeIn"
+				data-scroll-repeat="true"
+				data-scroll-speed="2"
+			>
 				Our Featured <span>Works</span>
 			</div>
 			{/* <h2>OUR FEATURED <span>WORKS</span></h2> */}
 			<FlexBoxIndex className="mColumn">
-				<div className="image">
+				<div
+					className="image"
+					data-scroll
+					data-scroll-direction="vertical"
+					data-scroll-speed="2"
+				>
 					<img src={bolt} alt="Logo" width="50" />
-					{/* <img
-						src="https://source.unsplash.com/LXI5kqCdEcE/600x480"
-						alt="Picture 1"
-					/> */}
 				</div>
 				<div className="text_section3">
 					<GenericH2 none>
@@ -272,13 +308,18 @@ const IndexPage = () => (
 						build dealing with manufacturers specifications and
 						suppliers.
 					</GenericPara>
-					<MoreButton>
+					<MoreButton
+						data-scroll
+						data-scroll-direction="vertical"
+						data-scroll-speed="-1"
+					>
 						<Link
 							to="/clients"
 							style={{
 								color: "#9b9b01 ",
 								fontWeight: "600",
 								textDecoration: `none`,
+								marginTop: "1.5rem",
 							}}
 						>
 							View Details
@@ -287,10 +328,18 @@ const IndexPage = () => (
 				</div>
 			</FlexBoxIndex>
 			<FlexBoxIndex inverse className="mColumn">
-				<div className="text_section3">
+				<div className="text_section3" style={{ marginRight: "2rem" }}>
 					<GenericH2 none>
 						SPRINGHURST <span>Flats</span>
 					</GenericH2>
+					<div
+						className="image mview"
+						data-scroll
+						data-scroll-direction="vertical"
+						data-scroll-speed="2"
+					>
+						<img src={springhurst} alt="Logo" width="50" />
+					</div>
 					<GenericPara lessSize lessSpacing>
 						This streamlined strategy allows the various
 						stakeholders in a project from the owner, the architect,
@@ -313,12 +362,13 @@ const IndexPage = () => (
 						</Link>
 					</MoreButton>
 				</div>
-				<div className="image">
+				<div
+					className="image lview"
+					data-scroll
+					data-scroll-direction="vertical"
+					data-scroll-speed="2"
+				>
 					<img src={springhurst} alt="Logo" width="50" />
-					{/* <img
-						src="https://source.unsplash.com/f77Bh3inUpE/600x480"
-						alt="pic2"
-					/> */}
 				</div>
 			</FlexBoxIndex>
 		</SectionFive>

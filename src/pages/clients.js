@@ -1,13 +1,7 @@
-import {
-	Clients,
-	GenericH2,
-	GenericH3,
-	GenericPara,
-} from "../styles/IndexStyles"
+import { Clients, GenericH3, GenericPara } from "../styles/IndexStyles"
 
 import Banner from "../components/banner"
 import Layout from "../components/layout"
-import { Link } from "gatsby"
 import React from "react"
 import background from "../images/flats-at-springhurst.jpg"
 import springhurst from "../images/flats-at-springhurst.jpg"
@@ -27,42 +21,41 @@ const MoreButton = styled.a`
 	display: inline-block;
 `
 
-export default () => {
-	return (
-		<Layout>
-			<div style={{ position: "relative" }}>
-				<Banner
-					bgImage={background}
-					inner
-					h2Content="FLATS AT SPRINGHURST"
-					// spanContent="Project"
-				></Banner>
-			</div>
-			<Clients className="singlePjt">
-				<GenericH3 none>PROJECT GALLERY</GenericH3>
-				<GenericPara lessSize>
-					There are many variations of passages of Lorem Ipsum
-					available, but the majority have suffered alteration in some
-					form, by injected humour, or randomised words which don’t
-					look even slightly believable. If you are going to use a
-					passage of Lorem Ipsum, you need to be sure there isn’t
-					anything embarrassing hidden in the middle of text. All the
-					Lorem Ipsum generators on the Internet tend to repeat
-					predefined chunks as necessary, making this the first true
-					generator on the Internet. It uses a dictionary of over 200
-					Latin words
-				</GenericPara>
+const ClientsPage = () => (
+	<Layout>
+		<div style={{ position: "relative" }}>
+			<Banner
+				bgImage={background}
+				inner
+				h2Content="FLATS AT SPRINGHURST"
+				// spanContent="Project"
+			></Banner>
+		</div>
+		<Clients className="singlePjt">
+			<GenericH3 none>PROJECT GALLERY</GenericH3>
+			<GenericPara lessSize>
+				There are many variations of passages of Lorem Ipsum available,
+				but the majority have suffered alteration in some form, by
+				injected humour, or randomised words which don’t look even
+				slightly believable. If you are going to use a passage of Lorem
+				Ipsum, you need to be sure there isn’t anything embarrassing
+				hidden in the middle of text. All the Lorem Ipsum generators on
+				the Internet tend to repeat predefined chunks as necessary,
+				making this the first true generator on the Internet. It uses a
+				dictionary of over 200 Latin words
+			</GenericPara>
 
-				<div className="gallery">
-					<div class="card">
-						<img src={springhurst} alt="Logo" />
-						<img src={springhurst} alt="Logo" />
-						<img src={springhurst} alt="Logo" />
-						<img src={springhurst} alt="Logo" />
-					</div>
+			<div className="gallery">
+				<div class="card">
+					<img src={springhurst} alt="Logo" />
+					<img src={springhurst} alt="Logo" />
+					<img src={springhurst} alt="Logo" />
+					<img src={springhurst} alt="Logo" />
 				</div>
-				<MoreButton>View Details</MoreButton>
-			</Clients>
-		</Layout>
-	)
-}
+			</div>
+			<MoreButton>View Details</MoreButton>
+		</Clients>
+	</Layout>
+)
+
+export default ClientsPage

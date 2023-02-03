@@ -60,6 +60,7 @@ const cursor = keyframes`
 	}
 `
 const Container = styled.div`
+	background: url(../images/canvas-bg.jpg);
 	position: relative;
 	height: 100%;
 	width: 100%;
@@ -72,7 +73,7 @@ const Container = styled.div`
 	padding: 3vmin;
 	overflow: hidden;
 	h1 {
-		margin: 3rem;
+		margin: 0 3rem;
 		font-size: 4rem;
 		display: inline-flex;
 		align-items: flex-start;
@@ -121,13 +122,21 @@ const Companies = () => {
 	return (
 		<>
 			<div
+				className="flexCol"
 				style={{
 					display: `flex`,
 					backgroundColor: `#2b2d2f`,
 				}}
 			>
 				<FlexBoxIndex>
-					<Container>
+					<Container
+						data-scroll
+						data-scroll-direction="vertical"
+						data-scroll-speed="3"
+					>
+						<h2 style={{ color: `white`, marginLeft: `3rem` }}>
+							We're
+						</h2>
 						<h1>
 							<i></i>
 							<span id="a">Prepared</span>
@@ -145,7 +154,12 @@ const Companies = () => {
 					}}
 				>
 					<Canvas />
-					<div className="stats">
+					<div
+						className="stats"
+						data-scroll
+						data-scroll-direction="vertical"
+						data-scroll-speed="-1"
+					>
 						<div className="design">
 							<GenericH2 none>200</GenericH2>
 							<GenericPara lessSize>Design</GenericPara>

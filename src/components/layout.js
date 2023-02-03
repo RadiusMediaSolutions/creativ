@@ -6,31 +6,39 @@
  */
 
 import "./layout.css"
+import "../styles/locomotive.css"
 
-import {
-	Copyright,
-	Footer,
-	GenericH3,
-	GenericPara,
-} from "../styles/IndexStyles"
-import { Link, graphql, useStaticQuery } from "gatsby"
-import React, { useRef } from "react"
-import {
-	faFacebook,
-	faInstagram,
-	faLinkedin,
-	faPinterest,
-	faTwitter,
-	faYoutube,
-} from "@fortawesome/free-brands-svg-icons"
+import { graphql, useStaticQuery } from "gatsby"
+import { useRef, useState } from "react"
 
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import Footer from "./footer"
 import Header from "./header"
+import { LocomotiveScrollProvider } from "react-locomotive-scroll"
+import { MDXProvider } from "@mdx-js/react"
+import MessageComponent from "./message"
 import PropTypes from "prop-types"
+import React from "react"
 
-// import * as React from "react"
+const shortcodes = { MessageComponent }
+// import { Copyright, Ftr, GenericH3, GenericPara } from "../styles/IndexStyles"
 
 const Layout = ({ children }) => {
+	const [sticky, setSticky] = useState(false)
+	const ref = useRef(null)
+
+	const options = {
+		smooth: true,
+		// smartphone: {
+		// 	smooth: true,
+		// },
+		// tablet: {
+		// 	smooth: true,
+		// },
+	}
+	const stickNav = value => {
+		value.scroll.y >= 100 ? setSticky(true) : setSticky(false)
+	}
+
 	const data = useStaticQuery(graphql`
 		query SiteTitleQuery {
 			site {
@@ -42,70 +50,32 @@ const Layout = ({ children }) => {
 	`)
 
 	return (
-		<>
-			<Header siteTitle={data.site.siteMetadata?.title || `Title`} />
-			<div
-				style={{
-					marginTop: `-50px`,
+		<MDXProvider components={shortcodes}>
+			<Header
+				sticky={sticky}
+				siteTitle={data.site.siteMetadata?.title || `Title`}
+			/>
+
+			<LocomotiveScrollProvider
+				options={options}
+				containerRef={ref}
+				watch={[]}
+				onUpdate={scroll => {
+					scroll.on("scroll", stickNav)
 				}}
 			>
-				<main>{children}</main>
-				<Footer
-					style={{
-						fontSize: `var(--font-sm)`,
-					}}
-				>
-					<div className="ftr1">
-						<GenericH3 none>Sky Develop</GenericH3>
-						<GenericPara lessSize>
-							We use modern and latest technologies which help our
-							clients as they are high scalable and maintainable
-						</GenericPara>
+				<main data-scroll-container ref={ref}>
+					<div
+					// style={{
+					// 	marginTop: `-105px`,
+					// }}
+					>
+						{children}
 					</div>
-					<div className="ftr2">
-						<GenericH3 none>Phone Number</GenericH3>
-						<Link
-							to="/"
-							style={{
-								color: "#666666 ",
-								fontSize: `var(--font-sm)`,
-								textDecoration: `none`,
-							}}
-						>
-							123-456-7890
-						</Link>
-					</div>
-					<div className="ftr3">
-						<GenericH3 none>Email Address</GenericH3>
-						<Link
-							to="/"
-							style={{
-								color: "#666666 ",
-								fontSize: `var(--font-sm)`,
-								textDecoration: `none`,
-							}}
-						>
-							skydevelop@mail.com
-						</Link>
-					</div>
-					<div className="ftr4">
-						<GenericH3 none>Address</GenericH3>
-						<GenericPara lessSize>
-							1234 Prather Road, Louisville KY 47172
-						</GenericPara>
-					</div>
-				</Footer>
-				<Copyright>
-					<div>
-						<span>&copy; {new Date().getFullYear()} , Skynet </span>
-						<span>
-							&middot; Built by
-							{` `}RadiusMedia
-						</span>
-					</div>
-				</Copyright>
-			</div>
-		</>
+					<Footer />
+				</main>
+			</LocomotiveScrollProvider>
+		</MDXProvider>
 	)
 }
 

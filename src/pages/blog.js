@@ -1,12 +1,7 @@
-import {
-	Clients,
-	GenericH2,
-	GenericH3,
-	GenericPara,
-} from "../styles/IndexStyles"
 import { Link, graphql } from "gatsby"
 
 import Banner from "../components/banner"
+import { GenericH3 } from "../styles/IndexStyles"
 import Layout from "../components/layout"
 import React from "react"
 import { StaticImage } from "gatsby-plugin-image"
@@ -14,13 +9,6 @@ import background from "../images/roofingblog.jpg"
 import styled from "styled-components"
 
 const BlogList = styled.div`
-	.blogGrid {
-		display: grid;
-		// grid-template-columns: 1fr 1fr 1fr;
-		grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-		grid-gap: 20px;
-		margin: 4rem 0;
-	}
 	h2 {
 		margin: 3rem 0;
 		font-size: 2rem;
@@ -43,10 +31,11 @@ const BlogPage = ({ data }) => {
 				<Banner
 					bgImage={background}
 					inner
-					h2Content="SKY"
+					h2Content="SKYNET"
 					spanContent="Resources"
 				>
 					<StaticImage
+						className=""
 						src="../images/roofingblog.jpg"
 						alt="landscape"
 						style={{ height: `70vh`, width: `100%` }}
@@ -55,9 +44,9 @@ const BlogPage = ({ data }) => {
 				</Banner>
 			</div>
 
-			<BlogList>
+			<BlogList className="innerTitle">
 				<h2>
-					<span>SKYNET</span> RECENT ARTICLES
+					RECENT <span> ARTICLES</span>
 				</h2>
 				<div className="blogGrid">
 					{data.allMdx.nodes.map(node => (
@@ -67,7 +56,7 @@ const BlogPage = ({ data }) => {
 									{node.frontmatter.title}
 								</Link>
 							</GenericH3>
-							<span>
+							<span style={{ marginBottom: `0.5rem` }}>
 								<b>Posted:</b> {node.frontmatter.date}
 							</span>
 							<p>{node.excerpt}</p>
@@ -81,10 +70,15 @@ const BlogPage = ({ data }) => {
 
 export const query = graphql`
 	query {
-		allMdx(sort: { fields: frontmatter___date, order: DESC }) {
+		allMdx(sort: { frontmatter: { date: DESC } }) {
 			nodes {
 				frontmatter {
 					date(formatString: "MMMM D, YYYY")
+					featured_image {
+						childrenImageSharp {
+							gatsbyImageData
+						}
+					}
 					title
 					slug
 				}

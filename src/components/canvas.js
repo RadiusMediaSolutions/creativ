@@ -46,7 +46,7 @@ const Canvas = props => {
 				0.5 -
 			0.5
 
-		const offset = 8 / 10
+		// const offset = 8 / 10
 
 		let t = 0
 
@@ -86,7 +86,7 @@ const Canvas = props => {
 		setInterval(drawLines, 300)
 	}, [])
 
-	return <AnimatedCanvas ref={canvasRef} />
+	return <AnimatedCanvas className="canvasMobile" ref={canvasRef} />
 }
 
 export default Canvas

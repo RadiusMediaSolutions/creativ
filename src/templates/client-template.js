@@ -11,7 +11,7 @@ import background from "../images/roofingblog.jpg"
 const Template = ({ data }) => {
 	console.log(data)
 	console.log("testtt")
-	const { clientName, description, images } = data.client
+	const { clientName, description } = data.client
 	const image = getImage(data.client.images[0])
 
 	return (
