@@ -55,7 +55,7 @@ const TextWrapper = styled.div`
 		color: #ffff66;
 		/*   margin-top:100px; */
 		bottom: 100px;
-		padding-left: 30px;
+		// padding-left: 30px;
 		padding-bottom: 20px;
 		z-index: 2000;
 	}
@@ -66,7 +66,7 @@ const TextWrapper = styled.div`
 		background-position: left center;
 		-webkit-background-clip: text;
 		-webkit-text-fill-color: transparent;
-		padding-left: 20px;
+		// padding-left: 20px;
 		-webkit-text-stroke: 1px yellow;
 		z-index: 1000;
 		font-size: 150px;

@@ -137,7 +137,7 @@ const Companies = () => {
 						<span id="c">Change</span>
 					</h1>
 				</Container>
-				{/* <Canvas /> */}
+
 				<div className="milestone">
 					<div>
 						<GenericH2 none>200</GenericH2>
@@ -151,7 +151,9 @@ const Companies = () => {
 						<GenericH2 none>100</GenericH2>
 						<GenericPara lessSize>Execute</GenericPara>
 					</div>
+					{/* <Canvas /> */}
 				</div>
+				<Canvas />
 			</div>
 		</>
 	)
