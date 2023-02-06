@@ -4,13 +4,16 @@ import styled from "styled-components"
 
 const AnimatedCanvas = styled.canvas`
 	display: inline-block;
-	position: relative;
+	position: absolute;
+	z-index: -5;
 	// left: 0;
 	// top: 0;
 	width: 100%;
 	// height: 100%;
 	// background-size: cover;
 	// background-repeat: no-repeat;
+	bottom: 100px;
+	transform: translateY(-140px);
 `
 
 const Canvas = props => {

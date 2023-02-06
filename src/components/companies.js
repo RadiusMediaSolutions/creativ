@@ -72,6 +72,7 @@ const Container = styled.div`
 	font-family: sans-serif;
 	padding: 3vmin;
 	overflow: hidden;
+	padding: 100px 0;
 	h1 {
 		margin: 0 3rem;
 		font-size: 4rem;
@@ -121,59 +122,38 @@ const Container = styled.div`
 const Companies = () => {
 	return (
 		<>
-			<div
-				className="flexCol"
-				style={{
-					display: `flex`,
-					backgroundColor: `#2b2d2f`,
-				}}
-			>
-				<FlexBoxIndex>
-					<Container
-						data-scroll
-						data-scroll-direction="vertical"
-						data-scroll-speed="3"
-					>
-						<h2 style={{ color: `white`, marginLeft: `3rem` }}>
-							We're
-						</h2>
-						<h1>
-							<i></i>
-							<span id="a">Prepared</span>
-							<span id="b">For</span>
-							<span id="c">Change</span>
-						</h1>
-					</Container>
-				</FlexBoxIndex>
-				<FlexBoxIndex
-					inverse
-					className="statsPara"
-					style={{
-						display: `flex`,
-						alignItems: `baseline`,
-					}}
+			<div className="statscard">
+				<Container
+					className="textSlide"
+					style={{ backgroundColor: `#2b2d2f` }}
 				>
-					<Canvas />
-					<div
-						className="stats"
-						data-scroll
-						data-scroll-direction="vertical"
-						data-scroll-speed="-1"
-					>
-						<div className="design">
-							<GenericH2 none>200</GenericH2>
-							<GenericPara lessSize>Design</GenericPara>
-						</div>
-						<div className="estimate">
-							<GenericH2 none>180</GenericH2>
-							<GenericPara lessSize>Estimate</GenericPara>
-						</div>
-						<div className="execute">
-							<GenericH2 none>100</GenericH2>
-							<GenericPara lessSize>Execute</GenericPara>
-						</div>
+					{/* <h2 style={{ color: `white`, marginLeft: `3rem` }}>
+						We're
+					</h2> */}
+					<h1>
+						<i></i>
+						<span id="a">Prepared</span>
+						<span id="b">For</span>
+						<span id="c">Change</span>
+					</h1>
+				</Container>
+
+				<div className="milestone">
+					<div>
+						<GenericH2 none>200</GenericH2>
+						<GenericPara lessSize>Design</GenericPara>
 					</div>
-				</FlexBoxIndex>
+					<div>
+						<GenericH2 none>180</GenericH2>
+						<GenericPara lessSize>Estimate</GenericPara>
+					</div>
+					<div>
+						<GenericH2 none>100</GenericH2>
+						<GenericPara lessSize>Execute</GenericPara>
+					</div>
+					{/* <Canvas /> */}
+				</div>
+				<Canvas />
 			</div>
 		</>
 	)

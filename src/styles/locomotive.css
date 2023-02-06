@@ -3,7 +3,7 @@
 	overflow: hidden;
 }
 
-html.has-scroll-dragging {
+/* html.has-scroll-dragging {
 	-webkit-user-select: none;
 	-moz-user-select: none;
 	-ms-user-select: none;
@@ -75,13 +75,14 @@ html.has-scroll-dragging {
 [data-scroll-direction="horizontal"] .c-scrollbar_thumb {
 	right: auto;
 	bottom: 0;
-}
+} */
 
-/* main {
+main {
 	min-height: 100vh;
 	display: flex;
 	flex-direction: column;
-} */
+	padding-bottom: 40px;
+}
 
 .left img {
 	transform: translateY(-100px);

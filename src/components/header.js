@@ -87,6 +87,13 @@ const Header = ({ sticky, siteTitle }) => {
 								</Link>
 								<Link
 									activeClassName="active"
+									to="/about"
+									style={{ textDecoration: `none` }}
+								>
+									<MenuItem>About</MenuItem>
+								</Link>
+								<Link
+									activeClassName="active"
 									to="/portfolio"
 									style={{ textDecoration: `none` }}
 								>

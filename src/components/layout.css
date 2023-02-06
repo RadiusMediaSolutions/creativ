@@ -1,4 +1,4 @@
-/* @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;800;900&display=swap"); */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;800;900&display=swap");
 
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500;700;900&display=swap");
 :root {
@@ -49,6 +49,23 @@ a,
 	z-index: 100;
 }
 @media (max-width: 1230px) {
+	.canvasMobile {
+		display: none !important;
+	}
+	.lview {
+		display: none !important;
+	}
+	.milestone {
+		max-width: 600px;
+		grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+		padding: 100px 0;
+	}
+	.textSlide h1 {
+		font-size: 3rem !important;
+	}
+	section {
+		padding: 30px !important;
+	}
 	.stats {
 		left: 5% !important;
 	}
@@ -58,16 +75,16 @@ a,
 		left: 10% !important;
 		font-size: 3rem !important;
 	}
-	body {
-		padding: 0 30px;
-	}
 
 	.text_section3,
 	.image {
 		display: flex;
 		flex-direction: column !important;
 		width: 100% !important;
-		margin: 0 auto !important;
+		margin: 1rem auto !important;
+	}
+	.mview {
+		margin-top: 1rem;
 	}
 	.lg {
 		display: none !important;
@@ -90,6 +107,13 @@ a,
 	}
 }
 @media (min-width: 1231px) and (max-width: 1399px) {
+	.canvasMobile {
+		position: absolute;
+		z-index: -5;
+	}
+	section {
+		padding: 30px !important;
+	}
 	.mdxBanner .textWrapper {
 		width: 50% !important;
 		left: 10% !important;
@@ -97,7 +121,6 @@ a,
 	}
 	body {
 		margin: 0 auto;
-		padding: 0 30px;
 	}
 	/* .fixed-top {
 		right: 20%;
@@ -183,6 +206,7 @@ strong {
 dfn {
 	font-style: italic;
 }
+
 /* h2 {
 	font-family: poppins;
 	font-size: 3rem;
