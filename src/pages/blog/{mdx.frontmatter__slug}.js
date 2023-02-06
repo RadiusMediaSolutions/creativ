@@ -40,9 +40,11 @@ const BlogPost = ({ data, children }) => {
 				</Banner>
 			</div>
 			<BlogPosts className="mdxContent">
-				<GenericH2 none>{data.mdx.frontmatter.title}</GenericH2>
-				<PostPara>{data.mdx.frontmatter.date}</PostPara>
-				{children}
+				<section>
+					<GenericH2 none>{data.mdx.frontmatter.title}</GenericH2>
+					<PostPara>{data.mdx.frontmatter.date}</PostPara>
+					{children}
+				</section>
 			</BlogPosts>
 		</Layout>
 	)

@@ -38,31 +38,33 @@ const BlogPage = ({ data }) => {
 						className=""
 						src="../images/roofingblog.jpg"
 						alt="landscape"
-						style={{ height: `70vh`, width: `100%` }}
+						style={{ height: `80vh`, width: `100%` }}
 						aspectRatio={2 / 1}
 					/>
 				</Banner>
 			</div>
 
 			<BlogList className="innerTitle">
-				<h2>
-					RECENT <span> ARTICLES</span>
-				</h2>
-				<div className="blogGrid">
-					{data.allMdx.nodes.map(node => (
-						<article key={node.id}>
-							<GenericH3 none>
-								<Link to={`/blog/${node.frontmatter.slug}`}>
-									{node.frontmatter.title}
-								</Link>
-							</GenericH3>
-							<span style={{ marginBottom: `0.5rem` }}>
-								<b>Posted:</b> {node.frontmatter.date}
-							</span>
-							<p>{node.excerpt}</p>
-						</article>
-					))}
-				</div>
+				<section>
+					<h2>
+						RECENT <span> ARTICLES</span>
+					</h2>
+					<div className="blogGrid">
+						{data.allMdx.nodes.map(node => (
+							<article key={node.id}>
+								<GenericH3 none>
+									<Link to={`/blog/${node.frontmatter.slug}`}>
+										{node.frontmatter.title}
+									</Link>
+								</GenericH3>
+								<span style={{ marginBottom: `0.5rem` }}>
+									<b>Posted:</b> {node.frontmatter.date}
+								</span>
+								<p>{node.excerpt}</p>
+							</article>
+						))}
+					</div>
+				</section>
 			</BlogList>
 		</Layout>
 	)

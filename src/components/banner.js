@@ -157,7 +157,7 @@ const Banner = ({
 					</MoreLink>
 				</TextWrapper>
 			</div>
-			<BannerFooter inner={inner}>
+			<BannerFooter>
 				<div className="icon-set-group">
 					<FontAwesomeIcon icon={faTwitter} color="#666;" size="1x" />
 					<FontAwesomeIcon

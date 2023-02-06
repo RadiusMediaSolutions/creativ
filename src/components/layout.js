@@ -28,12 +28,12 @@ const Layout = ({ children }) => {
 
 	const options = {
 		smooth: true,
-		// smartphone: {
-		// 	smooth: true,
-		// },
-		// tablet: {
-		// 	smooth: true,
-		// },
+		smartphone: {
+			smooth: true,
+		},
+		tablet: {
+			smooth: true,
+		},
 	}
 	const stickNav = value => {
 		value.scroll.y >= 100 ? setSticky(true) : setSticky(false)
@@ -65,13 +65,7 @@ const Layout = ({ children }) => {
 				}}
 			>
 				<main data-scroll-container ref={ref}>
-					<div
-					// style={{
-					// 	marginTop: `-105px`,
-					// }}
-					>
-						{children}
-					</div>
+					{children}
 					<Footer />
 				</main>
 			</LocomotiveScrollProvider>

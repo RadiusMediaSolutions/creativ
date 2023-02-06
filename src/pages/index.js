@@ -91,51 +91,33 @@ const IndexPage = () => (
 						/>
 					</div>
 					{/* <GenericH2 none>WELCOME SKY DEVELOP</GenericH2> */}
-					<GenericPara lessSize lessSpacing style={{ margin: "0" }}>
-						Our proven methodology creates a comprehensive strategy
-						combining the services of an architect, an engineer and
-						a construction manager as one unified package towards
-						your construction goals whether its the design of a new
-						building or a renovation or remodel of existing space.
-						This streamlined strategy allows the various
-						stakeholders in a project from the owner, the architect,
-						the engineer and the estimator to communicate
-						effectively and eliminate issues between the design part
-						of the build to the takeoff and estimating part of the
-						build dealing with manufacturers specifications and
-						suppliers.
-					</GenericPara>
-					<h3>Our process</h3>
-					<ul className="processList">
-						<li
-							data-scroll
-							data-scroll-direction="vertical"
-							data-scroll-speed="1"
+					<div className="contentSection">
+						<GenericPara
+							lessSize
+							lessSpacing
+							style={{ margin: "0" }}
 						>
-							IDEA & START
-						</li>
-						<li
-							data-scroll
-							data-scroll-direction="vertical"
-							data-scroll-speed="2"
-						>
-							DESIGN & CREATE
-						</li>
-						<li
-							data-scroll
-							data-scroll-direction="vertical"
-							data-scroll-speed="3"
-						>
-							BUILD & FINISH
-						</li>
-					</ul>
-					<MoreButton
-						data-scroll
-						data-scroll-direction="vertical"
-						data-scroll-speed="1"
-					>
-						Learn More
-					</MoreButton>
+							Our proven methodology creates a comprehensive
+							strategy combining the services of an architect, an
+							engineer and a construction manager as one unified
+							package towards your construction goals whether its
+							the design of a new building or a renovation or
+							remodel of existing space. This streamlined strategy
+							allows the various stakeholders in a project from
+							the owner, the architect, the engineer and the
+							estimator to communicate effectively and eliminate
+							issues between the design part of the build to the
+							takeoff and estimating part of the build dealing
+							with manufacturers specifications and suppliers.
+						</GenericPara>
+						<h3>Our process</h3>
+						<ul className="processList">
+							<li>IDEA & START</li>
+							<li>DESIGN & CREATE</li>
+							<li>BUILD & FINISH</li>
+						</ul>
+						<MoreButton>Learn More</MoreButton>
+					</div>
 				</div>
 			</FlexBoxIndex>
 		</SectionTwo>
@@ -287,12 +269,7 @@ const IndexPage = () => (
 			</div>
 			{/* <h2>OUR FEATURED <span>WORKS</span></h2> */}
 			<FlexBoxIndex className="mColumn">
-				<div
-					className="image"
-					data-scroll
-					data-scroll-direction="vertical"
-					data-scroll-speed="2"
-				>
+				<div className="image">
 					<img src={bolt} alt="Logo" width="50" />
 				</div>
 				<div className="text_section3">
@@ -308,11 +285,7 @@ const IndexPage = () => (
 						build dealing with manufacturers specifications and
 						suppliers.
 					</GenericPara>
-					<MoreButton
-						data-scroll
-						data-scroll-direction="vertical"
-						data-scroll-speed="-1"
-					>
+					<MoreButton>
 						<Link
 							to="/clients"
 							style={{
@@ -332,12 +305,7 @@ const IndexPage = () => (
 					<GenericH2 none>
 						SPRINGHURST <span>Flats</span>
 					</GenericH2>
-					<div
-						className="image mview"
-						data-scroll
-						data-scroll-direction="vertical"
-						data-scroll-speed="2"
-					>
+					<div className="image mview">
 						<img src={springhurst} alt="Logo" width="50" />
 					</div>
 					<GenericPara lessSize lessSpacing>

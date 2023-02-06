@@ -120,6 +120,7 @@ const FlexBoxIndex = styled.div`
 	.processList {
 		display: flex;
 		margin-left: 0;
+		margin-bottom: 50px;
 	}
 	.processList li {
 		font-size: 14px;
@@ -201,7 +202,7 @@ const SectionFour = styled.section`
 			width: 8rem;
 			background: var(--heading-color);
 			margin-top: 15px;
-			position: absolute;
+			// position: absolute;
 			left: 35%;
 			bottom: 30px;
 		}
@@ -262,8 +263,8 @@ const SectionFive = styled.section`
 			height: 0.2rem;
 			width: 8rem;
 			background: var(--heading-color);
-			margin-top: 15px;
-			position: absolute;
+			margin: 15px auto;
+			// position: absolute;
 			left: 34%;
 			bottom: 30px;
 		}
@@ -298,14 +299,11 @@ const SectionFive = styled.section`
 `
 
 const Ftr = styled.footer`
-	display: grid;
-	grid-template-columns: 1fr 1fr 1fr 1fr;
-	grid-gap: 20px;
 	width: 100%;
-	margin-top: 3rem;
-	padding: 3rem;
+	// margin-top: 3rem;
 	background-color: #1d242a;
 	color: rgba(255, 255, 255, 0.8) !important;
+	padding-bottom: 50px;
 
 	.icons > * {
 		cursor: pointer;
@@ -328,13 +326,7 @@ const Ftr = styled.footer`
 	// 	padding: 10px 0;
 	// }
 `
-const Copyright = styled.div`
-	display: flex;
-	justify-content: center;
-	background: #171b1e;
-	padding: 10px 0;
-	margin-bottom: -42px;
-`
+
 const Works = styled.div`
 	color: #4e4852;
 	padding: 2em 0 1em 0 !important;
@@ -427,6 +419,49 @@ const Clients = styled.div`
 		grid-gap: 20px;
 	}
 `
+
+const OurTeam = styled.section`
+	background-color: whitesmoke;
+	color: #000;
+	margin: 0 auto;
+	.header__section4 {
+		p {
+			font-size: 1rem !important;
+			line-height: 2rem !important;
+			color: #666666 !important;
+		}
+		.teamImg {
+			margin: 0 auto;
+		}
+	}
+	.title__section4 {
+		font-family: Roboto;
+		font-size: 3rem;
+		font-weight: 100;
+		padding: 1em 0;
+		text-align: left;
+		color: var(--heading-color);
+		// border-bottom: 2px solid #464981;
+		text-transform: uppercase;
+		margin: 0;
+		position: relative;
+		&:after {
+			content: "";
+			display: flex;
+			margin: 0 auto;
+			height: 0.2rem;
+			width: 8rem;
+			background: var(--heading-color);
+			margin-top: 15px;
+			// position: absolute;
+			bottom: 30px;
+		}
+		span {
+			font-weight: 700;
+		}
+	}
+`
+
 export {
 	MoreText,
 	SectionTwo,
@@ -439,9 +474,9 @@ export {
 	SectionFour,
 	SectionFive,
 	Ftr,
-	Copyright,
 	Works,
 	ContactSection,
 	CntForm,
 	Clients,
+	OurTeam,
 }
