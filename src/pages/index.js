@@ -14,9 +14,9 @@ import Companies from "../components/companies"
 // import FeaturedClients from "../components/clients/FeaturedClients"
 import Layout from "../components/layout"
 import { Link } from "gatsby"
-import Seo from "../components/seo"
+import { SEO } from "../components/seo"
 import { StaticImage } from "gatsby-plugin-image"
-import about from "../images/feature_bg.jpg"
+import about from "../images/welcome_banner.jpg"
 import background from "../images/skynet_heroImg.jpg"
 import bolt from "../images/bolttie.jpeg"
 import springhurst from "../images/flats-at-springhurst.jpg"
@@ -45,7 +45,7 @@ const IndexPage = () => (
 				bgImage={background}
 				h2Content="SKYNET"
 				spanContent="Develop"
-				h1Content="Develop your inner beast"
+				h3Content="Global Consulting Powerhouse"
 			>
 				<StaticImage
 					src="../images/skynet_heroImg.jpg"
@@ -69,9 +69,9 @@ const IndexPage = () => (
 					data-scroll
 					data-scroll-direction="vertical"
 					data-scroll-repeat="true"
-					data-scroll-speed="2"
+					data-scroll-speed="1"
 				>
-					<img src={about} alt="about" style={{ maxWidth: "70%" }} />
+					<img src={about} alt="about" style={{ maxWidth: "60%" }} />
 				</div>
 				<div className="text_section3">
 					<h2>
@@ -82,7 +82,7 @@ const IndexPage = () => (
 						data-scroll
 						data-scroll-direction="vertical"
 						data-scroll-repeat="true"
-						data-scroll-speed="2"
+						data-scroll-speed="1"
 					>
 						<img
 							src={about}
@@ -150,22 +150,25 @@ const IndexPage = () => (
 						boxShadow: "0 0 7px #ddd",
 					}}
 				>
-					<div className="flex__section4">
-						{/* <FontAwesomeIcon
+					<Link to="/project-management">
+						<div className="flex__section4">
+							{/* <FontAwesomeIcon
 							icon={faReact}
 							color="#00FFCC"
 							size="3x"
 							fixedWidth
 						/> */}
-						<GenericH2 none lessSize>
-							Project Management
-						</GenericH2>
-					</div>
-					<GenericPara lessSize lessSpacing grey>
-						We all know that great work is achieved with a great
-						team. At Skynet, we have gathered an outstanding team of
-						experts that work together to bring your dreams to life.
-					</GenericPara>
+							<GenericH2 none lessSize>
+								Project Management
+							</GenericH2>
+						</div>
+						<GenericPara lessSize lessSpacing grey>
+							We all know that great work is achieved with a great
+							team. At Skynet, we have gathered an outstanding
+							team of experts that work together to bring your
+							dreams to life.
+						</GenericPara>
+					</Link>
 				</div>
 				<div
 					data-scroll
@@ -177,24 +180,20 @@ const IndexPage = () => (
 						boxShadow: "0 0 7px #ddd",
 					}}
 				>
-					<div className="flex__section4">
-						{/* <FontAwesomeIcon
-							icon={faCode}
-							color="#00FFCC"
-							size="3x"
-							fixedWidth
-						/> */}
-						<GenericH2 none lessSize>
-							Design Build
-						</GenericH2>
-					</div>
-					<GenericPara lessSize lessSpacing grey>
-						We implement the Design/Build approach toward projects
-						because it makes a sizable impact on your budget and
-						your timeline. Our proven methodology combines the
-						services of architects, engineers, and construction
-						managers
-					</GenericPara>
+					<Link to="/design-build">
+						<div className="flex__section4">
+							<GenericH2 none lessSize>
+								Design Build
+							</GenericH2>
+						</div>
+						<GenericPara lessSize lessSpacing grey>
+							We implement the Design/Build approach toward
+							projects because it makes a sizable impact on your
+							budget and your timeline. Our proven methodology
+							combines the services of architects, engineers, and
+							construction managers
+						</GenericPara>
+					</Link>
 				</div>
 				<div
 					data-scroll
@@ -206,24 +205,21 @@ const IndexPage = () => (
 						boxShadow: "0 0 7px #ddd",
 					}}
 				>
-					<div className="flex__section4">
-						{/* <FontAwesomeIcon
-							icon={faJs}
-							color="#00FFCC"
-							size="3x"
-							fixedWidth
-						/> */}
-						<GenericH2 none lessSize>
-							Take Off
-						</GenericH2>
-					</div>
-					<GenericPara lessSize lessSpacing grey>
-						Once the blueprints are drafted and adopted, the
-						take-off begins. Our highly experienced team will
-						determine the volume and quality of materials required
-						to realize your project. This is a crucial step in the
-						process that supports the precision of the estimate.
-					</GenericPara>
+					<Link to="/take-off">
+						<div className="flex__section4">
+							<GenericH2 none lessSize>
+								Take Off
+							</GenericH2>
+						</div>
+						<GenericPara lessSize lessSpacing grey>
+							Once the blueprints are drafted and adopted, the
+							take-off begins. Our highly experienced team will
+							determine the volume and quality of materials
+							required to realize your project. This is a crucial
+							step in the process that supports the precision of
+							the estimate.
+						</GenericPara>
+					</Link>
 				</div>
 				<div
 					data-scroll
@@ -236,24 +232,20 @@ const IndexPage = () => (
 						boxShadow: "0 0 7px #ddd",
 					}}
 				>
-					<div className="flex__section4">
-						{/* <FontAwesomeIcon
-							icon={faGem}
-							color="#00FFCC"
-							size="3x"
-							fixedWidth
-						/> */}
-						<GenericH2 none lessSize>
-							Estimate
-						</GenericH2>
-					</div>
-					<GenericPara lessSize lessSpacing grey>
-						Your estimate will go through a detailed cost analysis
-						to determine all the materials, manpower, and time
-						required. You will be involved through every step, as we
-						collectively decide, what will work best for your
-						project.
-					</GenericPara>
+					<Link to="/estimate">
+						<div className="flex__section4">
+							<GenericH2 none lessSize>
+								Estimate
+							</GenericH2>
+						</div>
+						<GenericPara lessSize lessSpacing grey>
+							Your estimate will go through a detailed cost
+							analysis to determine all the materials, manpower,
+							and time required. You will be involved through
+							every step, as we collectively decide, what will
+							work best for your project.
+						</GenericPara>
+					</Link>
 				</div>
 			</div>
 		</SectionFour>
@@ -349,6 +341,6 @@ const IndexPage = () => (
  *
  * See: https://www.gatsbyjs.com/docs/reference/built-in-components/gatsby-head/
  */
-export const Head = () => <Seo title="Home" />
+export const Head = () => <SEO title="Skynet Professional Solutions" />
 
 export default IndexPage

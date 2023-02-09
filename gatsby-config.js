@@ -6,7 +6,7 @@ module.exports = {
 		title: `Skynet`,
 		description: `SkyNet Professional Solutions - We develop your tomorrow `,
 		author: `Radius Media Solutions`,
-		siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`,
+		siteUrl: `https://www.skynetps.com/`,
 	},
 	plugins: [
 		`gatsby-plugin-image`,
@@ -46,7 +46,7 @@ module.exports = {
 				// https://css-tricks.com/meta-theme-color-and-trickery/
 				// theme_color: `#663399`,
 				display: `minimal-ui`,
-				icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+				icon: `src/images/logo-small.png`, // This path is relative to the root of the site.
 			},
 		},
 

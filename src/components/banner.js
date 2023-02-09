@@ -7,7 +7,6 @@ import {
 } from "@fortawesome/free-brands-svg-icons"
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { GenericPara } from "../styles/IndexStyles"
 import styled from "styled-components"
 
 const Hero = styled.div`
@@ -71,8 +70,11 @@ const TextWrapper = styled.div`
 		z-index: 1000;
 		font-size: 150px;
 	}
-	h3 span {
-		font-size: 50px;
+	h3 {
+		font-size: 1.5rem;
+		text-transform: uppercase;
+		margin: 0;
+		letter-spacing: 2px;
 	}
 	p {
 		text-transform: uppercase;
@@ -127,7 +129,7 @@ const Banner = ({
 	bgImage,
 	inner,
 	h2Content,
-	h1Content,
+	h3Content,
 	spanContent,
 	children,
 }) => {
@@ -150,7 +152,7 @@ const Banner = ({
 						<h1>
 							<span>{spanContent}</span>
 						</h1>
-						<h1>{h1Content}</h1>
+						<h3>{h3Content}</h3>
 					</div>
 					<MoreLink inner={inner} className="moreBtn">
 						Learn More

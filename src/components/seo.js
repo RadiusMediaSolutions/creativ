@@ -1,55 +1,33 @@
-/**
- * SEO component that queries for data with
- *  Gatsby's useStaticQuery React hook
- *
- * See: https://www.gatsbyjs.com/docs/use-static-query/
- */
+import React from "react"
+import { useSiteMetadata } from "../hooks/use-site-metadata"
 
-import * as React from "react"
-import PropTypes from "prop-types"
-import { useStaticQuery, graphql } from "gatsby"
+export const SEO = ({ title, description, children, pathname }) => {
+	const {
+		title: defaultTitle,
+		description: defaultDescription,
+		image,
+		siteUrl,
+	} = useSiteMetadata()
 
-function Seo({ description, title, children }) {
-	const { site } = useStaticQuery(
-		graphql`
-			query {
-				site {
-					siteMetadata {
-						title
-						description
-						author
-					}
-				}
-			}
-		`
-	)
-
-	const metaDescription = description || site.siteMetadata.description
-	const defaultTitle = site.siteMetadata?.title
+	const seo = {
+		title: title || defaultTitle,
+		description: description || defaultDescription,
+		image: `${siteUrl}${image}`,
+		url: `${siteUrl}${pathname || ``}`,
+	}
 
 	return (
 		<>
-			<title>{defaultTitle ? `${title} | ${defaultTitle}` : title}</title>
-			<meta name="description" content={metaDescription} />
-			<meta property="og:title" content={title} />
-			<meta property="og:description" content={metaDescription} />
-			<meta property="og:type" content="website" />
-			<meta name="twitter:card" content="summary" />
-			<meta name="twitter:creator" content={site.siteMetadata?.author || ``} />
-			<meta name="twitter:title" content={title} />
-			<meta name="twitter:description" content={metaDescription} />
+			<title>{seo.title}</title>
+			<meta name="description" content={seo.description} />
+			<meta name="image" content={seo.image} />
+			<link
+				rel="shortcut icon"
+				href="../images/develop_logo.png"
+				type="image/x-icon"
+			/>
+
 			{children}
 		</>
 	)
 }
-
-Seo.defaultProps = {
-	description: ``,
-}
-
-Seo.propTypes = {
-	description: PropTypes.string,
-	title: PropTypes.string.isRequired,
-}
-
-export default Seo
