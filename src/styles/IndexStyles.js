@@ -300,7 +300,7 @@ const SectionFive = styled.section`
 
 const Ftr = styled.footer`
 	width: 100%;
-	// margin-top: 3rem;
+	margin-top: 3rem;
 	background-color: #1d242a;
 	color: rgba(255, 255, 255, 0.8) !important;
 	padding-bottom: 50px;
@@ -423,12 +423,17 @@ const Clients = styled.div`
 const OurTeam = styled.section`
 	background-color: whitesmoke;
 	color: #000;
-	margin: 0 auto;
-	.header__section4 {
+	margin: 2rem auto;
+	.text_Section3 {
+		h2 {
+			margin-bottom: 0;
+		}
 		p {
 			font-size: 1rem !important;
 			line-height: 2rem !important;
 			color: #666666 !important;
+			margin-right: 3rem;
+			margin-top: 1.5rem;
 		}
 		.teamImg {
 			margin: 0 auto;
@@ -461,7 +466,84 @@ const OurTeam = styled.section`
 		}
 	}
 `
-
+const TimeLine = styled.section`
+	background-color: whitesmoke;
+	color: #000;
+	margin: 2rem auto;
+	.text_Section3 {
+		h2 {
+			margin-bottom: 1.2rem;
+		}
+		p {
+			font-size: 1rem !important;
+			line-height: 2rem !important;
+			color: #666666 !important;
+		}
+		ul{
+			margin:0;
+		}
+		h3{
+			margin-bottom:.5rem;
+			span{
+				font-style:italic;
+			}
+		}
+		a.ctBtn{
+			border: 1px solid #9b9b01;
+			box-shadow: none;
+			color: #9b9b01;
+			border-radius: 5px;
+			cursor: pointer;
+			font-size: 1.2rem;
+			font-weight: 600;
+			padding: 0.8rem;
+			text-align: center;
+			text-transform: uppercase;
+			margin-bottom: 30px;
+			display:inline-flex;
+}
+`
+const ServiceList = styled.section`
+	background-color: whitesmoke;
+	color: #000;
+	.text_Section3 {
+		h4 {
+			text-align: left;
+			margin-bottom: 0.5rem;
+		}
+	}
+	.mColumn {
+		p {
+			font-size: 1rem !important;
+			line-height: 2rem !important;
+			color: #666666 !important;
+			max-width: 900px;
+			margin-right: 3rem;
+			margin-top: 1.5rem;
+		}
+	}
+`
+const ClientTemplate = styled.section`
+	background-color: whitesmoke;
+	color: #000;
+	margin: 2rem auto;
+	.text_Section3 {
+		h2 {
+			margin-bottom: 0;
+		}
+		p {
+			font-size: 1rem !important;
+			line-height: 2rem !important;
+			color: #666666 !important;
+			max-width: 900px;
+			margin-right: 3rem;
+			margin-top: 1.5rem;
+		}
+		.teamImg {
+			margin: 0 auto;
+		}
+	}
+`
 export {
 	MoreText,
 	SectionTwo,
@@ -479,4 +561,7 @@ export {
 	CntForm,
 	Clients,
 	OurTeam,
+	TimeLine,
+	ServiceList,
+	ClientTemplate,
 }

@@ -1,42 +1,55 @@
 import * as styles from "../styles/template.module.css"
 
-import { GatsbyImage, StaticImage, getImage } from "gatsby-plugin-image"
+import { ClientTemplate, FlexBoxIndex } from "../styles/IndexStyles"
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import { Link, graphql } from "gatsby"
 
 import Banner from "../components/banner"
 import Layout from "../components/layout"
 import React from "react"
-import background from "../images/roofingblog.jpg"
+
+// import background from "../images/roofingblog.jpg"
 
 const Template = ({ data }) => {
 	console.log(data)
 	console.log("testtt")
-	const { clientName, description } = data.client
+	const { clientName, description, projectDetails } = data.client
 	const image = getImage(data.client.images[0])
 
 	return (
 		<Layout>
-			<div style={{ position: "relative" }}>
+			<div style={{ position: "relative" }} className="portfolioTitle">
 				<Banner
-					bgImage={background}
+					className="portfolioTitle"
 					inner
-					h2Content="SKY"
-					spanContent="ClIENTS"
+					h2Content="SKYNET"
+					spanContent={clientName}
+					h1Content=""
 				>
-					<StaticImage
-						src="../images/roofingblog.jpg"
-						alt="landscape"
-						style={{ height: `70vh`, width: `100%` }}
+					<GatsbyImage
+						image={image}
+						alt="single Client"
+						style={{ height: `80vh`, width: `100%` }}
 						aspectRatio={2 / 1}
 					/>
 				</Banner>
 			</div>
-			<div className={styles.singleClient}>
-				<GatsbyImage image={image} alt="single Client" />
-				<h2>{clientName}</h2>
-				<p>{description}</p>
-			</div>
-
+			<ClientTemplate>
+				<FlexBoxIndex className="mColumn">
+					<div className="text_Section3">
+						<div className="innerTitle">
+							<h2>
+								<span>{clientName}</span>
+							</h2>
+						</div>
+						<p>{description}</p>
+						<p>{projectDetails.projectDetails}</p>
+					</div>
+					<div className="header__section4">
+						<GatsbyImage image={image} alt="single Client" />
+					</div>
+				</FlexBoxIndex>
+			</ClientTemplate>
 			<Link className={styles.backLink} to={`/portfolio/`}>
 				&#10094; Back to Portfolio
 			</Link>
@@ -51,6 +64,9 @@ export const query = graphql`
 			description
 			images {
 				gatsbyImageData(height: 500, formats: [AUTO, WEBP, AVIF])
+			}
+			projectDetails {
+				projectDetails
 			}
 		}
 	}

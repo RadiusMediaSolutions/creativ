@@ -114,8 +114,6 @@ img {
 	background: rgba(245, 245, 245, 0.9) !important;
 	content: "";
 	position: relative;
-	height: 95px;
-	/* width: 1500px; */
 	z-index: 1;
 	margin-right: 0;
 	transition: 0.5s;
@@ -478,7 +476,7 @@ img {
 	}
 }
 .innerTitle h2 {
-	margin: 3rem 0;
+	margin: 3rem 0 !important;
 }
 
 .mdxBanner h2 {
@@ -554,4 +552,15 @@ img {
 	text-transform: uppercase;
 	letter-spacing: 5px;
 	display: inline;
+}
+
+.portfolioTitle h1 span {
+	font-size: 4rem !important;
+}
+
+.portfolioTitle h2 {
+	font-size: 3rem !important;
+	margin: 0;
+	padding: 0;
+	bottom: 60px !important;
 }

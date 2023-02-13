@@ -4,7 +4,7 @@ import { GenericH2, PostPara } from "../../styles/IndexStyles"
 import Banner from "../../components/banner"
 import Layout from "../../components/layout"
 import React from "react"
-import Seo from "../../components/seo"
+// import Seo from "../../components/seo"
 import { graphql } from "gatsby"
 import styled from "styled-components"
 
@@ -13,6 +13,9 @@ const BlogPosts = styled.div`
 	// padding: 0 1.5rem;
 	h2 {
 		margin-bottom: 0;
+	}
+	.gatsby-resp-image-wrapper {
+		margin: 30px 0;
 	}
 `
 const BlogPost = ({ data, children }) => {
@@ -67,6 +70,6 @@ export const query = graphql`
 	}
 `
 
-export const Head = ({ data }) => <Seo title={data.mdx.frontmatter.title} />
+// export const Head = ({ data }) => <Seo title={data.mdx.frontmatter.title} />
 
 export default BlogPost
