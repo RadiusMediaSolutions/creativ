@@ -11,11 +11,10 @@ import {
 import Banner from "../components/banner"
 import Layout from "../components/layout"
 import { Link } from "gatsby"
-import { Seo } from "../components/seo"
+// import { Seo } from "../components/seo"
 import { StaticImage } from "gatsby-plugin-image"
 import about from "../images/our-story.jpg"
 import background from "../images/skynet_heroImg.jpg"
-import styled from "styled-components"
 
 const About = () => (
 	<Layout>
@@ -122,13 +121,6 @@ const About = () => (
 						engineers.
 					</p>
 				</div>
-				{/* <div className="header__section4">
-					<img
-						src={team}
-						alt="Skynet Team Picture"
-						className="teamImg"
-					/>
-				</div> */}
 			</FlexBoxIndex>
 		</OurTeam>
 
@@ -200,4 +192,4 @@ const About = () => (
 
 export default About
 
-export const Head = () => <Seo title="About Skynet" />
+// export const Head = () => <Seo title="About Skynet" />
