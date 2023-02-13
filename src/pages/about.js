@@ -11,29 +11,12 @@ import {
 import Banner from "../components/banner"
 import Layout from "../components/layout"
 import { Link } from "gatsby"
-import { SEO } from "../components/seo"
+import { Seo } from "../components/seo"
 import { StaticImage } from "gatsby-plugin-image"
 import about from "../images/our-story.jpg"
 import background from "../images/skynet_heroImg.jpg"
 import styled from "styled-components"
-import team from "../images/skynet-team.jpg"
 
-const MoreButton = styled.a`
-	border: 1px solid #9b9b01;
-	box-shadow: none;
-	color: #9b9b01;
-	border-radius: 5px;
-	cursor: pointer;
-	font-size: 1.2rem;
-	font-weight: 600;
-	/*     letter-spacing: 0.1em; */
-	padding: 0.8rem;
-	text-align: center;
-	text-decoration: none;
-	text-transform: uppercase;
-	margin: 30px auto;
-	width: fit-content;
-`
 const About = () => (
 	<Layout>
 		<div style={{ position: "relative" }}>
@@ -218,7 +201,7 @@ const About = () => (
 export default About
 
 export const Head = () => (
-	<SEO
+	<Seo
 		title="About Skynet"
 		description="We began our operations a few decades ago and have grown due to excellent relationships with our clients."
 	/>

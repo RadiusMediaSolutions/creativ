@@ -7,7 +7,6 @@ import Layout from "../components/layout"
 import { StaticImage } from "gatsby-plugin-image"
 import background from "../images/project-management_Banner.jpg"
 import project from "../images/take-small.jpg"
-import styled from "styled-components"
 
 const Services = () => (
 	<Layout>
