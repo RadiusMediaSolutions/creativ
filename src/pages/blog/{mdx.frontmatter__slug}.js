@@ -4,7 +4,7 @@ import { GenericH2, PostPara } from "../../styles/IndexStyles"
 import Banner from "../../components/banner"
 import Layout from "../../components/layout"
 import React from "react"
-import Seo from "../../components/seo"
+// import Seo from "../../components/seo"
 import { graphql } from "gatsby"
 import styled from "styled-components"
 

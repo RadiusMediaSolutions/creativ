@@ -12,7 +12,7 @@ const AnimatedCanvas = styled.canvas`
 	// height: 100%;
 	// background-size: cover;
 	// background-repeat: no-repeat;
-	bottom: 100px;
+	bottom: 110px;
 	transform: translateY(-140px);
 `
 
