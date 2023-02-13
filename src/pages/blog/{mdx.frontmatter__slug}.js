@@ -14,6 +14,9 @@ const BlogPosts = styled.div`
 	h2 {
 		margin-bottom: 0;
 	}
+	.gatsby-resp-image-wrapper {
+		margin: 30px 0;
+	}
 `
 const BlogPost = ({ data, children }) => {
 	const image = getImage(data.mdx.frontmatter.featured_image)

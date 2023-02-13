@@ -432,7 +432,6 @@ const OurTeam = styled.section`
 			font-size: 1rem !important;
 			line-height: 2rem !important;
 			color: #666666 !important;
-			max-width: 900px;
 			margin-right: 3rem;
 			margin-top: 1.5rem;
 		}

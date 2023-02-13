@@ -1,7 +1,7 @@
 import * as styles from "../styles/template.module.css"
 
 import { ClientTemplate, FlexBoxIndex } from "../styles/IndexStyles"
-import { GatsbyImage, StaticImage, getImage } from "gatsby-plugin-image"
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import { Link, graphql } from "gatsby"
 
 import Banner from "../components/banner"

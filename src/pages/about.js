@@ -139,13 +139,13 @@ const About = () => (
 						engineers.
 					</p>
 				</div>
-				<div className="header__section4">
+				{/* <div className="header__section4">
 					<img
 						src={team}
 						alt="Skynet Team Picture"
 						className="teamImg"
 					/>
-				</div>
+				</div> */}
 			</FlexBoxIndex>
 		</OurTeam>
 
