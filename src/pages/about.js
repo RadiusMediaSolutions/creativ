@@ -200,9 +200,4 @@ const About = () => (
 
 export default About
 
-export const Head = () => (
-	<Seo
-		title="About Skynet"
-		description="We began our operations a few decades ago and have grown due to excellent relationships with our clients."
-	/>
-)
+export const Head = () => <Seo title="About Skynet" />
