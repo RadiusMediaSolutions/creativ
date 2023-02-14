@@ -14,7 +14,7 @@ import Companies from "../components/companies"
 // import FeaturedClients from "../components/clients/FeaturedClients"
 import Layout from "../components/layout"
 import { Link } from "gatsby"
-import { SEO } from "../components/seo"
+import { Seo } from "../components/seo"
 import { StaticImage } from "gatsby-plugin-image"
 import about from "../images/welcome_banner.jpg"
 import background from "../images/skynet_heroImg.jpg"
@@ -341,6 +341,6 @@ const IndexPage = () => (
  *
  * See: https://www.gatsbyjs.com/docs/reference/built-in-components/gatsby-head/
  */
-export const Head = () => <SEO title="Skynet Professional Solutions" />
+export const Head = () => <Seo title="Skynet Professional Solutions" />
 
 export default IndexPage

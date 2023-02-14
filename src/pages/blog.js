@@ -4,6 +4,7 @@ import Banner from "../components/banner"
 import { GenericH3 } from "../styles/IndexStyles"
 import Layout from "../components/layout"
 import React from "react"
+import { Seo } from "../components/seo"
 import { StaticImage } from "gatsby-plugin-image"
 import background from "../images/roofingblog.jpg"
 import styled from "styled-components"
@@ -90,5 +91,7 @@ export const query = graphql`
 		}
 	}
 `
-
+export const Head = () => (
+	<Seo title="SkyNet Resources" content={Seo.description} />
+)
 export default BlogPage

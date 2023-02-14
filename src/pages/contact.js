@@ -10,6 +10,7 @@ import Banner from "../components/banner"
 import Layout from "../components/layout"
 import { Link } from "gatsby"
 import React from "react"
+import { Seo } from "../components/seo"
 import { StaticImage } from "gatsby-plugin-image"
 import background from "../images/contactus.jpg"
 
@@ -122,5 +123,9 @@ const Contact = () => (
 			</CntForm>
 		</section>
 	</Layout>
+)
+
+export const Head = () => (
+	<Seo title="Contact SkyNet" content={Seo.description} />
 )
 export default Contact

@@ -2,9 +2,9 @@ import Banner from "../components/banner"
 import Clients from "../components/clients/Clients"
 import Layout from "../components/layout"
 import React from "react"
+import { Seo } from "../components/seo"
 import { StaticImage } from "gatsby-plugin-image"
 import background from "../images/porfolio_bg.jpg"
-
 const Portfolio = () => {
 	return (
 		<Layout>
@@ -25,16 +25,11 @@ const Portfolio = () => {
 				</Banner>
 			</div>
 			<Clients />
-			{/* <Works>
-
-				<section class="gallery__flex">
-					{projects &&
-						projects.map(proj => (
-							<Project key={proj.title} project={proj} />
-						))}
-				</section>
-			</Works> */}
 		</Layout>
 	)
 }
+
+export const Head = () => (
+	<Seo title="SkyNet Portfolio" content={Seo.description} />
+)
 export default Portfolio
