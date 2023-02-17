@@ -7,13 +7,15 @@ module.exports = {
 		description: `SkyNet Professional Solutions - We develop your tomorrow `,
 		author: `Radius Media Solutions`,
 		siteUrl: `https://www.skynetps.com/`,
+		keywords: `Roofing, Construction`,
 	},
 	plugins: [
 		`gatsby-plugin-image`,
 		`gatsby-plugin-sharp`,
 		`gatsby-transformer-sharp`,
 		`gatsby-plugin-styled-components`,
-		// `gatsby-plugin-mdx`,
+		`gatsby-plugin-sitemap`,
+		`gatsby-plugin-robots-txt`,
 		{
 			resolve: `gatsby-source-filesystem`,
 			options: {
@@ -61,6 +63,28 @@ module.exports = {
 						},
 					},
 				],
+			},
+		},
+		{
+			resolve: `gatsby-plugin-google-gtag`,
+			options: {
+				// You can add multiple tracking ids and a pageview event will be fired for all of them.
+				trackingIds: [
+					"G-41D5RS6CZJ", // Google Analytics / GA
+				],
+				// This object is used for configuration specific to this plugin
+				pluginConfig: {
+					// Puts tracking script in the head instead of the body
+					head: true,
+				},
+			},
+		},
+		{
+			resolve: "gatsby-plugin-google-analytics",
+			options: {
+				trackingId:
+					"google-site-verification=CnC4Jz_M1E_q-SYlkEt1C1j684M8iHoFN6m6v-LPM7o",
+				head: true,
 			},
 		},
 	],

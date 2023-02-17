@@ -40,7 +40,7 @@ img {
 
 .card__overlay {
 	position: absolute;
-	bottom: -16px;
+	bottom: 0;
 	background: linear-gradient(to bottom, transparent 0%, #000000 100%);
 	color: #f1f1f1;
 	width: 100%;
@@ -332,6 +332,22 @@ img {
 	.ftrNav {
 		grid-template-columns: 2fr 2fr !important;
 	}
+	.mdxBanner h2 {
+		font-size: 1.5rem !important;
+		color: white !important;
+		padding-bottom: 20px !important;
+		bottom: 0 !important;
+	}
+	.mdxBanner h3 {
+		font-size: 0.9rem !important;
+	}
+	.mdxBanner h3::before {
+		position: relative;
+		content: "POSTED ON :";
+		margin-right: 10px;
+		font-size: 0.8rem;
+		color: var(--heading-color);
+	}
 }
 
 @media (max-width: 767px) {
@@ -496,6 +512,23 @@ img {
 		width: 50% !important;
 		left: 10% !important;
 		font-size: 3rem !important;
+		top: 60% !important;
+	}
+	.mdxBanner h2 {
+		font-size: 2rem !important;
+		color: white !important;
+		padding-bottom: 20px !important;
+		bottom: 0 !important;
+	}
+	.mdxBanner h3 {
+		font-size: 0.9rem !important;
+	}
+	.mdxBanner h3::before {
+		position: relative;
+		content: "POSTED ON :";
+		margin-right: 10px;
+		font-size: 0.8rem;
+		color: var(--heading-color);
 	}
 }
 

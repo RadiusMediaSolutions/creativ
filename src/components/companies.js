@@ -1,6 +1,6 @@
 import * as React from "react"
 
-import { FlexBoxIndex, GenericH2, GenericPara } from "../styles/IndexStyles"
+import { GenericH2, GenericPara } from "../styles/IndexStyles"
 import styled, { keyframes } from "styled-components"
 
 import Canvas from "../components/canvas"

@@ -47,7 +47,7 @@ const Footer = () => {
 					<div className="ftr4">
 						<GenericH3 none>Address</GenericH3>
 						<FaMapMarkerAlt className="ftr-icon" />
-						<a>1234 Prather Road, Louisville KY 47172</a>
+						<a href="#">1234 Prather Road, Louisville KY 47172</a>
 					</div>
 				</div>
 				<div className="copyright">

@@ -11,7 +11,7 @@ import {
 import Banner from "../components/banner"
 import Layout from "../components/layout"
 import { Link } from "gatsby"
-// import { Seo } from "../components/seo"
+import { Seo } from "../components/seo"
 import { StaticImage } from "gatsby-plugin-image"
 import about from "../images/our-story.jpg"
 import background from "../images/skynet_heroImg.jpg"
@@ -190,6 +190,12 @@ const About = () => (
  * See: https://www.gatsbyjs.com/docs/reference/built-in-components/gatsby-head/
  */
 
-export default About
+export const Head = () => (
+	<Seo
+		title="About SkyNet"
+		content={Seo.description}
+		keywords="Constructions, Roofing"
+	/>
+)
 
-// export const Head = () => <Seo title="About Skynet" />
+export default About
