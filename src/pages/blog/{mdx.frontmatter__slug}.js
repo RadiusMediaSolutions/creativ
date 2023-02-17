@@ -10,7 +10,6 @@ import styled from "styled-components"
 
 const BlogPosts = styled.div`
 	margin: 4rem 0;
-	// padding: 0 1.5rem;
 	h2 {
 		margin-bottom: 0;
 	}
