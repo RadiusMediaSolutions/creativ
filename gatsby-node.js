@@ -2,7 +2,7 @@ const path = require("path")
 exports.createPages = ({ actions, graphql }) => {
 	const { createPage } = actions
 	const clientTemplate = path.resolve("src/templates/client-template.js")
-	const blogTemplate = path.resolve("./src/pages/blog.js")
+	const blogTemplate = path.resolve("src/pages/blog.js")
 	// Individual doc and blog pages
 	// All in one go
 	return graphql(`
@@ -14,23 +14,12 @@ exports.createPages = ({ actions, graphql }) => {
 					}
 				}
 			}
-			blog: allMdx(
-				sort: { frontmatter: { date: DESC } }
-				limit: 6
-				skip: 0
-			) {
-				totalCount
+			blog: allMdx(sort: { frontmatter: { date: DESC } }, limit: 100) {
+				pageInfo {
+					currentPage
+					totalCount
+				}
 				nodes {
-					frontmatter {
-						date(formatString: "MMMM D, YYYY")
-						featured_image {
-							childrenImageSharp {
-								gatsbyImageData
-							}
-						}
-						title
-						slug
-					}
 					id
 					excerpt
 				}
@@ -52,17 +41,34 @@ exports.createPages = ({ actions, graphql }) => {
 		})
 		// Create blog pages
 		console.log(result.data.nodes)
-		i = 0
-		result.data.blog.nodes.forEach(({ node }) => {
+		const blogs = result.data.blog.nodes
+		const postsPerPage = 6
+		const numPages = Math.ceil(blogs.length / postsPerPage)
+
+		Array.from({ length: numPages }).forEach((_, i) => {
+			console.log(i)
 			createPage({
-				path: i === 0 ? `/` : `/${i + 1}`,
+				path: i === 0 ? `/blog/1` : `/blog/${i + 1}`,
+				// path: `/blog/${i + 1}`,
 				component: blogTemplate,
 				context: {
-					limit: 6,
-					skip: i * 6,
+					limit: postsPerPage,
+					skip: i * postsPerPage,
 					currentPage: i + 1,
+					numPages,
 				},
 			})
 		})
 	})
+}
+exports.onCreateNode = ({ node, actions, getNode }) => {
+	const { createNodeField } = actions
+	if (node.internal.type === `MarkdownRemark`) {
+		const value = createFilePath({ node, getNode })
+		createNodeField({
+			name: `slug`,
+			node,
+			value,
+		})
+	}
 }
