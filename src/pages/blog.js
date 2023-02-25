@@ -3,6 +3,7 @@ import { Link, graphql } from "gatsby"
 import Banner from "../components/banner"
 import { GenericH3 } from "../styles/IndexStyles"
 import Layout from "../components/layout"
+import Pagination from "../components/Pagination"
 import React from "react"
 import { Seo } from "../components/seo"
 import { StaticImage } from "gatsby-plugin-image"
@@ -26,6 +27,11 @@ const BlogList = styled.div`
 	}
 `
 const BlogPage = ({ data }) => {
+	// const { currentPage, numPages } = data.pageContext
+	// const isFirst = currentPage === 1
+	// const isLast = currentPage === numPages
+	// const prevPage = currentPage - 1 === 1 ? "/" : (currentPage - 1).toString()
+	// const nextPage = (currentPage + 1).toString()
 	return (
 		<Layout pageTitle="My Blog Posts">
 			<div style={{ position: "relative" }}>
@@ -50,6 +56,7 @@ const BlogPage = ({ data }) => {
 					<h2>
 						RECENT <span> ARTICLES</span>
 					</h2>
+					<Pagination totalCount={data.allMdx.totalCount} />
 					<div className="blogGrid">
 						{data.allMdx.nodes.map(node => (
 							<article key={node.id}>
@@ -65,6 +72,17 @@ const BlogPage = ({ data }) => {
 							</article>
 						))}
 					</div>
+
+					{/* {!isFirst && (
+						<Link to={prevPage} rel="prev">
+							← Previous Page
+						</Link>
+					)}
+					{!isLast && (
+						<Link to={nextPage} rel="next">
+							Next Page →
+						</Link>
+					)} */}
 				</section>
 			</BlogList>
 		</Layout>
@@ -72,8 +90,9 @@ const BlogPage = ({ data }) => {
 }
 
 export const query = graphql`
-	query {
-		allMdx(sort: { frontmatter: { date: DESC } }) {
+	query blogPage($skip: Int! = 0) {
+		allMdx(sort: { frontmatter: { date: DESC } }, limit: 6, skip: $skip) {
+			totalCount
 			nodes {
 				frontmatter {
 					date(formatString: "MMMM D, YYYY")
