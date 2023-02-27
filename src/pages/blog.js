@@ -3,6 +3,7 @@ import { Link, graphql } from "gatsby"
 import Banner from "../components/banner"
 import { GenericH3 } from "../styles/IndexStyles"
 import Layout from "../components/layout"
+import Pagination from "../components/Pagination"
 import React from "react"
 import { Seo } from "../components/seo"
 import { StaticImage } from "gatsby-plugin-image"
@@ -50,6 +51,7 @@ const BlogPage = ({ data }) => {
 					<h2>
 						RECENT <span> ARTICLES</span>
 					</h2>
+
 					<div className="blogGrid">
 						{data.allMdx.nodes.map(node => (
 							<article key={node.id}>
@@ -65,6 +67,8 @@ const BlogPage = ({ data }) => {
 							</article>
 						))}
 					</div>
+
+					<Pagination pageInfo={data.allMdx.pageInfo} />
 				</section>
 			</BlogList>
 		</Layout>
@@ -72,8 +76,17 @@ const BlogPage = ({ data }) => {
 }
 
 export const query = graphql`
-	query {
-		allMdx(sort: { frontmatter: { date: DESC } }) {
+	query blogPage($skip: Int! = 0, $limit: Int! = 6) {
+		allMdx(
+			sort: { frontmatter: { date: DESC } }
+			limit: $limit
+			skip: $skip
+		) {
+			totalCount
+			pageInfo {
+				currentPage
+				totalCount
+			}
 			nodes {
 				frontmatter {
 					date(formatString: "MMMM D, YYYY")
