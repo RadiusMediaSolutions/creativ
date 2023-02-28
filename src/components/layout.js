@@ -14,12 +14,9 @@ import { useRef, useState } from "react"
 import Footer from "./footer"
 import Header from "./header"
 import { LocomotiveScrollProvider } from "react-locomotive-scroll"
-import { MDXProvider } from "@mdx-js/react"
-import MessageComponent from "./message"
 import PropTypes from "prop-types"
 import React from "react"
 
-const shortcodes = { MessageComponent }
 // import { Copyright, Ftr, GenericH3, GenericPara } from "../styles/IndexStyles"
 
 const Layout = ({ children }) => {
@@ -50,7 +47,7 @@ const Layout = ({ children }) => {
 	`)
 
 	return (
-		<MDXProvider components={shortcodes}>
+		<>
 			<Header
 				sticky={sticky}
 				siteTitle={data.site.siteMetadata?.title || `Title`}
@@ -69,7 +66,7 @@ const Layout = ({ children }) => {
 					<Footer />
 				</main>
 			</LocomotiveScrollProvider>
-		</MDXProvider>
+		</>
 	)
 }
 

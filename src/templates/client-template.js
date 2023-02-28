@@ -11,8 +11,6 @@ import React from "react"
 // import background from "../images/roofingblog.jpg"
 
 const Template = ({ data }) => {
-	console.log(data)
-	console.log("testtt")
 	const { clientName, description, projectDetails } = data.client
 	const image = getImage(data.client.images[0])
 
