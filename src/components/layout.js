@@ -16,7 +16,10 @@ import Header from "./header"
 import { LocomotiveScrollProvider } from "react-locomotive-scroll"
 import PropTypes from "prop-types"
 import React from "react"
-
+import MessageComponent from "./message"
+import CaptionedImage from "./Captionimage"
+import { MDXProvider } from "@mdx-js/react"
+const shortcodes = { MessageComponent, CaptionedImage }
 // import { Copyright, Ftr, GenericH3, GenericPara } from "../styles/IndexStyles"
 
 const Layout = ({ children }) => {
@@ -48,24 +51,26 @@ const Layout = ({ children }) => {
 
 	return (
 		<>
-			<Header
-				sticky={sticky}
-				siteTitle={data.site.siteMetadata?.title || `Title`}
-			/>
+			<MDXProvider components={shortcodes}>
+				<Header
+					sticky={sticky}
+					siteTitle={data.site.siteMetadata?.title || `Title`}
+				/>
 
-			<LocomotiveScrollProvider
-				options={options}
-				containerRef={ref}
-				watch={[]}
-				onUpdate={scroll => {
-					scroll.on("scroll", stickNav)
-				}}
-			>
-				<main data-scroll-container ref={ref}>
-					{children}
-					<Footer />
-				</main>
-			</LocomotiveScrollProvider>
+				<LocomotiveScrollProvider
+					options={options}
+					containerRef={ref}
+					watch={[]}
+					onUpdate={scroll => {
+						scroll.on("scroll", stickNav)
+					}}
+				>
+					<main data-scroll-container ref={ref}>
+						{children}
+						<Footer />
+					</main>
+				</LocomotiveScrollProvider>
+			</MDXProvider>
 		</>
 	)
 }

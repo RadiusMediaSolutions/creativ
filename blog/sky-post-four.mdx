@@ -11,4 +11,5 @@ embeddedImages:
 
 Here's another post! It's even better than the first one!
 
-<MessageComponent />
+<h1>{props.pageContext.frontmatter.title}</h1>
+<CaptionedImage image={props.data.mdx.frontmatter.embeddedImages.image1} />

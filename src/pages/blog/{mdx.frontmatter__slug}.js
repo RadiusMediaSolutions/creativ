@@ -3,10 +3,19 @@ import { GenericH2, PostPara } from "../../styles/IndexStyles"
 import { Link, graphql } from "gatsby"
 
 import Banner from "../../components/banner"
-import MdxLayout from "../../components/MdxLayout"
+import Layout from "../../components/layout"
 import React from "react"
 import { Seo } from "../../components/seo"
+
 import styled from "styled-components"
+// import { MDXRenderer } from "gatsby-plugin-mdx"
+import { MDXProvider } from "@mdx-js/react"
+import CaptionedImage from "../../components/Captionimage"
+import * as ThemeUIComponents from "@theme-ui/components"
+const shortcodes = {
+	...ThemeUIComponents,
+	CaptionedImage,
+}
 
 const BlogPosts = styled.div`
 	margin: 4rem 0;
@@ -33,37 +42,32 @@ const BlogPost = ({ data, children }) => {
 	const image = getImage(data.mdx.frontmatter.featured_image)
 	return (
 		<MDXProvider components={shortcodes}>
-			<MDXRenderer embeddedImages={embeddedImagesByKey}>
-				<MdxLayout pageTitle={data.mdx.frontmatter.title}>
-					<div style={{ position: "relative" }} className="mdxBanner">
-						<Banner
-							inner
-							h2Content={data.mdx.frontmatter.title}
-							h3Content={data.mdx.frontmatter.date}
-						>
-							<GatsbyImage
-								image={image}
-								alt={data.mdx.frontmatter.featured_image_alt}
-								style={{ height: `80vh`, width: `100%` }}
-								aspectRatio={2 / 1}
-							/>
-						</Banner>
-					</div>
-					<BlogPosts className="mdxContent">
-						<section>
-							<GenericH2 none>
-								{data.mdx.frontmatter.title}
-							</GenericH2>
-							<PostPara>{data.mdx.frontmatter.date}</PostPara>
-							{children}
-
-							<Link className="backLink" to={`/blog/`}>
-								&#10094; Back to Blog
-							</Link>
-						</section>
-					</BlogPosts>
-				</MdxLayout>
-			</MDXRenderer>
+			<Layout pageTitle={data.mdx.frontmatter.title}>
+				<div style={{ position: "relative" }} className="mdxBanner">
+					<Banner
+						inner
+						h2Content={data.mdx.frontmatter.title}
+						h3Content={data.mdx.frontmatter.date}
+					>
+						<GatsbyImage
+							image={image}
+							alt={data.mdx.frontmatter.featured_image_alt}
+							style={{ height: `80vh`, width: `100%` }}
+							aspectRatio={2 / 1}
+						/>
+					</Banner>
+				</div>
+				<BlogPosts className="mdxContent">
+					<section>
+						<GenericH2 none>{data.mdx.frontmatter.title}</GenericH2>
+						<PostPara>{data.mdx.frontmatter.date}</PostPara>
+						{children}
+						<Link className="backLink" to={`/blog/`}>
+							&#10094; Back to Blog
+						</Link>
+					</section>
+				</BlogPosts>
+			</Layout>
 		</MDXProvider>
 	)
 }
@@ -80,7 +84,11 @@ export const query = graphql`
 						gatsbyImageData
 					}
 				}
-				embeddedImages
+				embeddedImages {
+					childImageSharp {
+						gatsbyImageData
+					}
+				}
 				description
 				keywords
 			}
