@@ -16,22 +16,6 @@ const Hero = styled.div`
 		clip-path: none;
 		// position: absolute;
 	}
-	// &:after {
-	// 	z-index: 110;
-	// 	content: "";
-	// 	display: block;
-	// 	height: ${props => (props.inner ? `70vh` : `80vh`)};
-	// 	width: 100%;
-	// 	position: relative;
-	// background-image: url(${props => props.bgImage});
-	// 	background-size: cover;
-	// 	background-repeat: no-repeat;
-	// 	background-position: center;
-	// 	clip-path: polygon(15% 0%, 100% 0%, 100% 100%, 60% 100%);
-	// }
-	// & > * {
-	// 	z-index: 150;
-	// }
 `
 
 const TextWrapper = styled.div`
@@ -179,5 +163,3 @@ const Banner = ({
 }
 
 export default Banner
-
-// export { Banner, InnerBanner }

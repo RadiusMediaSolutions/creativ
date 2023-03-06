@@ -70,7 +70,6 @@ const About = () => (
 							style={{ maxWidth: "70%" }}
 						/>
 					</div>
-					{/* <GenericH2 none>WELCOME SKY DEVELOP</GenericH2> */}
 					<GenericPara lessSize lessSpacing style={{ margin: "0" }}>
 						Skynet is a global consulting powerhouse. We began our
 						operations a few decades ago and have grown due to
@@ -183,12 +182,6 @@ const About = () => (
 		</TimeLine>
 	</Layout>
 )
-
-/**
- * Head export to define metadata for the page
- *
- * See: https://www.gatsbyjs.com/docs/reference/built-in-components/gatsby-head/
- */
 
 export const Head = () => (
 	<Seo

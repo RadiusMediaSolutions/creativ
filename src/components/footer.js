@@ -47,25 +47,19 @@ const Footer = () => {
 					<div className="ftr4">
 						<GenericH3 none>Address</GenericH3>
 						<FaMapMarkerAlt className="ftr-icon" />
-						<a href="#">1234 Prather Road, Louisville KY 47172</a>
+						<a
+							href="https://goo.gl/maps/oq6uuekQh8e3wzZX6"
+							target="_blank"
+							rel="noreferrer"
+						>
+							1234 Prather Road, Louisville KY 47172
+						</a>
 					</div>
 				</div>
 				<div className="copyright">
 					<span>&copy; {new Date().getFullYear()} , Skynet </span>
-					<span>
-						&middot; Built by
-						{` `}RadiusMedia
-					</span>
+					<span>&middot; Built by RadiusMedia</span>
 				</div>
-				{/* <Copyright>
-					<div>
-						<span>&copy; {new Date().getFullYear()} , Skynet </span>
-						<span>
-							&middot; Built by
-							{` `}RadiusMedia
-						</span>
-					</div>
-				</Copyright> */}
 			</Ftr>
 		</>
 	)

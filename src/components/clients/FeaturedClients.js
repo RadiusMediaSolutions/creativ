@@ -3,7 +3,6 @@ import * as styles from "../../styles/items.module.css"
 import { graphql, useStaticQuery } from "gatsby"
 
 import Client from "../../components/clients/Client"
-import { GenericH2 } from "../../styles/IndexStyles.js"
 import { Link } from "gatsby"
 import React from "react"
 import Title from "../Title"
@@ -57,7 +56,6 @@ const FeaturedClients = () => {
 			<h2>
 				Our Featured <span>Works</span>
 			</h2>
-			{/* <Title title="featured" subtitle="portfolio" /> */}
 
 			<div className={styles.center}>
 				{clients.map(({ node }) => {

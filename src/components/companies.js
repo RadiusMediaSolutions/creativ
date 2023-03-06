@@ -127,9 +127,6 @@ const Companies = () => {
 					className="textSlide"
 					style={{ backgroundColor: `#2b2d2f` }}
 				>
-					{/* <h2 style={{ color: `white`, marginLeft: `3rem` }}>
-						We're
-					</h2> */}
 					<h1>
 						<i></i>
 						<span id="a">Prepared</span>

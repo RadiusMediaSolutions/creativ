@@ -1,17 +1,17 @@
+import * as ThemeUIComponents from "@theme-ui/components"
+
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import { GenericH2, PostPara } from "../../styles/IndexStyles"
 import { Link, graphql } from "gatsby"
 
 import Banner from "../../components/banner"
+import CaptionedImage from "../../components/Captionimage"
 import Layout from "../../components/layout"
+import { MDXProvider } from "@mdx-js/react"
 import React from "react"
 import { Seo } from "../../components/seo"
-
 import styled from "styled-components"
-// import { MDXRenderer } from "gatsby-plugin-mdx"
-import { MDXProvider } from "@mdx-js/react"
-import CaptionedImage from "../../components/Captionimage"
-import * as ThemeUIComponents from "@theme-ui/components"
+
 const shortcodes = {
 	...ThemeUIComponents,
 	CaptionedImage,

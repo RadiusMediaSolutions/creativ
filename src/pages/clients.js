@@ -28,7 +28,6 @@ const ClientsPage = () => (
 				bgImage={background}
 				inner
 				h2Content="FLATS AT SPRINGHURST"
-				// spanContent="Project"
 			></Banner>
 		</div>
 		<Clients className="singlePjt">

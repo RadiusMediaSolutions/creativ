@@ -11,16 +11,16 @@ import "../styles/locomotive.css"
 import { graphql, useStaticQuery } from "gatsby"
 import { useRef, useState } from "react"
 
+import CaptionedImage from "./Captionimage"
 import Footer from "./footer"
 import Header from "./header"
 import { LocomotiveScrollProvider } from "react-locomotive-scroll"
+import { MDXProvider } from "@mdx-js/react"
+import MessageComponent from "./message"
 import PropTypes from "prop-types"
 import React from "react"
-import MessageComponent from "./message"
-import CaptionedImage from "./Captionimage"
-import { MDXProvider } from "@mdx-js/react"
+
 const shortcodes = { MessageComponent, CaptionedImage }
-// import { Copyright, Ftr, GenericH3, GenericPara } from "../styles/IndexStyles"
 
 const Layout = ({ children }) => {
 	const [sticky, setSticky] = useState(false)

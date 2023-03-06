@@ -40,13 +40,11 @@ exports.createPages = ({ actions, graphql }) => {
 			})
 		})
 		// Create blog pages
-		console.log(result.data.nodes)
 		const blogs = result.data.blog.nodes
 		const postsPerPage = 6
 		const numPages = Math.ceil(blogs.length / postsPerPage)
 
 		Array.from({ length: numPages }).forEach((_, i) => {
-			console.log(i)
 			createPage({
 				path: i === 0 ? `/blog/1` : `/blog/${i + 1}`,
 				// path: `/blog/${i + 1}`,
