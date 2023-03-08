@@ -8,115 +8,35 @@
   SkyNet Professional Solutions
 </h1>
 
-GatsbyJS is a popular static site generator that allows developers to create blazing-fast websites with ease. Combined with a headless CMS like Contentful, you can build a powerful website with dynamic content that can be updated without having to touch any code. We'll walk you through the steps to build your first GatsbyJS website with Contentful.
+Skynet is a global consulting powerhouse. We began our operations a few decades ago and have grown due to excellent relationships with our clients. We started out small, with just a few people and a small office, but today we have offices in multiple countries with hundreds of people working inside them.
 
 ## 🚀 Quick start
 
-1.  **Set up a GatsbyJS project**
+1.  **Create a Gatsby site.**
 
-    The first step is to set up a GatsbyJS project. You'll need to have Node.js installed on your machine to get started. Open a terminal window and run the following command:
-    Use the Gatsby CLI ([install instructions](https://www.gatsbyjs.com/docs/tutorial/part-0/#gatsby-cli)).
-
-    ```shell
-    npm install -g gatsby-cli
-    ```
-
-    This will install the GatsbyJS command-line interface globally on your machine. Now you can create a new GatsbyJS project by running the following command:
+    Use the Gatsby CLI ([install instructions](https://www.gatsbyjs.com/docs/tutorial/part-0/#gatsby-cli)) to create a new site, specifying the default starter.
 
     ```shell
-    gatsby new my-first-gatsby-site
+    # create a new Gatsby site using the default starter
+    gatsby new my-default-starter https://github.com/gatsbyjs/gatsby-starter-default
     ```
 
-    Replace "my-first-gatsby-site" with the name of your project.
+1.  **Start developing.**
 
-2.  **Install the Contentful plugin.**
-
-    The next step is to install the Contentful plugin for GatsbyJS. Run the following command in your terminal:
+    Navigate into your new site’s directory and start it up.
 
     ```shell
-    npm install gatsby-source-contentful
-    ```
-
-    This plugin will allow you to pull content from your Contentful CMS and use it to create dynamic pages on your GatsbyJS website.
-
-3.  **Set up Contentful**
-
-    Now it's time to set up your Contentful account. Sign up for a free account here (https://www.contentful.com/) and create a new space for your website content. Then, create a content model that will define the structure of your website's content.
-
-4.  **Configure the Contentful plugin**
-
-    Once you have your Contentful account set up, you need to configure the plugin in your GatsbyJS project. Open the gatsby-config.js file in your project and add the following code:
-
-    ```shell
-    module.exports = {
-    	plugins: [
-    		{
-    		resolve: "gatsby-source-contentful",
-    		options: {
-    			spaceId: "<your_space_id>",
-    			accessToken: "<your_access_token>",
-    		},
-    		},
-    ],
-    }
-    ```
-
-    Replace "<your_space_id>" and "<your_access_token>" with the respective values from your Contentful account.
-
-5.  **Build your first page**
-
-        Now you can start building your first page with Contentful data. Create a new file in your GatsbyJS project's pages directory and add the following code:
-
-        ```shell
-        	import React from "react"
-        	import { graphql } from "gatsby"
-
-        	export default function Home({ data }) {
-        	return (
-        			<div className="text_Section3">
-        				<div className="innerTitle">
-        					<h2>
-        						<span>{clientName}</span>
-        					</h2>
-        				</div>
-        				<p>{description}</p>
-        				<p>{projectDetails.projectDetails}</p>
-        			</div>
-        	)
-        	}
-
-        export const query = graphql`
-        query ($slug: String) {
-        	client: contentfulRecentProjects(slug: { eq: $slug }) {
-        		clientName
-        		slug
-        		description
-        		projectDetails {
-        			projectDetails
-        		}
-        	}
-        }
-
-    `
-
-    ```
-
-        This code imports the necessary packages, defines the Home component, and queries the Contentful API for the homepage content. You can replace "contentfulHomePage" with the name of the content type you created in Contentful.
-
-    ```
-
-6.  **Run your GatsbyJS project**
-    Finally, you can run your GatsbyJS project and see your first page with dynamic content! In your terminal, navigate to your project directory and run the following command:
-
-    ```shell
+    cd my-default-starter/
     gatsby develop
     ```
 
-    This will start a development server at http://localhost:8000 where you can see your website. Any changes you make to your Contentful content will be reflected on your website in real-time.
+1.  **Open the source code and start editing!**
+
+    Your site is now running at `http://localhost:8000`!
 
     _Note: You'll also see a second link: _`http://localhost:8000/___graphql`_. This is a tool you can use to experiment with querying your data. Learn more about using this tool in the [Gatsby Tutorial](https://www.gatsbyjs.com/docs/tutorial/part-4/#use-graphiql-to-explore-the-data-layer-and-write-graphql-queries)._
 
-    building a GatsbyJS website with Contentful is a great way to create a powerful, dynamic website with minimal coding. By following these simple steps, you can have your first website up and running in no time. Happy coding!
+    Open the `my-default-starter` directory in your code editor of choice and edit `src/pages/index.js`. Save your changes and the browser will update in real time!
 
 ## 🚀 Quick start (Gatsby Cloud)
 
@@ -181,7 +101,3 @@ Looking for more guidance? Full documentation for Gatsby lives [on the website](
 Gatsby Cloud is an end-to-end cloud platform specifically built for the Gatsby framework that combines a modern developer experience with an optimized, global edge network.
 
 <!-- AUTO-GENERATED-CONTENT:END -->
-
-```
-
-```
