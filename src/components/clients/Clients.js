@@ -25,7 +25,6 @@ const getClients = graphql`
 `
 const Clients = () => {
 	const { clients } = useStaticQuery(getClients)
-	console.log(clients)
 	return <ClientList Clients={clients} />
 }
 export default Clients

@@ -36,7 +36,6 @@ exports.createPages = async ({ graphql, actions, collection }) => {
 
 	const { totalCount } = data.allMdx
 	const pages = Math.ceil(totalCount / 6)
-	console.log(totalCount)
 
 	Array.from({ length: pages }).forEach((_, i) => {
 		actions.createPage({

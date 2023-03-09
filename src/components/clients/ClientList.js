@@ -18,8 +18,6 @@ class ClientList extends Component {
 	render() {
 		return (
 			<section className="innerTitle imgGrid">
-				{/* <Title title="hampi" subtitle="clients" /> */}
-
 				<h2>
 					COMMERCIAL <span>PROJECTS</span>
 				</h2>

@@ -40,7 +40,6 @@ const MenuItem = styled.span`
 	color: ;
 	// background: ${props => (props.selected ? "lightgrey" : "white")};
 `
-// const isBrowser = () => typeof window !== "undefined"
 
 const Header = ({ sticky, siteTitle }) => {
 	const [isOpen, setNav] = useState(false)

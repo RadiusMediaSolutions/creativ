@@ -159,6 +159,9 @@ img {
 
 /* Responsive for Tablet & Mobile */
 @media (max-width: 1024px) {
+	.dgrid {
+		grid-template-columns: auto !important;
+	}
 	.textSlide h1 {
 		font-size: 1.5rem !important;
 	}
@@ -596,4 +599,31 @@ img {
 	margin: 0;
 	padding: 0;
 	bottom: 60px !important;
+}
+
+.mdxImage img {
+	display: block;
+	width: auto;
+	object-fit: cover;
+	height: 400px;
+}
+.mdxContent span {
+	display: block;
+}
+.dgrid span {
+	text-align: center;
+	color: var(--heading-color);
+	font-weight: 500;
+	background: #fdfdfd;
+	/* box-shadow: 0 3px 10px lightgray; */
+	padding: 8px;
+	display: block;
+}
+
+.dgrid {
+	display: grid;
+	grid-template-columns: 2fr 1fr;
+	align-items: center;
+	gap: 30px;
+	padding: 20px 0;
 }

@@ -1,0 +1,18 @@
+Contentful is a content management system (CMS) that allows developers to create, manage, and deliver digital content to various platforms. Gatsby, on the other hand, is a static site generator that builds fast, scalable, and secure websites. Together, Contentful and Gatsby make a powerful combination for building modern web applications.
+
+1. Here are the step-by-step instructions on how to set up Contentful with Gatsby:
+
+2. Create a Contentful account: The first step is to create a Contentful account https://www.contentful.com/. Once you have created your account, you can create a new space to store your content.
+
+3. Set up your Contentful space: After creating a new space, you can define your content models by adding fields for your content here we used "recent-projects". But you can create a content model for blog posts, products, pages, or any other content type you want to manage.
+PS: We have attached screenshots for this steps that you need to follow.
+
+4. Create and publish content: Once you have set up your content models, you can start creating and publishing content. You can add content to your space by creating new entries or importing existing content.
+
+5. Install the Gatsby Contentful plugin: The next step is to install the Gatsby Contentful plugin. You can install the plugin using the npm package manager running the following command "npm install gatsby-source-contentful gatsby-plugin-image". also refere for more https://www.gatsbyjs.com/plugins/gatsby-source-contentful/ 
+
+6. Configure the plugin: After installing the plugin, you need to configure it to fetch content from your Contentful space. You can do this by providing your Contentful space ID and access token in the plugin configuration. for this you need to go "Settings" -> "API Keys" -> "+Add API Key"
+
+7. Build your Gatsby site: With the plugin configured, you can now start building your Gatsby site. You can create pages, templates, and components that will use your content from Contentful.
+
+8. Deploy your Gatsby site: Once you have built your Gatsby site, you can deploy it to a your hosting service.

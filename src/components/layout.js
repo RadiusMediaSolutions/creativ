@@ -11,6 +11,7 @@ import "../styles/locomotive.css"
 import { graphql, useStaticQuery } from "gatsby"
 import { useRef, useState } from "react"
 
+import CaptionedImage from "./Captionimage"
 import Footer from "./footer"
 import Header from "./header"
 import { LocomotiveScrollProvider } from "react-locomotive-scroll"
@@ -19,8 +20,7 @@ import MessageComponent from "./message"
 import PropTypes from "prop-types"
 import React from "react"
 
-const shortcodes = { MessageComponent }
-// import { Copyright, Ftr, GenericH3, GenericPara } from "../styles/IndexStyles"
+const shortcodes = { MessageComponent, CaptionedImage }
 
 const Layout = ({ children }) => {
 	const [sticky, setSticky] = useState(false)
@@ -50,26 +50,28 @@ const Layout = ({ children }) => {
 	`)
 
 	return (
-		<MDXProvider components={shortcodes}>
-			<Header
-				sticky={sticky}
-				siteTitle={data.site.siteMetadata?.title || `Title`}
-			/>
+		<>
+			<MDXProvider components={shortcodes}>
+				<Header
+					sticky={sticky}
+					siteTitle={data.site.siteMetadata?.title || `Title`}
+				/>
 
-			<LocomotiveScrollProvider
-				options={options}
-				containerRef={ref}
-				watch={[]}
-				onUpdate={scroll => {
-					scroll.on("scroll", stickNav)
-				}}
-			>
-				<main data-scroll-container ref={ref}>
-					{children}
-					<Footer />
-				</main>
-			</LocomotiveScrollProvider>
-		</MDXProvider>
+				<LocomotiveScrollProvider
+					options={options}
+					containerRef={ref}
+					watch={[]}
+					onUpdate={scroll => {
+						scroll.on("scroll", stickNav)
+					}}
+				>
+					<main data-scroll-container ref={ref}>
+						{children}
+						<Footer />
+					</main>
+				</LocomotiveScrollProvider>
+			</MDXProvider>
+		</>
 	)
 }
 
