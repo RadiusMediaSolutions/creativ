@@ -9,10 +9,10 @@ PS: We have attached screenshots for this steps that you need to follow.
 
 4. Create and publish content: Once you have set up your content models, you can start creating and publishing content. You can add content to your space by creating new entries or importing existing content.
 
-5. Install the Gatsby Contentful plugin: The next step is to install the Gatsby Contentful plugin. You can install the plugin using the npm package manager.
+5. Install the Gatsby Contentful plugin: The next step is to install the Gatsby Contentful plugin. You can install the plugin using the npm package manager running the following command "npm install gatsby-source-contentful gatsby-plugin-image". also refere for more https://www.gatsbyjs.com/plugins/gatsby-source-contentful/ 
 
 6. Configure the plugin: After installing the plugin, you need to configure it to fetch content from your Contentful space. You can do this by providing your Contentful space ID and access token in the plugin configuration. for this you need to go "Settings" -> "API Keys" -> "+Add API Key"
 
 7. Build your Gatsby site: With the plugin configured, you can now start building your Gatsby site. You can create pages, templates, and components that will use your content from Contentful.
 
-8. Deploy your Gatsby site: Once you have built your Gatsby site, you can deploy it to a hosting service like Netlify or AWS Amplify. You can use the Gatsby CLI to build and deploy your site.
+8. Deploy your Gatsby site: Once you have built your Gatsby site, you can deploy it to a your hosting service.
