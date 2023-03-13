@@ -50,6 +50,29 @@ a,
 	z-index: 100;
 }
 @media (max-width: 1230px) {
+	.mdxBanner .textWrapper {
+		padding: 3rem;
+		top: 60%;
+		width: 100% !important;
+		left: 10% !important;
+		font-size: 3rem !important;
+	}
+	.mdxBanner h2 {
+		font-size: 2rem !important;
+		color: white !important;
+		padding-bottom: 20px !important;
+		bottom: 0 !important;
+	}
+	.mdxBanner h3 {
+		font-size: 0.9rem !important;
+	}
+	.mdxBanner h3::before {
+		position: relative;
+		content: "POSTED ON :";
+		margin-right: 10px;
+		font-size: 0.8rem;
+		color: var(--heading-color);
+	}
 	.canvasMobile {
 		display: none !important;
 	}
@@ -69,12 +92,6 @@ a,
 	}
 	.stats {
 		left: 5% !important;
-	}
-	.mdxBanner .textWrapper {
-		top: 60%;
-		width: 100% !important;
-		left: 10% !important;
-		font-size: 3rem !important;
 	}
 
 	.text_section3,

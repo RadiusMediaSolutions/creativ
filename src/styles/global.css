@@ -159,6 +159,12 @@ img {
 
 /* Responsive for Tablet & Mobile */
 @media (max-width: 1024px) {
+	/* .mdxBanner .textWrapper {
+		top: 60%;
+		width: 100% !important;
+		left: 10% !important;
+		font-size: 3rem !important;
+	} */
 	.dgrid {
 		grid-template-columns: auto !important;
 	}
@@ -601,15 +607,23 @@ img {
 	bottom: 60px !important;
 }
 
+/* For Grid type image with content */
 .mdxImage img {
 	display: block;
 	width: auto;
-	object-fit: cover;
 	height: 400px;
 }
 .mdxContent span {
 	display: block;
 }
+.dgrid {
+	display: grid;
+	grid-template-columns: 2fr 1fr;
+	align-items: center;
+	gap: 30px;
+	padding: 20px 0;
+}
+
 .dgrid span {
 	text-align: center;
 	color: var(--heading-color);
@@ -620,10 +634,21 @@ img {
 	display: block;
 }
 
-.dgrid {
-	display: grid;
-	grid-template-columns: 2fr 1fr;
-	align-items: center;
-	gap: 30px;
-	padding: 20px 0;
+/* For Single Line Image */
+.caption {
+	width: 700px;
+	max-width: 600px;
+	margin: 0 auto;
+}
+
+.caption span {
+	width: 100%;
+	background: white;
+	padding: 10px;
+	text-align: center;
+}
+
+.caption img {
+	max-width: 600px;
+	width: 700px;
 }

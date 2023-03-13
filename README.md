@@ -65,45 +65,41 @@ GatsbyJS is a popular static site generator that allows developers to create bla
 
 5.  **Build your first page**
 
-        Now you can start building your first page with Contentful data. Create a new file in your GatsbyJS project's pages directory and add the following code:
+    Now you can start building your first page with Contentful data. Create a new file in your GatsbyJS project's pages directory and add the following code:
 
-        ```shell
-        	import React from "react"
-        	import { graphql } from "gatsby"
+    ```shell
+    import React from "react"
+    import { graphql } from "gatsby"
 
-        	export default function Home({ data }) {
-        	return (
-        			<div className="text_Section3">
-        				<div className="innerTitle">
-        					<h2>
-        						<span>{clientName}</span>
-        					</h2>
-        				</div>
-        				<p>{description}</p>
-        				<p>{projectDetails.projectDetails}</p>
-        			</div>
-        	)
-        	}
+    export default function Home({ data }) {
+    return (
+    		<div className="text_Section3">
+    			<div className="innerTitle">
+    				<h2>
+    					<span>{clientName}</span>
+    				</h2>
+    			</div>
+    			<p>{description}</p>
+    			<p>{projectDetails.projectDetails}</p>
+    		</div>
+    )
+    }
 
-        export const query = graphql`
-        query ($slug: String) {
-        	client: contentfulRecentProjects(slug: { eq: $slug }) {
-        		clientName
-        		slug
-        		description
-        		projectDetails {
-        			projectDetails
-        		}
-        	}
-        }
-
+    export const query = graphql`
+    query ($slug: String) {
+    	client: contentfulRecentProjects(slug: { eq: $slug }) {
+    		clientName
+    		slug
+    		description
+    		projectDetails {
+    			projectDetails
+    		}
+    	}
+    }
     `
-
     ```
 
-        This code imports the necessary packages, defines the Home component, and queries the Contentful API for the homepage content. You can replace "contentfulHomePage" with the name of the content type you created in Contentful.
-
-    ```
+    This code imports the necessary packages, defines the Home component, and queries the Contentful API for the homepage content. You can replace "contentfulHomePage" with the name of the content type you created in Contentful.
 
 6.  **Run your GatsbyJS project**
     Finally, you can run your GatsbyJS project and see your first page with dynamic content! In your terminal, navigate to your project directory and run the following command:
